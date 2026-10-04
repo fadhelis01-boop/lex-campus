@@ -1,0 +1,433 @@
+{
+ "id": "commercial",
+ "version": "2026.10.1",
+ "title": "Droit commercial général",
+ "branch": "Droit des affaires",
+ "icon": "🏪",
+ "color": "#b8862f",
+ "order": 10,
+ "updatedAt": "2026-10-01",
+ "description": "Commerçant et entrepreneur individuel, juridictions commerciales, fonds de commerce, bail commercial, délais de paiement et recouvrement.",
+ "modules": [
+  {
+   "id": "acteurs",
+   "title": "Les acteurs du commerce",
+   "level": 1,
+   "summary": "Actes de commerce, commerçant, entrepreneur individuel à patrimoine séparé, juridictions commerciales.",
+   "lessons": [
+    {
+     "id": "commercant-entrepreneur",
+     "title": "Actes de commerce, commerçant et entrepreneur individuel (réforme de 2022)",
+     "duration": 16,
+     "src": "packs/commercial/commercant-entrepreneur.md",
+     "objectives": [
+      "Qualifier un acte de commerce",
+      "Appliquer le statut de l'entrepreneur individuel",
+      "Situer les tribunaux des activités économiques"
+     ],
+     "keyRefs": [
+      "Art. L. 110-1 C. com.",
+      "Art. L. 110-3 C. com.",
+      "Art. L. 110-4 C. com.",
+      "Art. L. 121-1 C. com.",
+      "Art. L. 526-22 C. com.",
+      "Loi n° 2022-172 du 14 févr. 2022"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Depuis le 15 mai 2022, l'entrepreneur individuel :",
+       "choices": [
+        "Doit créer une EIRL",
+        "Bénéficie automatiquement d'un patrimoine professionnel séparé",
+        "Répond de ses dettes professionnelles sur tous ses biens",
+        "Doit constituer une EURL"
+       ],
+       "answer": 1,
+       "explain": "Loi du 14 févr. 2022, art. L. 526-22."
+      },
+      {
+       "type": "vf",
+       "q": "La lettre de change est un acte de commerce entre toutes personnes.",
+       "answer": true,
+       "explain": "Acte de commerce par la forme (art. L. 110-1, 10°)."
+      },
+      {
+       "type": "qcm",
+       "q": "Contre un commerçant, l'acte de commerce se prouve :",
+       "choices": [
+        "Par écrit au-delà de 1 500 €",
+        "Par tous moyens",
+        "Par acte notarié",
+        "Par témoins seulement"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 110-3."
+      },
+      {
+       "type": "vf",
+       "q": "Le micro-entrepreneur est une forme juridique de société.",
+       "answer": false,
+       "explain": "C'est un régime fiscal et social simplifié de l'entrepreneur individuel."
+      },
+      {
+       "type": "qcm",
+       "q": "Les tribunaux des activités économiques sont expérimentés depuis :",
+       "choices": [
+        "2015",
+        "2020",
+        "1er janvier 2025",
+        "Ils n'existent pas"
+       ],
+       "answer": 2,
+       "explain": "Loi du 20 nov. 2023, expérimentation de quatre ans."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Définition du commerçant ?",
+       "a": "Celui qui exerce des actes de commerce et en fait sa profession habituelle (art. L. 121-1)."
+      },
+      {
+       "q": "Limites de la séparation de patrimoines de l'EI ?",
+       "a": "Renonciation au profit d'un créancier ; fraude ; manquements graves et répétés aux obligations fiscales et sociales ; règles propres aux dettes fiscales/sociales."
+      }
+     ]
+    },
+    {
+     "id": "delais-paiement-recouvrement",
+     "title": "Délais de paiement, facturation et recouvrement des créances",
+     "duration": 14,
+     "src": "packs/commercial/delais-paiement-recouvrement.md",
+     "objectives": [
+      "Appliquer les délais légaux",
+      "Choisir l'outil de recouvrement adapté"
+     ],
+     "keyRefs": [
+      "Art. L. 441-10 C. com.",
+      "Art. L. 441-16 C. com.",
+      "Art. 1405 CPC",
+      "Art. 873 CPC",
+      "Art. L. 511-1 CPCE"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Délai de paiement maximal convenu entre professionnels :",
+       "choices": [
+        "30 jours date de facture",
+        "60 jours date de facture ou 45 jours fin de mois",
+        "90 jours",
+        "120 jours"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 441-10."
+      },
+      {
+       "type": "qcm",
+       "q": "Montant de l'indemnité forfaitaire pour frais de recouvrement :",
+       "choices": [
+        "15 €",
+        "40 €",
+        "100 €",
+        "Aucune"
+       ],
+       "answer": 1,
+       "explain": "40 €, en plus des pénalités de retard."
+      },
+      {
+       "type": "vf",
+       "q": "L'ordonnance d'injonction de payer devient exécutoire si le débiteur ne forme pas opposition dans le mois de sa signification.",
+       "answer": true,
+       "explain": "Art. 1416 CPC."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Sanction du non-respect des délais de paiement ?",
+       "a": "Amende administrative jusqu'à 2 M€ (personne morale), doublée en cas de réitération, avec publication."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fonds-bail",
+   "title": "Le fonds de commerce et le bail commercial",
+   "level": 2,
+   "summary": "Cession, nantissement et location-gérance du fonds ; statut des baux commerciaux.",
+   "lessons": [
+    {
+     "id": "fonds-de-commerce",
+     "title": "Le fonds de commerce : cession, nantissement, location-gérance",
+     "duration": 15,
+     "src": "packs/commercial/fonds-de-commerce.md",
+     "objectives": [
+      "Identifier les éléments du fonds",
+      "Sécuriser une cession",
+      "Mesurer les risques de la location-gérance"
+     ],
+     "keyRefs": [
+      "Art. L. 141-1 C. com.",
+      "Art. L. 141-14 C. com.",
+      "Art. L. 141-23 C. com.",
+      "Art. L. 142-1 C. com.",
+      "Art. L. 144-1 C. com.",
+      "Art. L. 144-7 C. com."
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Élément essentiel du fonds de commerce :",
+       "choices": [
+        "Le droit au bail",
+        "La clientèle",
+        "Le matériel",
+        "L'enseigne"
+       ],
+       "answer": 1,
+       "explain": "Sans clientèle, pas de fonds."
+      },
+      {
+       "type": "vf",
+       "q": "Depuis 2019, l'omission des mentions obligatoires dans l'acte de cession entraîne sa nullité.",
+       "answer": false,
+       "explain": "Les mentions obligatoires ont été supprimées par la loi du 19 juill. 2019."
+      },
+      {
+       "type": "qcm",
+       "q": "Délai d'opposition des créanciers du vendeur :",
+       "choices": [
+        "10 jours après la publication au BODACC",
+        "1 mois",
+        "3 mois",
+        "1 an"
+       ],
+       "answer": 0,
+       "explain": "Art. L. 141-14."
+      },
+      {
+       "type": "qcm",
+       "q": "Le loueur d'un fonds en location-gérance est solidaire des dettes d'exploitation :",
+       "choices": [
+        "Jamais",
+        "Jusqu'à la publication et 6 mois après",
+        "Pendant toute la location",
+        "Pendant 2 ans"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 144-7."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Information des salariés en cas de cession du fonds ?",
+       "a": "Entreprises < 250 salariés : au plus tard 2 mois avant ; sanction : amende civile (L. 141-23)."
+      }
+     ]
+    },
+    {
+     "id": "bail-commercial",
+     "title": "Le bail commercial après la loi Pinel",
+     "duration": 22,
+     "src": "packs/commercial/bail-commercial.md",
+     "objectives": [
+      "Déterminer le champ du statut",
+      "Gérer congé, renouvellement et éviction",
+      "Calculer et contester un loyer"
+     ],
+     "keyRefs": [
+      "Art. L. 145-1 C. com.",
+      "Art. L. 145-4 C. com.",
+      "Art. L. 145-5 C. com.",
+      "Art. L. 145-14 C. com.",
+      "Art. L. 145-34 C. com.",
+      "Art. L. 145-38 C. com.",
+      "Art. L. 145-40-2 C. com.",
+      "Art. L. 145-41 C. com.",
+      "Art. L. 145-60 C. com."
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Durée maximale d'un bail dérogatoire depuis 2014 :",
+       "choices": [
+        "2 ans",
+        "3 ans",
+        "6 ans",
+        "9 ans"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 145-5 (loi Pinel)."
+      },
+      {
+       "type": "qcm",
+       "q": "Le lissage du déplafonnement limite la hausse annuelle à :",
+       "choices": [
+        "5 %",
+        "10 %",
+        "15 %",
+        "25 %"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 145-34 al. 4."
+      },
+      {
+       "type": "vf",
+       "q": "La taxe foncière ne peut plus être refacturée au locataire.",
+       "answer": false,
+       "explain": "Elle reste refacturable ; ce sont notamment les grosses réparations de l'art. 606 qui ne le sont plus."
+      },
+      {
+       "type": "qcm",
+       "q": "La clause résolutoire du bail commercial produit effet :",
+       "choices": [
+        "Immédiatement",
+        "Un mois après un commandement resté infructueux",
+        "Trois mois après",
+        "Après jugement seulement"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 145-41."
+      },
+      {
+       "type": "qcm",
+       "q": "Prescription des actions fondées sur le statut :",
+       "choices": [
+        "1 an",
+        "2 ans",
+        "5 ans",
+        "10 ans"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 145-60, sauf l'action en réputé non écrit."
+      },
+      {
+       "type": "qcm",
+       "q": "En refusant le renouvellement sans motif grave et légitime, le bailleur doit :",
+       "choices": [
+        "Rien",
+        "Une indemnité d'éviction",
+        "Un an de loyer",
+        "Proposer un autre local"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 145-14."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Apports de la loi Pinel ?",
+       "a": "ILC/ILAT, inventaire et répartition des charges, état des lieux, droit de préférence du locataire, bail dérogatoire de 3 ans, lissage 10 %, garantie du cédant 3 ans, clauses contraires réputées non écrites."
+      },
+      {
+       "q": "Droit de repentir ?",
+       "a": "Le bailleur peut, dans les 15 jours de la décision fixant l'indemnité d'éviction, consentir finalement au renouvellement (L. 145-58)."
+      }
+     ],
+     "exercises": [
+      {
+       "id": "cas-bail-renouvellement",
+       "type": "cas-pratique",
+       "title": "Cas pratique : le congé du bailleur",
+       "timerMin": 45,
+       "statement": "La SARL Pain Doré exploite une boulangerie dans un local loué depuis le 1er avril 2015 par bail commercial de 9 ans, au loyer actuel de 24 000 € par an. Le 20 septembre 2023, le bailleur lui a délivré un congé pour le 31 mars 2024, avec refus de renouvellement et offre d'indemnité d'éviction, puis, en mars 2024, a proposé à la place un renouvellement « au loyer de marché » de 40 000 €.\n\nLe gérant vous interroge : 1) Le congé est-il régulier ? 2) Le bailleur peut-il revenir sur son refus ? 3) Le nouveau loyer de 40 000 € s'impose-t-il ? 4) Dans quel délai agir ?",
+       "rubric": [
+        "Forme et délai du congé (6 mois, acte extrajudiciaire, motifs, mention de l'art. L. 145-9)",
+        "Indemnité d'éviction et droit de repentir (L. 145-58)",
+        "Plafonnement du loyer renouvelé (L. 145-34) et exceptions",
+        "Lissage du déplafonnement",
+        "Prescription biennale (L. 145-60)"
+       ],
+       "model": "**1.** Le congé doit être donné par acte extrajudiciaire au moins **six mois** à l'avance, pour la date d'expiration du bail (ou, si le bail s'est prolongé tacitement, pour le dernier jour du trimestre civil) ; il doit préciser les motifs et indiquer que le locataire qui entend contester ou demander une indemnité doit saisir le tribunal dans les **deux ans** (art. L. 145-9). Délivré le 20 septembre 2023 pour le 31 mars 2024 : délai de six mois respecté, sous réserve des mentions.\n\n**2.** Le refus avec offre d'indemnité d'éviction est un droit du bailleur ; il peut exercer un **droit de repentir** (art. L. 145-58) tant que le locataire n'a pas engagé le processus de réinstallation, au plus tard dans les quinze jours de la décision définitive fixant l'indemnité. Le repentir est irrévocable et vaut acceptation du renouvellement.\n\n**3.** Loyer du bail renouvelé : valeur locative **plafonnée** à la variation de l'indice (ILC) depuis la fixation initiale (art. L. 145-34), sauf modification notable des éléments de la valeur locative (art. L. 145-33, 1° à 4°) ou durée effective du bail supérieure à 12 ans (ici, le bail a duré 9 ans : pas de déplafonnement à ce titre). Même en cas de déplafonnement, le **lissage** limite l'augmentation à 10 % par an. Le loyer de 40 000 € ne s'impose donc pas.\n\n**4.** Prescription **biennale** (art. L. 145-60) : action en fixation du loyer ou en paiement de l'indemnité d'éviction dans les deux ans ; saisir le juge des loyers commerciaux après mémoire préalable."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "decisions": [
+  {
+   "id": "covid-loyers-2022",
+   "name": "Loyers commerciaux et crise sanitaire",
+   "court": "Cass. civ. 3e",
+   "date": "30 juin 2022",
+   "topic": "Bail commercial",
+   "solution": "La fermeture administrative des commerces n'est ni une perte de la chose louée, ni un manquement du bailleur à son obligation de délivrance ; les loyers restaient dus.",
+   "scope": "Refus de suspendre les loyers sur les fondements classiques.",
+   "status": "en vigueur"
+  }
+ ],
+ "reforms": [
+  {
+   "date": "2008-08-04",
+   "title": "LME : délais de paiement plafonnés",
+   "summary": "60 jours date de facture ou 45 jours fin de mois ; création du régime de l'auto-entrepreneur."
+  },
+  {
+   "date": "2010-06-15",
+   "title": "Création de l'EIRL",
+   "summary": "Patrimoine affecté sur déclaration ; supprimée pour l'avenir en 2022."
+  },
+  {
+   "date": "2014-06-18",
+   "title": "Loi Pinel sur les baux commerciaux",
+   "summary": "Rééquilibrage du statut : ILC/ILAT, charges, état des lieux, droit de préférence, lissage du déplafonnement."
+  },
+  {
+   "date": "2014-07-31",
+   "title": "Loi Hamon : information des salariés",
+   "summary": "Information préalable des salariés en cas de cession de fonds ou de titres dans les PME."
+  },
+  {
+   "date": "2015-08-06",
+   "title": "Loi Macron",
+   "summary": "Insaisissabilité de droit de la résidence principale de l'entrepreneur individuel ; sanctions des délais de paiement renforcées."
+  },
+  {
+   "date": "2019-07-19",
+   "title": "Simplification du fonds de commerce",
+   "summary": "Suppression des mentions obligatoires de l'acte de cession et de la condition d'exploitation préalable de 2 ans pour la location-gérance."
+  },
+  {
+   "date": "2022-05-15",
+   "title": "Nouveau statut de l'entrepreneur individuel",
+   "summary": "Séparation automatique des patrimoines professionnel et personnel ; fin de l'EIRL."
+  },
+  {
+   "date": "2025-01-01",
+   "title": "Tribunaux des activités économiques (expérimentation)",
+   "summary": "Douze juridictions expérimentales compétentes pour toutes les entreprises en difficulté, quel que soit leur statut."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Acte mixte",
+   "def": "Acte commercial pour une partie et civil pour l'autre."
+  },
+  {
+   "term": "Fonds de commerce",
+   "def": "Ensemble des éléments mobiliers affectés à une exploitation commerciale, dont la clientèle est l'élément essentiel."
+  },
+  {
+   "term": "Location-gérance",
+   "def": "Contrat par lequel le propriétaire d'un fonds en concède l'exploitation à un gérant qui l'exploite à ses risques."
+  },
+  {
+   "term": "Indemnité d'éviction",
+   "def": "Indemnité due par le bailleur qui refuse le renouvellement du bail commercial (art. L. 145-14)."
+  },
+  {
+   "term": "Plafonnement",
+   "def": "Limitation de la hausse du loyer du bail renouvelé à la variation de l'indice (art. L. 145-34)."
+  },
+  {
+   "term": "Bail dérogatoire",
+   "def": "Bail de courte durée (3 ans maximum) échappant au statut des baux commerciaux (art. L. 145-5)."
+  },
+  {
+   "term": "RNE",
+   "def": "Registre national des entreprises, tenu par l'INPI depuis 2023."
+  }
+ ]
+}

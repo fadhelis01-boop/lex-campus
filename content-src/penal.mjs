@@ -1,0 +1,67 @@
+const P = "packs/penal/";
+
+export default {
+  id: "penal",
+  version: "2026.10.1",
+  title: "Droit pénal des affaires",
+  branch: "Droit des affaires",
+  icon: "🚔",
+  color: "#5b2a2a",
+  order: 18,
+  updatedAt: "2026-10-01",
+  description: "Abus de confiance, escroquerie, ABS, corruption, blanchiment, fraude fiscale ; responsabilité des personnes morales, délégation de pouvoirs, CJIP.",
+  modules: [
+    {
+      id: "infractions",
+      title: "Les infractions et les responsables",
+      level: 2,
+      summary: "Principales infractions ; imputation de la responsabilité ; justice négociée.",
+      lessons: [
+        {
+          id: "infractions-affaires",
+          title: "Les principales infractions d'affaires",
+          duration: 15,
+          src: P + "infractions-affaires.md",
+          objectives: ["Distinguer abus de confiance, escroquerie et ABS", "Connaître les atteintes à la probité et le blanchiment"],
+          keyRefs: ["Art. 314-1 C. pén.", "Art. 313-1 C. pén.", "Art. 432-11 C. pén.", "Art. 433-1 C. pén.", "Art. 445-1 C. pén.", "Art. 324-1 C. pén.", "Art. 1741 CGI"],
+          quiz: [
+            { type: "qcm", q: "Le dirigeant d'une association qui détourne des fonds commet :", choices: ["Un ABS", "Un abus de confiance", "Une banqueroute", "Un délit d'initié"], answer: 1, explain: "L'ABS est réservé aux sociétés commerciales visées par le code de commerce." },
+            { type: "qcm", q: "Peine encourue pour corruption active d'agent public par une personne physique :", choices: ["2 ans", "5 ans", "10 ans et 1 M€", "20 ans"], answer: 2, explain: "Art. 433-1 C. pén." },
+            { type: "vf", q: "La loi présume l'origine illicite des biens lorsque les conditions de l'opération ne peuvent avoir d'autre justification que de dissimuler cette origine.", answer: true, explain: "Art. 324-1-1 C. pén." },
+          ],
+          flashcards: [{ q: "Éléments de l'escroquerie ?", a: "Faux nom, fausse qualité, abus de qualité vraie ou manœuvres frauduleuses ; tromperie ; remise (art. 313-1)." }],
+        },
+        {
+          id: "responsabilite-personnes-morales-cjip",
+          title: "Responsabilité pénale des personnes morales, délégation de pouvoirs et CJIP",
+          duration: 14,
+          src: P + "responsabilite-personnes-morales-cjip.md",
+          objectives: ["Imputer une infraction à la personne morale", "Organiser une délégation de pouvoirs", "Négocier une CJIP"],
+          keyRefs: ["Art. 121-2 C. pén.", "Art. 131-38 C. pén.", "Art. 41-1-2 CPP", "Loi n° 2016-1691 du 9 déc. 2016 (Sapin II)"],
+          quiz: [
+            { type: "qcm", q: "Plafond de l'amende d'intérêt public d'une CJIP :", choices: ["10 % du CA", "30 % du CA moyen annuel des trois derniers exercices", "1 M€", "Sans plafond"], answer: 1, explain: "Art. 41-1-2 CPP." },
+            { type: "vf", q: "La CJIP emporte déclaration de culpabilité.", answer: false, explain: "Ni culpabilité, ni inscription au casier." },
+            { type: "qcm", q: "Conditions d'une délégation de pouvoirs exonératoire :", choices: ["Écrit notarié", "Compétence, autorité et moyens du délégataire", "Accord du CSE", "Ancienneté de 5 ans"], answer: 1, explain: "Crim., 11 mars 1993." },
+            { type: "qcm", q: "Depuis Crim., 25 nov. 2020, en cas de fusion-absorption :", choices: ["Toute responsabilité s'éteint", "L'absorbante peut être condamnée pour les faits de l'absorbée", "Seuls les dirigeants répondent", "L'AFA décide"], answer: 1, explain: "Revirement, au nom de la continuité économique." },
+          ],
+          flashcards: [{ q: "Amende encourue par une personne morale ?", a: "Le quintuple de celle prévue pour les personnes physiques (art. 131-38)." }],
+        },
+      ],
+    },
+  ],
+  decisions: [
+    { id: "fusion-penal-2020", name: "Fusion-absorption et responsabilité pénale", court: "Cass. crim.", date: "25 novembre 2020", number: "n° 18-86.955", topic: "Responsabilité des personnes morales", solution: "La société absorbante peut être condamnée pénalement pour des faits commis par la société absorbée avant la fusion.", scope: "Revirement ; application aux fusions postérieures, et sans limite en cas de fraude.", status: "en vigueur" },
+    { id: "delegation-1993", name: "Délégation de pouvoirs", court: "Cass. crim.", date: "11 mars 1993", topic: "Responsabilité du chef d'entreprise", solution: "Le chef d'entreprise qui n'a pas personnellement pris part à l'infraction s'exonère s'il rapporte la preuve qu'il a délégué ses pouvoirs à une personne pourvue de la compétence, de l'autorité et des moyens nécessaires.", scope: "Conditions de la délégation exonératoire.", status: "en vigueur" },
+  ],
+  reforms: [
+    { date: "2005-12-31", title: "Généralisation de la responsabilité pénale des personnes morales", summary: "Loi Perben II : responsabilité pour toutes les infractions." },
+    { date: "2013-12-06", title: "Création du parquet national financier", summary: "Loi relative à la lutte contre la fraude fiscale et la grande délinquance économique et financière." },
+    { date: "2016-12-09", title: "Loi Sapin II", summary: "AFA, programmes de conformité anticorruption, CJIP, protection des lanceurs d'alerte." },
+  ],
+  glossary: [
+    { term: "CJIP", def: "Convention judiciaire d'intérêt public : transaction pénale réservée aux personnes morales (art. 41-1-2 CPP)." },
+    { term: "PNF", def: "Parquet national financier, compétent pour les affaires économiques et financières complexes." },
+    { term: "AFA", def: "Agence française anticorruption." },
+    { term: "Délégation de pouvoirs", def: "Transfert par le chef d'entreprise d'une partie de ses pouvoirs, et de la responsabilité pénale correspondante, à un préposé compétent, doté d'autorité et de moyens." },
+  ],
+};

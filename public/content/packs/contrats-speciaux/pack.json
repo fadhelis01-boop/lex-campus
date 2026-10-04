@@ -1,0 +1,229 @@
+{
+ "id": "contrats-speciaux",
+ "version": "2026.10.1",
+ "title": "Contrats spéciaux de l'entreprise",
+ "branch": "Droit privé",
+ "icon": "📑",
+ "color": "#5b6b8c",
+ "order": 4,
+ "updatedAt": "2026-10-01",
+ "description": "Vente (délivrance, vices cachés, éviction), contrat d'entreprise et sous-traitance, mandat, prêt, dépôt ; réforme des contrats spéciaux en préparation.",
+ "modules": [
+  {
+   "id": "contrats-usuels",
+   "title": "Les contrats usuels",
+   "level": 2,
+   "summary": "Vente, prestation de services, mandat, prêt.",
+   "lessons": [
+    {
+     "id": "vente",
+     "title": "La vente : transfert, délivrance, vices cachés, éviction",
+     "duration": 16,
+     "src": "packs/contrats-speciaux/vente.md",
+     "objectives": [
+      "Choisir entre non-conformité et vice caché",
+      "Maîtriser les délais de la garantie",
+      "Aménager les garanties entre professionnels"
+     ],
+     "keyRefs": [
+      "Art. 1583 C. civ.",
+      "Art. 1196 C. civ.",
+      "Art. 1604 C. civ.",
+      "Art. 1626 C. civ.",
+      "Art. 1641 C. civ.",
+      "Art. 1644 C. civ.",
+      "Art. 1645 C. civ.",
+      "Art. 1648 C. civ."
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Une machine livrée avec une puissance inférieure à celle stipulée relève :",
+       "choices": [
+        "Des vices cachés",
+        "Du défaut de conformité",
+        "De la garantie d'éviction",
+        "De la lésion"
+       ],
+       "answer": 1,
+       "explain": "Chose différente de celle convenue."
+      },
+      {
+       "type": "qcm",
+       "q": "Depuis Cass. ch. mixte, 21 juill. 2023, le délai de l'art. 1648 est :",
+       "choices": [
+        "Un délai de forclusion",
+        "Un délai de prescription",
+        "Un délai préfix insusceptible d'interruption",
+        "Supprimé"
+       ],
+       "answer": 1,
+       "explain": "Et la garantie est enfermée dans le délai butoir de 20 ans (2232)."
+      },
+      {
+       "type": "vf",
+       "q": "Le vendeur professionnel est présumé connaître les vices de la chose vendue.",
+       "answer": true,
+       "explain": "Présomption irréfragable ; il doit tous dommages-intérêts (1645)."
+      },
+      {
+       "type": "qcm",
+       "q": "Les risques de la chose vendue sont transférés :",
+       "choices": [
+        "À la livraison toujours",
+        "Avec la propriété, sauf mise en demeure du vendeur ou clause contraire",
+        "Au paiement",
+        "À l'immatriculation"
+       ],
+       "answer": 1,
+       "explain": "Art. 1196 al. 3."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Conditions du vice caché ?",
+       "a": "Caché, antérieur à la vente, grave (rend la chose impropre à l'usage ou en diminue fortement l'usage)."
+      }
+     ]
+    },
+    {
+     "id": "services-mandat-pret",
+     "title": "Contrat d'entreprise, sous-traitance, mandat et prêt",
+     "duration": 14,
+     "src": "packs/contrats-speciaux/services-mandat-pret.md",
+     "objectives": [
+      "Qualifier une prestation",
+      "Engager un mandant sur l'apparence",
+      "Connaître la nature du prêt bancaire"
+     ],
+     "keyRefs": [
+      "Art. 1710 C. civ.",
+      "Art. 1165 C. civ.",
+      "Art. 1984 C. civ.",
+      "Art. 1153 à 1161 C. civ.",
+      "Art. 2004 C. civ.",
+      "Loi n° 75-1334 du 31 déc. 1975"
+     ],
+     "quiz": [
+      {
+       "type": "vf",
+       "q": "Le prêt consenti par un professionnel du crédit est un contrat réel.",
+       "answer": false,
+       "explain": "Consensuel (Civ. 1re, 28 mars 2000)."
+      },
+      {
+       "type": "qcm",
+       "q": "Le mandat apparent suppose que le tiers :",
+       "choices": [
+        "Ait vérifié les pouvoirs",
+        "Ait légitimement cru à l'étendue des pouvoirs",
+        "Soit commerçant",
+        "Ait payé"
+       ],
+       "answer": 1,
+       "explain": "Ass. plén., 13 déc. 1962 ; art. 1156."
+      },
+      {
+       "type": "qcm",
+       "q": "Le sous-traitant impayé dispose contre le maître de l'ouvrage :",
+       "choices": [
+        "D'aucune action",
+        "D'une action directe en paiement",
+        "D'une hypothèque légale",
+        "D'un privilège général"
+       ],
+       "answer": 1,
+       "explain": "Loi du 31 déc. 1975."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Mandat d'intérêt commun ?",
+       "a": "Mandat dans lequel mandant et mandataire ont un intérêt commun à l'opération ; révocation seulement pour juste motif ou cause contractuelle, à défaut indemnité."
+      }
+     ]
+    },
+    {
+     "id": "reforme-contrats-speciaux",
+     "title": "Le projet de réforme des contrats spéciaux",
+     "level": 3,
+     "objectives": [
+      "Connaître les grandes orientations de l'avant-projet",
+      "Suivre l'état d'avancement"
+     ],
+     "outline": [
+      "Genèse : la commission de 2020 et l'avant-projet de 2022",
+      "Vente : unification des garanties, sanctions",
+      "Contrats de services : un régime général nouveau",
+      "Mandat, prêt, dépôt : principales modifications",
+      "État des travaux et calendrier"
+     ]
+    }
+   ]
+  }
+ ],
+ "decisions": [
+  {
+   "id": "vices-caches-2023",
+   "name": "Délais de la garantie des vices cachés",
+   "court": "Cass. ch. mixte",
+   "date": "21 juillet 2023",
+   "topic": "Vente",
+   "solution": "Le délai biennal de l'art. 1648 est un délai de prescription ; la garantie est enfermée dans le délai butoir de 20 ans à compter de la vente (art. 2232).",
+   "scope": "Unification du régime des délais, y compris en matière commerciale.",
+   "status": "en vigueur"
+  },
+  {
+   "id": "mandat-apparent",
+   "name": "Banque canadienne nationale",
+   "court": "Cass. ass. plén.",
+   "date": "13 décembre 1962",
+   "topic": "Mandat apparent",
+   "solution": "Le mandant peut être engagé sur le fondement d'un mandat apparent si la croyance du tiers aux pouvoirs du mandataire est légitime, les circonstances l'autorisant à ne pas vérifier ces pouvoirs.",
+   "scope": "Théorie de l'apparence.",
+   "status": "codifié",
+   "statusNote": "Art. 1156 C. civ. (2016)."
+  },
+  {
+   "id": "pret-consensuel",
+   "name": "Prêt consenti par un professionnel du crédit",
+   "court": "Cass. civ. 1re",
+   "date": "28 mars 2000",
+   "topic": "Prêt",
+   "solution": "Le prêt consenti par un professionnel du crédit n'est pas un contrat réel.",
+   "scope": "Contrat consensuel, formé avant la remise des fonds.",
+   "status": "en vigueur"
+  }
+ ],
+ "reforms": [
+  {
+   "date": "2022-07-01",
+   "title": "Avant-projet de réforme des contrats spéciaux",
+   "summary": "Présenté par une commission d'experts ; non adopté à ce jour."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Action rédhibitoire",
+   "def": "Action par laquelle l'acheteur rend la chose et se fait restituer le prix (art. 1644)."
+  },
+  {
+   "term": "Action estimatoire",
+   "def": "Action par laquelle l'acheteur garde la chose et obtient une réduction du prix (art. 1644)."
+  },
+  {
+   "term": "Res perit domino",
+   "def": "La chose périt aux risques du propriétaire.",
+   "latin": true
+  },
+  {
+   "term": "Solo consensu",
+   "def": "Par le seul échange des consentements.",
+   "latin": true
+  },
+  {
+   "term": "Mandat apparent",
+   "def": "Engagement du mandant envers le tiers qui a légitimement cru aux pouvoirs du mandataire."
+  }
+ ]
+}

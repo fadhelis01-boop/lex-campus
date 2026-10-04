@@ -1,0 +1,99 @@
+const P = "packs/consommation/";
+
+export default {
+  id: "consommation",
+  version: "2026.10.1",
+  title: "Droit de la consommation",
+  branch: "Droit des affaires",
+  icon: "🛒",
+  color: "#2c7a7b",
+  order: 14,
+  updatedAt: "2026-10-01",
+  description: "Notions de consommateur et de professionnel, information, clauses abusives, pratiques commerciales, vente à distance, rétractation, garanties légales, crédit, action de groupe.",
+  modules: [
+    {
+      id: "fondamentaux",
+      title: "Les protections du consommateur",
+      level: 1,
+      summary: "Champ, information, clauses abusives, pratiques commerciales, vente à distance et garanties.",
+      lessons: [
+        {
+          id: "consommateur-protection",
+          title: "Consommateur, information, clauses abusives et pratiques commerciales",
+          duration: 15,
+          src: P + "consommateur-protection.md",
+          objectives: ["Déterminer le champ du droit de la consommation", "Contrôler une clause abusive", "Identifier une pratique commerciale déloyale"],
+          keyRefs: ["Article liminaire C. consom.", "Art. L. 111-1 C. consom.", "Art. L. 212-1 C. consom.", "Art. R. 212-1 C. consom.", "Art. L. 121-2 C. consom.", "Art. L. 612-1 C. consom."],
+          quiz: [
+            { type: "qcm", q: "Le non-professionnel est :", choices: ["Une personne physique", "Une personne morale qui n'agit pas à des fins professionnelles", "Un professionnel hors spécialité", "Un salarié"], answer: 1, explain: "Article liminaire." },
+            { type: "vf", q: "Le juge doit relever d'office le caractère abusif d'une clause.", answer: true, explain: "Jurisprudence de la CJUE, art. R. 632-1 C. consom." },
+            { type: "qcm", q: "Une clause de la liste noire est :", choices: ["Présumée abusive, preuve contraire possible", "Irréfragablement présumée abusive", "Valable entre professionnels", "Facultative"], answer: 1, explain: "Art. R. 212-1." },
+            { type: "qcm", q: "Sanction d'une clause abusive :", choices: ["Nullité du contrat", "Réputée non écrite", "Amende pénale seule", "Résolution"], answer: 1, explain: "Le contrat subsiste sans la clause s'il peut subsister." },
+          ],
+          flashcards: [{ q: "Prix de référence d'une annonce de réduction ?", a: "Le prix le plus bas pratiqué au cours des 30 jours précédant la réduction (directive Omnibus)." }],
+        },
+        {
+          id: "distance-garanties",
+          title: "Vente à distance, rétractation et garanties légales",
+          duration: 14,
+          src: P + "distance-garanties.md",
+          objectives: ["Mettre un site marchand en conformité", "Distinguer garantie de conformité et vices cachés"],
+          keyRefs: ["Art. L. 221-5 C. consom.", "Art. L. 221-18 C. consom.", "Art. L. 221-28 C. consom.", "Art. L. 217-3 C. consom.", "Art. 1641 C. civ.", "Art. 1648 C. civ."],
+          quiz: [
+            { type: "qcm", q: "Délai de rétractation d'un contrat à distance :", choices: ["7 jours", "14 jours", "30 jours", "Aucun"], answer: 1, explain: "Art. L. 221-18." },
+            { type: "qcm", q: "Faute d'information sur le droit de rétractation, le délai est prolongé de :", choices: ["14 jours", "3 mois", "12 mois", "2 ans"], answer: 2, explain: "Art. L. 221-20." },
+            { type: "qcm", q: "Durée de présomption d'antériorité du défaut de conformité pour un bien neuf :", choices: ["6 mois", "12 mois", "24 mois", "5 ans"], answer: 2, explain: "Depuis le 1er janvier 2022 (ord. 29 sept. 2021)." },
+            { type: "vf", q: "Le vendeur professionnel est présumé connaître les vices de la chose.", answer: true, explain: "Jurisprudence constante : il est tenu de tous dommages-intérêts (art. 1645)." },
+          ],
+          flashcards: [{ q: "Délai de l'action en garantie des vices cachés ?", a: "2 ans à compter de la découverte du vice (art. 1648), dans la limite du délai butoir." }],
+        },
+      ],
+    },
+    {
+      id: "credit-contentieux",
+      title: "Crédit et contentieux de la consommation",
+      level: 2,
+      summary: "Crédit à la consommation et immobilier, surendettement, action de groupe.",
+      lessons: [
+        {
+          id: "credit-consommation",
+          title: "Crédit à la consommation et crédit immobilier",
+          objectives: ["Connaître le formalisme protecteur du crédit", "Mesurer les sanctions (déchéance du droit aux intérêts)"],
+          outline: [
+            "Champ d'application et exclusions",
+            "Information précontractuelle, fiche standardisée, vérification de la solvabilité",
+            "Délai de rétractation (crédit conso) et délai de réflexion (crédit immobilier)",
+            "TAEG et sanctions : déchéance du droit aux intérêts",
+            "Prescription biennale et forclusion",
+            "Réforme du crédit à la consommation (directive (UE) 2023/2225) : calendrier de transposition",
+          ],
+          keyRefs: ["Art. L. 312-1 C. consom.", "Art. L. 313-1 C. consom.", "Art. R. 312-35 C. consom."],
+        },
+        {
+          id: "action-groupe-surendettement",
+          title: "Action de groupe et surendettement",
+          objectives: ["Situer l'action de groupe réformée en 2025", "Connaître la procédure de surendettement"],
+          outline: [
+            "Action de groupe : historique (2014), refonte de 2025 et directive (UE) 2020/1828",
+            "Qualité pour agir, phases, indemnisation",
+            "Surendettement des particuliers : commission, mesures, rétablissement personnel",
+            "Articulation avec les procédures collectives de l'entrepreneur",
+          ],
+        },
+      ],
+    },
+  ],
+  decisions: [],
+  reforms: [
+    { date: "2014-03-17", title: "Loi Hamon", summary: "Création de l'action de groupe en matière de consommation ; renforcement des pouvoirs de la DGCCRF." },
+    { date: "2016-07-01", title: "Recodification du code de la consommation", summary: "Ordonnance du 14 mars 2016 : nouvelle numérotation, article liminaire de définitions." },
+    { date: "2022-01-01", title: "Nouvelle garantie légale de conformité", summary: "Ordonnance du 29 sept. 2021 : biens numériques, présomption de 24 mois." },
+    { date: "2023-06-01", title: "Résiliation en trois clics", summary: "Fonctionnalité obligatoire de résiliation des contrats conclus par voie électronique (loi du 16 août 2022)." },
+  ],
+  glossary: [
+    { term: "Consommateur", def: "Personne physique agissant à des fins étrangères à son activité professionnelle." },
+    { term: "Clause abusive", def: "Clause créant au détriment du consommateur un déséquilibre significatif ; réputée non écrite." },
+    { term: "Droit de rétractation", def: "Faculté de revenir sur son engagement sans motif dans un délai légal (14 jours à distance)." },
+    { term: "Garantie de conformité", def: "Garantie légale de 2 ans due par le vendeur professionnel au consommateur." },
+  ],
+};

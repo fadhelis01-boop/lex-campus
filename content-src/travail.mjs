@@ -1,0 +1,105 @@
+const P = "packs/travail/";
+
+export default {
+  id: "travail",
+  version: "2026.10.1",
+  title: "Droit du travail de l'entreprise",
+  branch: "Droit des affaires",
+  icon: "👷",
+  color: "#4a6a2a",
+  order: 17,
+  updatedAt: "2026-10-01",
+  description: "Contrat de travail, clauses, transfert d'entreprise, temps de travail et congés ; ruptures et barème ; CSE et négociation collective — à jour des ordonnances de 2017 et des réformes récentes.",
+  modules: [
+    {
+      id: "contrat",
+      title: "Le contrat de travail",
+      level: 1,
+      summary: "Qualification, clauses, modification, transfert, temps de travail et congés.",
+      lessons: [
+        {
+          id: "contrat-execution",
+          title: "Formation et exécution du contrat de travail",
+          duration: 16,
+          src: P + "contrat-execution.md",
+          objectives: ["Qualifier un contrat de travail", "Rédiger une clause de non-concurrence valable", "Appliquer l'art. L. 1224-1"],
+          keyRefs: ["Art. L. 1221-1 C. trav.", "Art. L. 1222-6 C. trav.", "Art. L. 1224-1 C. trav.", "Art. L. 3141-5 C. trav."],
+          quiz: [
+            { type: "qcm", q: "Conditions de validité de la clause de non-concurrence :", choices: ["Limitée dans le temps uniquement", "Intérêts légitimes, limites de temps et d'espace, spécificités de l'emploi, contrepartie financière", "Simple accord écrit", "Uniquement pour les cadres"], answer: 1, explain: "Soc., 10 juill. 2002." },
+            { type: "vf", q: "La modification de la rémunération contractuelle peut être imposée au salarié.", answer: false, explain: "Modification du contrat : accord exprès requis." },
+            { type: "qcm", q: "En cas de cession d'une entité économique autonome, les contrats de travail :", choices: ["Prennent fin", "Sont transférés automatiquement au repreneur", "Sont transférés si le salarié l'accepte", "Sont suspendus"], answer: 1, explain: "Art. L. 1224-1, d'ordre public." },
+            { type: "qcm", q: "Depuis la loi du 22 avril 2024, l'arrêt maladie non professionnel ouvre droit à :", choices: ["Aucun congé", "2 jours ouvrables par mois, dans la limite de 24 jours par an", "2,5 jours par mois sans limite", "1 jour par mois"], answer: 1, explain: "Mise en conformité après Soc., 13 sept. 2023." },
+          ],
+          flashcards: [{ q: "Critère du lien de subordination ?", a: "Pouvoir de donner des ordres et directives, d'en contrôler l'exécution et de sanctionner les manquements (Soc., 13 nov. 1996)." }],
+        },
+      ],
+    },
+    {
+      id: "rupture",
+      title: "La rupture du contrat",
+      level: 2,
+      summary: "Licenciements, barème, rupture conventionnelle, délais.",
+      lessons: [
+        {
+          id: "rupture-contrat",
+          title: "Licenciements, barème et rupture conventionnelle",
+          duration: 20,
+          src: P + "rupture-contrat.md",
+          objectives: ["Conduire une procédure de licenciement", "Chiffrer le risque prud'homal", "Choisir le bon mode de rupture"],
+          keyRefs: ["Art. L. 1232-1 C. trav.", "Art. L. 1235-3 C. trav.", "Art. L. 1233-3 C. trav.", "Art. L. 1237-11 C. trav.", "Art. L. 1471-1 C. trav."],
+          quiz: [
+            { type: "qcm", q: "Le barème Macron a été jugé :", choices: ["Contraire à la convention OIT n° 158", "Compatible ; pas d'écart au cas par cas", "Applicable aux licenciements nuls", "Abrogé en 2022"], answer: 1, explain: "Soc., 11 mai 2022." },
+            { type: "qcm", q: "Délai de rétractation de la rupture conventionnelle :", choices: ["7 jours", "10 jours", "15 jours calendaires", "1 mois"], answer: 2, explain: "Art. L. 1237-13." },
+            { type: "qcm", q: "Délai pour contester un licenciement :", choices: ["2 mois", "12 mois", "2 ans", "5 ans"], answer: 1, explain: "Art. L. 1471-1." },
+            { type: "vf", q: "Les difficultés économiques s'apprécient au niveau mondial du groupe.", answer: false, explain: "Secteur d'activité commun aux entreprises du groupe établies en France (2017)." },
+            { type: "qcm", q: "Indemnité minimale en cas de licenciement nul :", choices: ["1 mois", "3 mois", "6 mois", "Le barème"], answer: 2, explain: "Art. L. 1235-3-1." },
+          ],
+          flashcards: [{ q: "PSE obligatoire quand ?", a: "Entreprise d'au moins 50 salariés, au moins 10 licenciements économiques sur 30 jours." }],
+        },
+      ],
+    },
+    {
+      id: "collectif",
+      title: "Relations collectives",
+      level: 2,
+      summary: "CSE, négociation collective, santé et sécurité.",
+      lessons: [
+        {
+          id: "cse-negociation",
+          title: "Le CSE et la négociation collective",
+          duration: 15,
+          src: P + "cse-negociation.md",
+          objectives: ["Intégrer la consultation du CSE dans une opération", "Articuler accords de branche et d'entreprise"],
+          keyRefs: ["Art. L. 2311-2 C. trav.", "Art. L. 2312-8 C. trav.", "Art. L. 2232-12 C. trav.", "Art. L. 2254-2 C. trav.", "Art. L. 4121-1 C. trav."],
+          quiz: [
+            { type: "qcm", q: "Seuil de mise en place du CSE :", choices: ["11 salariés", "20 salariés", "50 salariés", "250 salariés"], answer: 0, explain: "Pendant 12 mois consécutifs." },
+            { type: "vf", q: "Dans le bloc 3, l'accord d'entreprise prime même s'il est moins favorable que l'accord de branche.", answer: true, explain: "Ordonnances de 2017." },
+            { type: "qcm", q: "Pourquoi signe-t-on une promesse unilatérale d'achat avant la consultation du CSE ?", choices: ["Pour des raisons fiscales", "Parce que l'engagement ferme doit suivre la consultation", "Pour éviter le notaire", "C'est une obligation boursière"], answer: 1, explain: "Le défaut de consultation préalable expose au délit d'entrave." },
+          ],
+          flashcards: [{ q: "Validité d'un accord d'entreprise ?", a: "Signature par des syndicats représentatifs ayant > 50 % des suffrages, ou > 30 % + référendum." }],
+        },
+      ],
+    },
+  ],
+  decisions: [
+    { id: "non-concurrence-2002", name: "Contrepartie de la non-concurrence", court: "Cass. soc.", date: "10 juillet 2002", topic: "Clause de non-concurrence", solution: "La clause n'est licite que si elle est indispensable à la protection des intérêts légitimes de l'entreprise, limitée dans le temps et l'espace, tient compte des spécificités de l'emploi et comporte une contrepartie financière.", scope: "Conditions cumulatives toujours exigées.", status: "en vigueur" },
+    { id: "bareme-2022", name: "Barème Macron", court: "Cass. soc.", date: "11 mai 2022", number: "n° 21-14.490", topic: "Licenciement sans cause réelle et sérieuse", solution: "Le barème de l'art. L. 1235-3 est compatible avec la convention n° 158 de l'OIT et ne peut être écarté au cas par cas.", scope: "Sécurisation du barème.", status: "en vigueur" },
+    { id: "uber-2020", name: "Uber", court: "Cass. soc.", date: "4 mars 2020", number: "n° 19-13.316", topic: "Qualification du contrat de travail", solution: "Le chauffeur VTC qui intègre un service organisé par la plateforme, sans clientèle propre ni liberté de fixer ses tarifs, est lié par un contrat de travail.", scope: "Requalification des travailleurs de plateformes.", status: "en vigueur" },
+    { id: "conges-maladie-2023", name: "Congés payés et maladie", court: "Cass. soc.", date: "13 septembre 2023", topic: "Congés payés", solution: "Le salarié en arrêt maladie, même non professionnel, acquiert des droits à congés payés (art. 31 de la Charte des droits fondamentaux de l'UE).", scope: "Mise en conformité par la loi du 22 avril 2024.", status: "codifié", statusNote: "Loi n° 2024-364 du 22 avril 2024 (2 jours ouvrables par mois d'arrêt, plafond de 24 jours)." },
+    { id: "air-france-2015", name: "Air France", court: "Cass. soc.", date: "25 novembre 2015", topic: "Obligation de sécurité", solution: "Ne méconnaît pas son obligation de sécurité l'employeur qui justifie avoir pris toutes les mesures prévues par les art. L. 4121-1 et L. 4121-2 C. trav.", scope: "Fin de l'obligation de sécurité de résultat stricte.", status: "en vigueur" },
+  ],
+  reforms: [
+    { date: "2008-05-01", title: "Recodification du code du travail", summary: "Nouvelle numérotation (L. 1111-1 et s.)." },
+    { date: "2008-06-25", title: "Création de la rupture conventionnelle", summary: "Loi portant modernisation du marché du travail." },
+    { date: "2016-08-08", title: "Loi Travail", summary: "Primauté de l'accord d'entreprise en matière de durée du travail, nouvelle définition du motif économique." },
+    { date: "2017-09-22", title: "Ordonnances Macron", summary: "CSE, barème des indemnités, périmètre national du motif économique, rupture conventionnelle collective, accords de performance collective." },
+    { date: "2024-04-22", title: "Loi DDADUE : congés payés et maladie", summary: "Acquisition de congés pendant l'arrêt maladie, mise en conformité avec le droit de l'Union." },
+  ],
+  glossary: [
+    { term: "Lien de subordination", def: "Critère du contrat de travail : autorité de l'employeur qui donne des ordres, contrôle et sanctionne." },
+    { term: "PSE", def: "Plan de sauvegarde de l'emploi, obligatoire pour les grands licenciements économiques." },
+    { term: "RCC", def: "Rupture conventionnelle collective, départs volontaires par accord collectif." },
+    { term: "CSE", def: "Comité social et économique, instance unique de représentation du personnel." },
+    { term: "Délit d'entrave", def: "Infraction sanctionnant l'atteinte au fonctionnement régulier des instances représentatives." },
+  ],
+};

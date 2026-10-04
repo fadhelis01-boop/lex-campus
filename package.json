@@ -1,0 +1,33 @@
+{
+  "name": "lex-campus",
+  "version": "1.0.0",
+  "description": "LexCampus — remise à niveau en droit privé et droit des affaires",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/build-content.mjs && tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "content": "node scripts/build-content.mjs",
+    "deploy": "npm run build && node scripts/deploy.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.131.0",
+    "dompurify": "^3.4.16",
+    "marked": "^18.0.14",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/dompurify": "^3.0.5",
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.2"
+  },
+  "private": true
+}

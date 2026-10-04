@@ -1,0 +1,115 @@
+const P = "packs/suretes/";
+
+export default {
+  id: "suretes",
+  version: "2026.10.1",
+  title: "Droit des sûretés",
+  branch: "Droit privé",
+  icon: "🔐",
+  color: "#7a4e9c",
+  order: 3,
+  updatedAt: "2026-10-01",
+  description: "La réforme de 2021 : cautionnement unifié, garanties autonomes, sûretés réelles mobilières et immobilières, classement des créanciers.",
+  modules: [
+    {
+      id: "personnelles",
+      title: "Les sûretés personnelles",
+      level: 1,
+      summary: "Cautionnement après la réforme de 2021, garantie autonome, lettre d'intention.",
+      lessons: [
+        {
+          id: "cautionnement-2021",
+          title: "Le cautionnement après l'ordonnance du 15 septembre 2021",
+          duration: 22,
+          src: P + "cautionnement-2021.md",
+          objectives: ["Vérifier la validité d'un cautionnement", "Appliquer proportionnalité et mise en garde", "Connaître les droits de la caution"],
+          keyRefs: ["Art. 2288 C. civ.", "Art. 2297 C. civ.", "Art. 2298 C. civ.", "Art. 2299 C. civ.", "Art. 2300 C. civ.", "Art. 2302 C. civ.", "Art. 2303 C. civ.", "Art. 2314 C. civ.", "Ord. n° 2021-1192 du 15 sept. 2021"],
+          quiz: [
+            { type: "qcm", q: "La réforme du cautionnement s'applique aux cautionnements conclus à compter du :", choices: ["1er octobre 2016", "15 septembre 2021", "1er janvier 2022", "1er janvier 2023"], answer: 2, explain: "Ordonnance du 15 sept. 2021, entrée en vigueur le 1er janvier 2022." },
+            { type: "qcm", q: "Sanction d'un cautionnement manifestement disproportionné souscrit par une personne physique envers un créancier professionnel :", choices: ["Nullité", "Déchéance totale", "Réduction au montant à hauteur duquel la caution pouvait s'engager", "Aucune"], answer: 2, explain: "Art. 2300." },
+            { type: "vf", q: "La mention de l'art. 2297 doit obligatoirement être manuscrite.", answer: false, explain: "Elle est apposée par la caution elle-même, y compris sous forme électronique." },
+            { type: "qcm", q: "Depuis 2022, la caution peut opposer au créancier :", choices: ["Seulement les exceptions inhérentes à la dette", "Toutes les exceptions, personnelles ou inhérentes à la dette, du débiteur", "Aucune exception", "Seulement la prescription"], answer: 1, explain: "Art. 2298, revirement par rapport à Cass. ch. mixte, 8 juin 2007." },
+            { type: "qcm", q: "Défaut de mise en garde (art. 2299) :", choices: ["Nullité du cautionnement", "Déchéance du créancier à hauteur du préjudice de la caution", "Déchéance des intérêts", "Amende"], answer: 1, explain: "Art. 2299 al. 2." },
+            { type: "vf", q: "La caution personne physique peut être poursuivie pendant la période d'observation d'une sauvegarde.", answer: false, explain: "Suspension des poursuites (art. L. 622-28)." },
+          ],
+          flashcards: [
+            { q: "Contenu de la mention (2297) ?", a: "Engagement de payer ce que doit le débiteur en cas de défaillance, dans la limite d'un montant en principal et accessoires en lettres et en chiffres ; renonciation aux bénéfices de discussion/division si solidaire." },
+            { q: "Information annuelle de la caution (2302) : sanction ?", a: "Déchéance des intérêts et pénalités échus depuis la précédente information." },
+            { q: "Bénéfice de subrogation (2314) ?", a: "La caution est déchargée à concurrence du préjudice causé par la faute du créancier qui a empêché la subrogation." },
+          ],
+        },
+        {
+          id: "garanties-autonomes-suretes-reelles",
+          title: "Garanties autonomes, lettres d'intention et sûretés réelles mobilières",
+          duration: 18,
+          src: P + "garanties-autonomes-suretes-reelles.md",
+          objectives: ["Distinguer garantie autonome et cautionnement", "Choisir la sûreté mobilière adaptée", "Mesurer l'efficacité de la propriété-sûreté"],
+          keyRefs: ["Art. 2321 C. civ.", "Art. 2322 C. civ.", "Art. 2333 C. civ.", "Art. 2348 C. civ.", "Art. 2355 C. civ.", "Art. 2367 C. civ.", "Art. 2373 C. civ.", "Art. 2286 C. civ."],
+          quiz: [
+            { type: "qcm", q: "Le garant autonome peut refuser de payer :", choices: ["Si le débiteur conteste la dette", "En cas d'abus ou de fraude manifestes du bénéficiaire", "S'il a changé d'avis", "Jamais"], answer: 1, explain: "Art. 2321 al. 2." },
+            { type: "qcm", q: "Délai de revendication des biens vendus avec réserve de propriété en procédure collective :", choices: ["1 mois", "3 mois après la publication du jugement d'ouverture", "6 mois", "1 an"], answer: 1, explain: "Art. L. 624-9 C. com." },
+            { type: "vf", q: "La réforme de 2021 a créé la cession de créance à titre de garantie.", answer: true, explain: "Art. 2373 s." },
+            { type: "qcm", q: "Le pacte commissoire permet :", choices: ["La vente forcée", "L'attribution conventionnelle de la propriété du bien au créancier", "La saisie", "La rétention"], answer: 1, explain: "Art. 2348 (avec évaluation)." },
+          ],
+          flashcards: [
+            { q: "Lettre d'intention (2322) ?", a: "Engagement de faire ou de ne pas faire ayant pour objet le soutien apporté à un débiteur ; obligation de moyens ou de résultat selon la rédaction." },
+          ],
+        },
+      ],
+    },
+    {
+      id: "reelles",
+      title: "Sûretés immobilières et classement",
+      level: 2,
+      summary: "Hypothèques, nouveautés de 2021, ordre des créanciers.",
+      lessons: [
+        {
+          id: "suretes-immobilieres-classement",
+          title: "Hypothèques et classement des créanciers",
+          duration: 14,
+          src: P + "suretes-immobilieres-classement.md",
+          objectives: ["Connaître les hypothèques et leurs effets", "Comprendre l'ordre de paiement en liquidation"],
+          keyRefs: ["Art. 2393 C. civ.", "Art. L. 643-8 C. com.", "Art. L. 611-11 C. com."],
+          quiz: [
+            { type: "qcm", q: "Les anciens privilèges du vendeur d'immeuble et du prêteur de deniers sont devenus :", choices: ["Des gages", "Des hypothèques légales spéciales", "Des privilèges généraux", "Ils ont disparu"], answer: 1, explain: "Réforme de 2021." },
+            { type: "vf", q: "L'hypothèque rechargeable a été réintroduite en 2021.", answer: true, explain: "Après sa suppression par la loi Hamon de 2014." },
+            { type: "qcm", q: "Qui est payé en premier en liquidation judiciaire ?", choices: ["Le Trésor", "Les salariés (superprivilège)", "La banque hypothécaire", "Les chirographaires"], answer: 1, explain: "Superprivilège des salaires." },
+          ],
+          flashcards: [{ q: "Effets de l'hypothèque ?", a: "Droit de préférence et droit de suite." }],
+        },
+        {
+          id: "suretes-pratique-financement",
+          title: "Les sûretés dans le financement d'entreprise : montages et choix",
+          level: 3,
+          objectives: ["Construire le package de sûretés d'un financement", "Anticiper le sort des sûretés en procédure collective"],
+          outline: [
+            "Financement d'acquisition (LBO) : nantissement des titres, garanties de la holding",
+            "Financement immobilier : hypothèque, cession Dailly des loyers",
+            "Financement court terme : nantissement de stocks, de créances, affacturage",
+            "Sort des sûretés en sauvegarde, redressement et liquidation",
+            "Fiducie-sûreté et agent des sûretés (art. 2488-6 C. civ.)",
+          ],
+        },
+      ],
+    },
+  ],
+  decisions: [
+    { id: "exceptions-caution-2007", name: "Exceptions purement personnelles", court: "Cass. ch. mixte", date: "8 juin 2007", topic: "Cautionnement", solution: "La caution ne peut opposer au créancier la nullité relative tirée du dol affectant le consentement du débiteur principal, exception purement personnelle.", scope: "Restriction des exceptions opposables par la caution.", status: "abandonné", statusNote: "L'art. 2298 (2021) permet d'opposer toutes les exceptions, personnelles ou inhérentes à la dette." },
+    { id: "mise-en-garde-2007", name: "Devoir de mise en garde du banquier", court: "Cass. ch. mixte", date: "29 juin 2007", topic: "Crédit et cautionnement", solution: "Le banquier dispensateur de crédit est tenu d'un devoir de mise en garde envers l'emprunteur non averti, au regard de ses capacités financières et des risques de l'endettement.", scope: "Devoir de mise en garde des emprunteurs et cautions non averties.", status: "codifié", statusNote: "Pour la caution : art. 2299 C. civ. (2021)." },
+  ],
+  reforms: [
+    { date: "2006-03-23", title: "Première réforme des sûretés", summary: "Ordonnance n° 2006-346 : création du Livre IV du Code civil, gage sans dépossession, pacte commissoire, hypothèque rechargeable, garantie autonome et lettre d'intention." },
+    { date: "2007-02-19", title: "Création de la fiducie", summary: "Loi n° 2007-211 : fiducie (art. 2011 s.), y compris à titre de garantie." },
+    { date: "2022-01-01", title: "Réforme du droit des sûretés", summary: "Ord. n° 2021-1192 du 15 sept. 2021 : cautionnement unifié dans le Code civil, nouvelles sûretés (cession de créance à titre de garantie), simplification des privilèges." },
+  ],
+  glossary: [
+    { term: "Cautionnement", def: "Contrat par lequel une caution s'oblige envers le créancier à payer la dette du débiteur en cas de défaillance de celui-ci (art. 2288)." },
+    { term: "Bénéfice de discussion", def: "Droit de la caution simple d'exiger que le créancier poursuive d'abord le débiteur." },
+    { term: "Bénéfice de division", def: "Droit de la caution, en présence de cofidéjusseurs, de n'être poursuivie que pour sa part." },
+    { term: "Garantie autonome", def: "Engagement de payer une somme à première demande ou suivant des modalités convenues, sans pouvoir opposer les exceptions de l'obligation garantie (art. 2321)." },
+    { term: "Pacte commissoire", def: "Clause attribuant au créancier la propriété du bien grevé en cas de défaillance (art. 2348, 2459)." },
+    { term: "Droit de suite", def: "Prérogative du créancier hypothécaire de saisir l'immeuble entre les mains d'un tiers acquéreur." },
+    { term: "Fiducie-sûreté", def: "Transfert de propriété de biens à un fiduciaire en garantie d'une créance." },
+    { term: "New money", def: "Financement nouveau apporté en conciliation ou en procédure, assorti d'un privilège de paiement." },
+  ],
+};

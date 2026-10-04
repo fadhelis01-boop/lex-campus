@@ -1,0 +1,187 @@
+{
+ "id": "patrimoine",
+ "version": "2026.10.1",
+ "title": "Patrimoine du dirigeant et transmission d'entreprise",
+ "branch": "Droit privé",
+ "icon": "🏡",
+ "color": "#7a6a55",
+ "order": 5,
+ "updatedAt": "2026-10-01",
+ "description": "Régimes matrimoniaux et entreprise, conjoint du chef d'entreprise, réserve héréditaire, donation-partage, RAAR, mandat à effet posthume, montages de transmission.",
+ "modules": [
+  {
+   "id": "famille-entreprise",
+   "title": "Famille et entreprise",
+   "level": 2,
+   "summary": "Régimes matrimoniaux, conjoint, divorce ; successions et transmission.",
+   "lessons": [
+    {
+     "id": "couple-entreprise",
+     "title": "Régimes matrimoniaux et entreprise",
+     "duration": 15,
+     "src": "packs/patrimoine/couple-entreprise.md",
+     "objectives": [
+      "Qualifier les titres et le fonds au regard du régime",
+      "Conseiller le choix d'un régime"
+     ],
+     "keyRefs": [
+      "Art. 1401 C. civ.",
+      "Art. 1421 C. civ.",
+      "Art. 1424 C. civ.",
+      "Art. 1832-2 C. civ.",
+      "Art. 1397 C. civ.",
+      "Art. L. 121-4 C. com."
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Parts de SARL acquises pendant le mariage avec des fonds communs :",
+       "choices": [
+        "Propres en valeur et en qualité",
+        "Valeur commune, qualité d'associé à l'époux acquéreur",
+        "Communes en tout",
+        "Indivises"
+       ],
+       "answer": 1,
+       "explain": "Art. 1832-2 ; revendication possible du conjoint."
+      },
+      {
+       "type": "vf",
+       "q": "L'aliénation d'un fonds de commerce commun exige le consentement des deux époux.",
+       "answer": true,
+       "explain": "Art. 1424."
+      },
+      {
+       "type": "qcm",
+       "q": "Depuis 2019, le changement de régime matrimonial :",
+       "choices": [
+        "Exige toujours une homologation",
+        "N'exige plus de délai de 2 ans ni d'homologation systématique en présence d'enfants mineurs",
+        "Est interdit avec enfants",
+        "Se fait au greffe"
+       ],
+       "answer": 1,
+       "explain": "Loi du 23 mars 2019."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Statuts du conjoint travaillant dans l'entreprise ?",
+       "a": "Collaborateur, salarié ou associé (art. L. 121-4 C. com.) ; collaborateur limité à 5 ans."
+      }
+     ]
+    },
+    {
+     "id": "transmission-entreprise",
+     "title": "Transmettre l'entreprise : réserve, donation-partage, outils de 2006",
+     "duration": 16,
+     "src": "packs/patrimoine/transmission-entreprise.md",
+     "objectives": [
+      "Mesurer la contrainte de la réserve",
+      "Utiliser donation-partage, RAAR, mandat posthume",
+      "Combiner avec la fiscalité"
+     ],
+     "keyRefs": [
+      "Art. 913 C. civ.",
+      "Art. 929 C. civ.",
+      "Art. 812 C. civ.",
+      "Art. 1075-1 C. civ.",
+      "Art. 1075-2 C. civ.",
+      "Art. 669 CGI",
+      "Art. 779 CGI"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Réserve des enfants avec deux enfants :",
+       "choices": [
+        "1/2",
+        "2/3",
+        "3/4",
+        "1/3"
+       ],
+       "answer": 1,
+       "explain": "Art. 913."
+      },
+      {
+       "type": "qcm",
+       "q": "Dans une donation-partage, les biens sont évalués pour la réserve :",
+       "choices": [
+        "Au décès",
+        "Au jour de la donation (si conditions réunies)",
+        "Au jour du partage",
+        "Au jour de la vente"
+       ],
+       "answer": 1,
+       "explain": "Art. 1078."
+      },
+      {
+       "type": "vf",
+       "q": "La donation-partage peut attribuer l'entreprise à un tiers repreneur non héritier.",
+       "answer": true,
+       "explain": "Art. 1075-2."
+      },
+      {
+       "type": "qcm",
+       "q": "La RAAR permet à un héritier réservataire de :",
+       "choices": [
+        "Renoncer à la succession",
+        "Renoncer par avance à l'action en réduction contre une libéralité",
+        "Céder ses droits",
+        "Refuser un legs"
+       ],
+       "answer": 1,
+       "explain": "Art. 929 s. (2006)."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Mandat à effet posthume ?",
+       "a": "Mandat donné de son vivant pour administrer tout ou partie de la succession (art. 812), justifié par un intérêt sérieux et légitime."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "decisions": [],
+ "reforms": [
+  {
+   "date": "2007-01-01",
+   "title": "Réforme des successions et des libéralités",
+   "summary": "Loi du 23 juin 2006 : donation-partage transgénérationnelle et avec tiers, RAAR, mandat à effet posthume, réduction en valeur."
+  },
+  {
+   "date": "2019-03-23",
+   "title": "Changement de régime matrimonial facilité",
+   "summary": "Suppression du délai de 2 ans et de l'homologation systématique."
+  },
+  {
+   "date": "2021-08-24",
+   "title": "Prélèvement compensatoire",
+   "summary": "Protection de la réserve face à une loi successorale étrangère qui l'ignore."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Réserve héréditaire",
+   "def": "Part des biens dont la loi assure la dévolution à certains héritiers (descendants, à défaut conjoint)."
+  },
+  {
+   "term": "Quotité disponible",
+   "def": "Part des biens dont on peut disposer librement par libéralités."
+  },
+  {
+   "term": "Donation-partage",
+   "def": "Libéralité-partage par laquelle un ascendant distribue et partage ses biens entre ses héritiers présomptifs (et des tiers pour l'entreprise)."
+  },
+  {
+   "term": "RAAR",
+   "def": "Renonciation anticipée à l'action en réduction (art. 929 C. civ.)."
+  },
+  {
+   "term": "Récompense",
+   "def": "Indemnité rétablissant l'équilibre entre la masse commune et les masses propres."
+  }
+ ]
+}

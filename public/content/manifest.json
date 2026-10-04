@@ -1,0 +1,126 @@
+{
+ "version": "2026.10.1",
+ "updatedAt": "2026-10-04",
+ "packs": [
+  {
+   "id": "bancaire",
+   "file": "packs/bancaire/pack.json",
+   "version": "2026.10.1",
+   "title": "Droit bancaire et financier"
+  },
+  {
+   "id": "commercial",
+   "file": "packs/commercial/pack.json",
+   "version": "2026.10.1",
+   "title": "Droit commercial général"
+  },
+  {
+   "id": "compliance",
+   "file": "packs/compliance/pack.json",
+   "version": "2026.10.1",
+   "title": "Compliance, données et RSE"
+  },
+  {
+   "id": "concurrence",
+   "file": "packs/concurrence/pack.json",
+   "version": "2026.10.1",
+   "title": "Concurrence et distribution"
+  },
+  {
+   "id": "consommation",
+   "file": "packs/consommation/pack.json",
+   "version": "2026.10.1",
+   "title": "Droit de la consommation"
+  },
+  {
+   "id": "contentieux",
+   "file": "packs/contentieux/pack.json",
+   "version": "2026.10.1",
+   "title": "Contentieux, arbitrage et international"
+  },
+  {
+   "id": "contrats",
+   "file": "packs/contrats/pack.json",
+   "version": "2026.10.1",
+   "title": "Droit des contrats et des obligations"
+  },
+  {
+   "id": "contrats-speciaux",
+   "file": "packs/contrats-speciaux/pack.json",
+   "version": "2026.10.1",
+   "title": "Contrats spéciaux de l'entreprise"
+  },
+  {
+   "id": "difficultes",
+   "file": "packs/difficultes/pack.json",
+   "version": "2026.10.1",
+   "title": "Entreprises en difficulté"
+  },
+  {
+   "id": "droit-public",
+   "file": "packs/droit-public/pack.json",
+   "version": "2026.10.1",
+   "title": "Droit public pour le juriste d'affaires"
+  },
+  {
+   "id": "fiscal",
+   "file": "packs/fiscal/pack.json",
+   "version": "2026.10.1",
+   "title": "Fiscalité des affaires"
+  },
+  {
+   "id": "methodologie",
+   "file": "packs/methodologie/pack.json",
+   "version": "2026.10.1",
+   "title": "Méthodologie juridique"
+  },
+  {
+   "id": "patrimoine",
+   "file": "packs/patrimoine/pack.json",
+   "version": "2026.10.1",
+   "title": "Patrimoine du dirigeant et transmission d'entreprise"
+  },
+  {
+   "id": "penal",
+   "file": "packs/penal/pack.json",
+   "version": "2026.10.1",
+   "title": "Droit pénal des affaires"
+  },
+  {
+   "id": "pi",
+   "file": "packs/pi/pack.json",
+   "version": "2026.10.1",
+   "title": "Propriété intellectuelle et secret des affaires"
+  },
+  {
+   "id": "responsabilite",
+   "file": "packs/responsabilite/pack.json",
+   "version": "2026.10.1",
+   "title": "Responsabilité civile et quasi-contrats"
+  },
+  {
+   "id": "societes",
+   "file": "packs/societes/pack.json",
+   "version": "2026.10.1",
+   "title": "Droit des sociétés"
+  },
+  {
+   "id": "suretes",
+   "file": "packs/suretes/pack.json",
+   "version": "2026.10.1",
+   "title": "Droit des sûretés"
+  },
+  {
+   "id": "travail",
+   "file": "packs/travail/pack.json",
+   "version": "2026.10.1",
+   "title": "Droit du travail de l'entreprise"
+  }
+ ],
+ "changelog": [
+  {
+   "date": "2026-10-04",
+   "text": "Première version : 19 domaines, méthodologie complète, grands arrêts, réformes depuis 2006."
+  }
+ ]
+}

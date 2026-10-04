@@ -1,0 +1,220 @@
+{
+ "id": "compliance",
+ "version": "2026.10.1",
+ "title": "Compliance, données et RSE",
+ "branch": "Droit des affaires",
+ "icon": "🛡️",
+ "color": "#2a6f5b",
+ "order": 20,
+ "updatedAt": "2026-10-01",
+ "description": "Anticorruption (Sapin II), lanceurs d'alerte, devoir de vigilance, CSRD et CS3D ; RGPD, DSA/DMA, Data Act, règlement sur l'IA.",
+ "modules": [
+  {
+   "id": "conformite",
+   "title": "Conformité et responsabilité sociétale",
+   "level": 2,
+   "summary": "Programmes de conformité, alerte, vigilance, durabilité.",
+   "lessons": [
+    {
+     "id": "anticorruption-vigilance-durabilite",
+     "title": "Sapin II, lanceurs d'alerte, devoir de vigilance, CSRD",
+     "duration": 16,
+     "src": "packs/compliance/anticorruption-vigilance-durabilite.md",
+     "objectives": [
+      "Identifier les entreprises assujetties",
+      "Construire un programme de conformité",
+      "Suivre la trajectoire européenne"
+     ],
+     "keyRefs": [
+      "Art. 17 L. n° 2016-1691 (Sapin II)",
+      "L. n° 2022-401 du 21 mars 2022",
+      "Art. L. 225-102-4 C. com.",
+      "Ord. n° 2023-1142 du 6 déc. 2023",
+      "Dir. (UE) 2024/1760"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Seuils de l'art. 17 Sapin II :",
+       "choices": [
+        "50 salariés et 10 M€",
+        "500 salariés et CA > 100 M€",
+        "5 000 salariés",
+        "250 salariés et 50 M€"
+       ],
+       "answer": 1,
+       "explain": "Huit mesures obligatoires."
+      },
+      {
+       "type": "qcm",
+       "q": "Seuil du devoir de vigilance (périmètre France) :",
+       "choices": [
+        "500 salariés",
+        "1 000 salariés",
+        "5 000 salariés",
+        "10 000 salariés"
+       ],
+       "answer": 2,
+       "explain": "10 000 avec les filiales étrangères."
+      },
+      {
+       "type": "vf",
+       "q": "Le lanceur d'alerte doit obligatoirement signaler d'abord en interne.",
+       "answer": false,
+       "explain": "Loi Waserman : libre choix interne / externe."
+      },
+      {
+       "type": "qcm",
+       "q": "Juridiction compétente pour le devoir de vigilance :",
+       "choices": [
+        "Tribunal de commerce du siège",
+        "Tribunal judiciaire de Paris",
+        "Conseil d'État",
+        "Cour d'appel de Versailles"
+       ],
+       "answer": 1,
+       "explain": "Loi du 22 déc. 2021."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Les huit mesures Sapin II ?",
+       "a": "Code de conduite, alerte interne, cartographie, évaluation des tiers, contrôles comptables, formation, régime disciplinaire, contrôle interne."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "numerique",
+   "title": "Données et numérique",
+   "level": 2,
+   "summary": "RGPD, DSA, DMA, Data Act, AI Act.",
+   "lessons": [
+    {
+     "id": "donnees-numerique-ia",
+     "title": "RGPD, régulation des plateformes, Data Act et AI Act",
+     "duration": 16,
+     "src": "packs/compliance/donnees-numerique-ia.md",
+     "objectives": [
+      "Mettre un traitement en conformité RGPD",
+      "Situer les obligations de l'AI Act"
+     ],
+     "keyRefs": [
+      "Règl. (UE) 2016/679 (RGPD)",
+      "Règl. (UE) 2022/2065 (DSA)",
+      "Règl. (UE) 2022/1925 (DMA)",
+      "Règl. (UE) 2023/2854 (Data Act)",
+      "Règl. (UE) 2024/1689 (AI Act)"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Délai de notification d'une violation de données à la CNIL :",
+       "choices": [
+        "24 heures",
+        "72 heures",
+        "15 jours",
+        "1 mois"
+       ],
+       "answer": 1,
+       "explain": "Art. 33 RGPD."
+      },
+      {
+       "type": "qcm",
+       "q": "Sanction maximale RGPD :",
+       "choices": [
+        "1 M€",
+        "4 % du CA mondial ou 20 M€",
+        "10 % du CA",
+        "35 M€"
+       ],
+       "answer": 1,
+       "explain": "Art. 83."
+      },
+      {
+       "type": "qcm",
+       "q": "Les pratiques d'IA interdites s'appliquent depuis :",
+       "choices": [
+        "1er août 2024",
+        "2 février 2025",
+        "2 août 2026",
+        "2027"
+       ],
+       "answer": 1,
+       "explain": "AI Act."
+      },
+      {
+       "type": "vf",
+       "q": "L'intérêt légitime est une base légale de traitement.",
+       "answer": true,
+       "explain": "Art. 6, 1, f."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Principes du RGPD (art. 5) ?",
+       "a": "Licéité-loyauté-transparence, limitation des finalités, minimisation, exactitude, limitation de la conservation, intégrité-confidentialité, responsabilité."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "decisions": [],
+ "reforms": [
+  {
+   "date": "2016-12-09",
+   "title": "Loi Sapin II",
+   "summary": "Programmes anticorruption, AFA, CJIP."
+  },
+  {
+   "date": "2017-03-27",
+   "title": "Loi sur le devoir de vigilance",
+   "summary": "Plan de vigilance des grandes entreprises (art. L. 225-102-4 C. com.)."
+  },
+  {
+   "date": "2018-05-25",
+   "title": "Application du RGPD",
+   "summary": "Nouveau cadre européen de protection des données."
+  },
+  {
+   "date": "2022-03-21",
+   "title": "Loi Waserman",
+   "summary": "Protection renforcée des lanceurs d'alerte."
+  },
+  {
+   "date": "2023-12-06",
+   "title": "Transposition de la CSRD",
+   "summary": "Ordonnance n° 2023-1142 : rapport de durabilité."
+  },
+  {
+   "date": "2024-08-01",
+   "title": "Entrée en vigueur de l'AI Act",
+   "summary": "Application échelonnée de 2025 à 2027."
+  },
+  {
+   "date": "2025-04-14",
+   "title": "Omnibus « stop-the-clock »",
+   "summary": "Report de l'application de la CSRD pour les vagues suivantes et de la CS3D ; révision du contenu en cours."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Accountability",
+   "def": "Principe de responsabilité du RGPD : être capable de démontrer la conformité."
+  },
+  {
+   "term": "Plan de vigilance",
+   "def": "Mesures de vigilance raisonnable des grandes entreprises sur leurs activités, filiales et chaîne d'approvisionnement."
+  },
+  {
+   "term": "Lanceur d'alerte",
+   "def": "Personne physique qui signale de bonne foi, sans contrepartie directe, des informations sur une violation ou une menace pour l'intérêt général."
+  },
+  {
+   "term": "ESRS",
+   "def": "Normes européennes d'information en matière de durabilité de la CSRD."
+  }
+ ]
+}

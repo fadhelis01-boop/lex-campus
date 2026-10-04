@@ -1,0 +1,282 @@
+{
+ "id": "droit-public",
+ "version": "2026.10.1",
+ "title": "Droit public pour le juriste d'affaires",
+ "branch": "Droit public",
+ "icon": "🏛️",
+ "color": "#3b6ea8",
+ "order": 30,
+ "updatedAt": "2026-10-01",
+ "description": "Contrats publics, droit administratif général, droit constitutionnel et QPC, droit public économique. Programme complet ; leçons rédigées à la demande par l'assistant.",
+ "modules": [
+  {
+   "id": "contrats-publics",
+   "title": "La commande publique",
+   "level": 2,
+   "summary": "Contrats administratifs, marchés, concessions, contentieux.",
+   "lessons": [
+    {
+     "id": "contrats-publics",
+     "title": "Contrats publics : qualification, régime, contentieux",
+     "duration": 16,
+     "src": "packs/droit-public/contrats-publics.md",
+     "objectives": [
+      "Qualifier un contrat administratif",
+      "Connaître les prérogatives et droits des parties",
+      "Choisir la voie contentieuse"
+     ],
+     "keyRefs": [
+      "Code de la commande publique, art. L. 6",
+      "Art. L. 551-1 CJA",
+      "Art. L. 551-13 CJA"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Le code de la commande publique est entré en vigueur le :",
+       "choices": [
+        "1er janvier 2016",
+        "1er avril 2019",
+        "1er octobre 2016",
+        "1er janvier 2022"
+       ],
+       "answer": 1,
+       "explain": "Ordonnance et décret de 2018."
+      },
+      {
+       "type": "qcm",
+       "q": "Le recours des tiers contre la validité d'un contrat administratif est issu de :",
+       "choices": [
+        "Béziers I",
+        "Tarn-et-Garonne (CE, ass., 4 avr. 2014)",
+        "Bertin",
+        "Gaz de Bordeaux"
+       ],
+       "answer": 1,
+       "explain": "Tiers lésés de façon suffisamment directe et certaine."
+      },
+      {
+       "type": "vf",
+       "q": "La concession se distingue du marché par le transfert d'un risque d'exploitation.",
+       "answer": true,
+       "explain": "Critère essentiel de la concession."
+      },
+      {
+       "type": "qcm",
+       "q": "La résiliation pour motif d'intérêt général ouvre droit :",
+       "choices": [
+        "À rien",
+        "À une indemnisation du cocontractant (sauf stipulation contraire)",
+        "À la nullité du contrat",
+        "À une amende"
+       ],
+       "answer": 1,
+       "explain": "Règle générale des contrats administratifs."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Critère matériel du contrat administratif (TC 2014) ?",
+       "a": "Participation à l'exécution du service public, ou clause qui implique, dans l'intérêt général, que le contrat relève du régime exorbitant."
+      },
+      {
+       "q": "Fait du prince ?",
+       "a": "Mesure de l'autorité contractante aggravant les charges du cocontractant ; indemnisation intégrale."
+      }
+     ]
+    },
+    {
+     "id": "passation-marches",
+     "title": "Passation des marchés publics : procédures et seuils",
+     "objectives": [
+      "Choisir la procédure adaptée",
+      "Préparer une candidature et une offre"
+     ],
+     "outline": [
+      "Seuils européens et procédure adaptée",
+      "Appel d'offres, procédure avec négociation, dialogue compétitif",
+      "Critères d'attribution et offre économiquement la plus avantageuse",
+      "Offres anormalement basses",
+      "Exclusions et sous-traitance"
+     ],
+     "keyRefs": [
+      "Code de la commande publique"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "administratif",
+   "title": "Droit administratif général",
+   "level": 1,
+   "summary": "Organisation administrative, actes, recours, responsabilité.",
+   "lessons": [
+    {
+     "id": "organisation-administrative",
+     "title": "L'organisation administrative et les sources du droit administratif",
+     "objectives": [
+      "Situer l'État, les collectivités et les établissements publics",
+      "Hiérarchiser les sources"
+     ],
+     "outline": [
+      "Centralisation, déconcentration, décentralisation",
+      "Établissements publics et autorités administratives indépendantes",
+      "Sources : Constitution, conventions, lois, principes généraux du droit, règlements",
+      "Le Conseil d'État, juge et conseiller"
+     ]
+    },
+    {
+     "id": "acte-administratif",
+     "title": "L'acte administratif unilatéral",
+     "objectives": [
+      "Distinguer actes réglementaires et individuels",
+      "Connaître les règles d'entrée en vigueur et de retrait"
+     ],
+     "outline": [
+      "Notion et catégories",
+      "Code des relations entre le public et l'administration (CRPA)",
+      "Retrait et abrogation",
+      "Silence vaut acceptation (principe de 2013) et exceptions"
+     ]
+    },
+    {
+     "id": "recours-contentieux",
+     "title": "Le contentieux administratif : REP, plein contentieux, référés",
+     "objectives": [
+      "Choisir le recours",
+      "Utiliser les référés administratifs"
+     ],
+     "outline": [
+      "Recours pour excès de pouvoir : cas d'ouverture",
+      "Plein contentieux",
+      "Référé-suspension, référé-liberté",
+      "Délais de recours et jurisprudence Czabaj (délai raisonnable d'un an)",
+      "Modulation dans le temps des annulations (AC !, 2004)"
+     ]
+    },
+    {
+     "id": "responsabilite-administrative",
+     "title": "La responsabilité administrative",
+     "objectives": [
+      "Engager la responsabilité d'une personne publique"
+     ],
+     "outline": [
+      "Blanco (TC, 1873) et autonomie",
+      "Responsabilité pour faute",
+      "Responsabilité sans faute : risque, rupture d'égalité devant les charges publiques",
+      "Responsabilité du fait des lois et des conventions"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "constitutionnel-economique",
+   "title": "Droit constitutionnel et droit public économique",
+   "level": 3,
+   "summary": "QPC, libertés économiques, aides d'État, régulation.",
+   "lessons": [
+    {
+     "id": "qpc-libertes-economiques",
+     "title": "La QPC et les libertés économiques",
+     "objectives": [
+      "Mettre en œuvre une QPC dans un litige d'affaires"
+     ],
+     "outline": [
+      "Procédure de la QPC depuis 2010 : filtres, conditions",
+      "Liberté d'entreprendre, droit de propriété, liberté contractuelle",
+      "Exemples de censures en droit des affaires",
+      "Effets dans le temps des décisions"
+     ]
+    },
+    {
+     "id": "aides-etat-sieg",
+     "title": "Aides d'État, services d'intérêt économique général et régulation",
+     "objectives": [
+      "Identifier une aide d'État",
+      "Comprendre la régulation sectorielle"
+     ],
+     "outline": [
+      "Notion d'aide d'État (art. 107 TFUE) et exemptions",
+      "Récupération des aides illégales",
+      "SIEG et jurisprudence Altmark",
+      "Autorités de régulation (ARCEP, CRE, ART…)"
+     ]
+    }
+   ]
+  }
+ ],
+ "decisions": [
+  {
+   "id": "blanco",
+   "name": "Blanco",
+   "court": "TC",
+   "date": "8 février 1873",
+   "topic": "Responsabilité administrative",
+   "solution": "La responsabilité de l'État du fait des services publics n'est pas régie par le Code civil ; elle relève de règles spéciales et de la compétence administrative.",
+   "scope": "Autonomie du droit administratif.",
+   "status": "en vigueur"
+  },
+  {
+   "id": "gaz-bordeaux",
+   "name": "Gaz de Bordeaux",
+   "court": "CE",
+   "date": "30 mars 1916",
+   "topic": "Imprévision",
+   "solution": "Le concessionnaire confronté à un bouleversement imprévisible de l'économie du contrat doit poursuivre l'exécution mais a droit à une indemnité d'imprévision.",
+   "scope": "Théorie de l'imprévision en droit administratif.",
+   "status": "codifié",
+   "statusNote": "Art. L. 6, 3° du code de la commande publique."
+  },
+  {
+   "id": "tarn-et-garonne",
+   "name": "Département de Tarn-et-Garonne",
+   "court": "CE, ass.",
+   "date": "4 avril 2014",
+   "number": "n° 358994",
+   "topic": "Contentieux contractuel",
+   "solution": "Tout tiers susceptible d'être lésé dans ses intérêts de façon suffisamment directe et certaine peut contester la validité d'un contrat administratif.",
+   "scope": "Ouverture du recours des tiers contre le contrat.",
+   "status": "en vigueur"
+  },
+  {
+   "id": "beziers-1",
+   "name": "Commune de Béziers (I)",
+   "court": "CE, ass.",
+   "date": "28 décembre 2009",
+   "topic": "Loyauté contractuelle",
+   "solution": "Le juge du contrat doit, eu égard à l'exigence de loyauté des relations contractuelles, faire application du contrat, sauf irrégularité d'une particulière gravité.",
+   "scope": "Stabilité des relations contractuelles.",
+   "status": "en vigueur"
+  }
+ ],
+ "reforms": [
+  {
+   "date": "2010-03-01",
+   "title": "Entrée en vigueur de la QPC",
+   "summary": "Question prioritaire de constitutionnalité : contrôle a posteriori des lois."
+  },
+  {
+   "date": "2019-04-01",
+   "title": "Code de la commande publique",
+   "summary": "Codification du droit des marchés publics et des concessions."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Contrat administratif",
+   "def": "Contrat soumis au droit administratif et au juge administratif, par détermination de la loi ou selon les critères jurisprudentiels."
+  },
+  {
+   "term": "Fait du prince",
+   "def": "Mesure de l'autorité contractante aggravant les charges du cocontractant, ouvrant droit à indemnisation intégrale."
+  },
+  {
+   "term": "QPC",
+   "def": "Question prioritaire de constitutionnalité (art. 61-1 de la Constitution)."
+  },
+  {
+   "term": "REP",
+   "def": "Recours pour excès de pouvoir, tendant à l'annulation d'un acte administratif illégal."
+  }
+ ]
+}
