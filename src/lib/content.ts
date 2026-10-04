@@ -33,6 +33,10 @@ export function useContent<T>(sel: (s: ContentState) => T): T {
 
 export const getContent = () => cs;
 
+export function setUpdatesSeen() {
+  set({ updates: [] });
+}
+
 const base = () => new URL("content/", document.baseURI).toString();
 
 async function fetchJson<T>(url: string, fresh = false): Promise<T> {
@@ -209,4 +213,21 @@ export function allDecisions(): (Decision & { packId: string; packTitle: string 
 
 export function hasContent(l: Lesson) {
   return !!(l.body || l.src);
+}
+
+// ---------- Plan comptable ----------
+export function allAccounts(): Record<string, string> {
+  const out: Record<string, string> = {};
+  for (const p of cs.packs) Object.assign(out, p.accounts ?? {});
+  return out;
+}
+
+// Intitulé d'un compte : on cherche le préfixe connu le plus long (6071 → 607).
+export function accountLabel(acc: string, accounts: Record<string, string> = allAccounts()): string {
+  const a = acc.trim();
+  for (let n = a.length; n > 0; n--) {
+    const hit = accounts[a.slice(0, n)];
+    if (hit) return n === a.length ? hit : `${hit} (sous-compte)`;
+  }
+  return "compte inconnu";
 }

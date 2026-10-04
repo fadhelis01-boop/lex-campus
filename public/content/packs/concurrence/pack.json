@@ -1,12 +1,12 @@
 {
  "id": "concurrence",
- "version": "2026.10.1",
+ "version": "2026.10.2",
  "title": "Concurrence et distribution",
  "branch": "Droit des affaires",
  "icon": "⚔️",
  "color": "#2f7d4f",
  "order": 13,
- "updatedAt": "2026-10-01",
+ "updatedAt": "2026-10-05",
  "description": "Ententes, abus de position dominante, concentrations ; pratiques restrictives et rupture brutale ; franchise, concession, distribution sélective, agence commerciale.",
  "modules": [
   {
@@ -241,6 +241,58 @@
     },
     {
      "id": "concurrence-deloyale",
+     "src": "packs/concurrence/concurrence-deloyale.md",
+     "duration": 14,
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Fondement de l'action en concurrence déloyale :",
+       "choices": [
+        "Art. L. 442-1 C. com.",
+        "Art. 1240 C. civ.",
+        "Code de la propriété intellectuelle",
+        "Art. 101 TFUE"
+       ],
+       "answer": 1,
+       "explain": "Responsabilité délictuelle."
+      },
+      {
+       "type": "vf",
+       "q": "Le recrutement d'un salarié d'un concurrent est en soi fautif.",
+       "answer": false,
+       "explain": "Liberté du travail ; fautif seulement avec des manœuvres."
+      },
+      {
+       "type": "qcm",
+       "q": "Selon Cristal de Paris (2020), le préjudice peut être évalué en tenant compte :",
+       "choices": [
+        "Du seul chiffre d'affaires de la victime",
+        "De l'économie injustement réalisée par l'auteur",
+        "Du capital social",
+        "D'un forfait légal"
+       ],
+       "answer": 1,
+       "explain": "Le préjudice s'infère des actes."
+      },
+      {
+       "type": "qcm",
+       "q": "Se placer dans le sillage d'une entreprise pour profiter de ses efforts, c'est :",
+       "choices": [
+        "Le dénigrement",
+        "La confusion",
+        "Le parasitisme",
+        "L'entente"
+       ],
+       "answer": 2,
+       "explain": "Sans condition de situation de concurrence."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Quatre familles d'actes déloyaux ?",
+       "a": "Dénigrement, confusion, désorganisation, parasitisme."
+      }
+     ],
      "title": "Concurrence déloyale et parasitisme",
      "level": 1,
      "objectives": [

@@ -1,11 +1,11 @@
 {
- "version": "2026.10.1",
+ "version": "2026.10.2",
  "updatedAt": "2026-10-04",
  "packs": [
   {
    "id": "bancaire",
    "file": "packs/bancaire/pack.json",
-   "version": "2026.10.1",
+   "version": "2026.10.2",
    "title": "Droit bancaire et financier"
   },
   {
@@ -21,15 +21,21 @@
    "title": "Compliance, données et RSE"
   },
   {
+   "id": "comptabilite",
+   "file": "packs/comptabilite/pack.json",
+   "version": "2026.10.2",
+   "title": "Comptabilité, analyse financière et fiscalité appliquée"
+  },
+  {
    "id": "concurrence",
    "file": "packs/concurrence/pack.json",
-   "version": "2026.10.1",
+   "version": "2026.10.2",
    "title": "Concurrence et distribution"
   },
   {
    "id": "consommation",
    "file": "packs/consommation/pack.json",
-   "version": "2026.10.1",
+   "version": "2026.10.2",
    "title": "Droit de la consommation"
   },
   {
@@ -47,25 +53,25 @@
   {
    "id": "contrats-speciaux",
    "file": "packs/contrats-speciaux/pack.json",
-   "version": "2026.10.1",
+   "version": "2026.10.2",
    "title": "Contrats spéciaux de l'entreprise"
   },
   {
    "id": "difficultes",
    "file": "packs/difficultes/pack.json",
-   "version": "2026.10.1",
+   "version": "2026.10.2",
    "title": "Entreprises en difficulté"
   },
   {
    "id": "droit-public",
    "file": "packs/droit-public/pack.json",
-   "version": "2026.10.1",
+   "version": "2026.10.2",
    "title": "Droit public pour le juriste d'affaires"
   },
   {
    "id": "fiscal",
    "file": "packs/fiscal/pack.json",
-   "version": "2026.10.1",
+   "version": "2026.10.2",
    "title": "Fiscalité des affaires"
   },
   {
@@ -95,19 +101,19 @@
   {
    "id": "responsabilite",
    "file": "packs/responsabilite/pack.json",
-   "version": "2026.10.1",
+   "version": "2026.10.2",
    "title": "Responsabilité civile et quasi-contrats"
   },
   {
    "id": "societes",
    "file": "packs/societes/pack.json",
-   "version": "2026.10.1",
+   "version": "2026.10.2",
    "title": "Droit des sociétés"
   },
   {
    "id": "suretes",
    "file": "packs/suretes/pack.json",
-   "version": "2026.10.1",
+   "version": "2026.10.2",
    "title": "Droit des sûretés"
   },
   {
@@ -118,6 +124,10 @@
   }
  ],
  "changelog": [
+  {
+   "date": "2026-10-05",
+   "text": "Nouveau domaine « Comptabilité, analyse financière et fiscalité appliquée » (14 leçons, fil rouge chiffré, ateliers d'écritures et exercices chiffrés corrigés automatiquement, plan comptable consultable). Les 21 leçons qui restaient à rédiger le sont désormais : 98 leçons rédigées au total."
+  },
   {
    "date": "2026-10-04",
    "text": "Première version : 19 domaines, méthodologie complète, grands arrêts, réformes depuis 2006."

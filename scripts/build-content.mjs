@@ -30,6 +30,18 @@ for (const f of files) {
       if (ids.has(l.id)) errors.push(`${pack.id} : id de leçon en double ${l.id}`);
       ids.add(l.id);
       if (l.src && !existsSync(path.join(OUT, l.src))) errors.push(`${pack.id}/${l.id} : fichier manquant ${l.src}`);
+      for (const ex of l.exercises ?? []) {
+        for (const [k, e] of (ex.entries ?? []).entries()) {
+          const d = e.lines.reduce((t, x) => t + (x.debit ?? 0), 0);
+          const c = e.lines.reduce((t, x) => t + (x.credit ?? 0), 0);
+          if (Math.abs(d - c) > 0.005) errors.push(`${pack.id}/${ex.id} écriture ${k + 1} déséquilibrée (${d} / ${c})`);
+          for (const x of e.lines)
+            if (pack.accounts && !Object.keys(pack.accounts).some((a) => x.account.startsWith(a)))
+              errors.push(`${pack.id}/${ex.id} : compte ${x.account} absent du plan comptable du pack`);
+        }
+        for (const [k, q] of (ex.questions ?? []).entries())
+          if (typeof q.answer !== "number" || !q.explain) errors.push(`${pack.id}/${ex.id} question ${k + 1} invalide`);
+      }
       for (const [i, q] of (l.quiz ?? []).entries()) {
         if (q.type === "qcm" && (!Array.isArray(q.choices) || typeof q.answer !== "number" || q.answer >= q.choices.length))
           errors.push(`${pack.id}/${l.id} q${i + 1} : réponse QCM invalide`);

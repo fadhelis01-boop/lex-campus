@@ -2,13 +2,13 @@ const P = "packs/fiscal/";
 
 export default {
   id: "fiscal",
-  version: "2026.10.1",
+  version: "2026.10.2",
   title: "Fiscalité des affaires",
   branch: "Droit des affaires",
   icon: "🧾",
   color: "#8a5a14",
   order: 16,
-  updatedAt: "2026-10-01",
+  updatedAt: "2026-10-05",
   description: "IS, régimes de groupe, TVA, imposition du dirigeant ; contrôle fiscal, abus de droit, sanctions ; transmission et pacte Dutreil. Matière à vérifier à chaque loi de finances.",
   modules: [
     {
@@ -57,6 +57,15 @@ export default {
         },
         {
           id: "fiscalite-internationale",
+          src: P + "fiscalite-internationale.md",
+          duration: 15,
+          quiz: [
+            { type: "qcm", q: "Le principe de territorialité de l'IS signifie que :", choices: ["Tous les bénéfices mondiaux sont imposés en France", "Seuls les bénéfices des entreprises exploitées en France sont imposés", "Les filiales étrangères sont imposées en France", "Il n'y a pas d'IS sur l'export"], answer: 1, explain: "Art. 209, I CGI." },
+            { type: "qcm", q: "Le principe de pleine concurrence concerne :", choices: ["Les ententes", "Les prix de transfert entre entreprises liées", "La TVA", "Les marchés publics"], answer: 1, explain: "Art. 57 CGI." },
+            { type: "qcm", q: "Seuil du Pilier 2 (impôt minimum mondial) :", choices: ["50 M€", "250 M€", "750 M€", "1 Md€"], answer: 2, explain: "Taux effectif minimal de 15 %." },
+            { type: "vf", q: "Une entreprise étrangère sans établissement stable en France n'y est en principe pas imposable sur ses bénéfices d'exploitation (selon les conventions).", answer: true, explain: "Notion d'établissement stable." }
+          ],
+          flashcards: [{ q: "Art. 209 B CGI ?", a: "Imposition en France des bénéfices d'entités contrôlées établies dans des États à fiscalité privilégiée, sauf activité réelle." }],
           title: "Fiscalité internationale de l'entreprise",
           level: 3,
           objectives: ["Comprendre les conventions fiscales et les prix de transfert", "Situer BEPS et le Pilier 2"],

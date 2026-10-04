@@ -13,7 +13,7 @@ export function PackCard({ p }: { p: Pack }) {
   useStore((s) => s.progress);
   const st = packStats(p);
   return (
-    <a href={p.id === "methodologie" ? "#/methodo" : `#/domaine/${p.id}`} className="card pack-card" style={{ ["--accent" as string]: p.color }}>
+    <a href={p.id === "methodologie" ? "#/methodo" : p.id === "comptabilite" ? "#/compta" : `#/domaine/${p.id}`} className="card pack-card" style={{ ["--accent" as string]: p.color }}>
       <div className="pack-icon">{p.icon}</div>
       <div className="pack-body">
         <h3>{p.title}</h3>
@@ -36,7 +36,7 @@ export function PackCard({ p }: { p: Pack }) {
 export default function Parcours() {
   const packs = useContent((c) => c.packs);
   const branches = [...new Set(packs.map((p) => p.branch))];
-  const orderB = ["Méthodologie", "Droit privé", "Droit des affaires", "Droit public"];
+  const orderB = ["Méthodologie", "Droit privé", "Droit des affaires", "Comptabilité et finance", "Droit public"];
   branches.sort((a, b) => (orderB.indexOf(a) + 1 || 99) - (orderB.indexOf(b) + 1 || 99));
 
   return (
@@ -50,6 +50,7 @@ export default function Parcours() {
           <li>Droit commercial général, puis droit des sociétés.</li>
           <li>Sûretés (réforme de 2021) puis entreprises en difficulté (réforme de 2021) : elles se répondent.</li>
           <li>Concurrence et distribution, consommation, puis les droits « spéciaux » selon vos besoins.</li>
+          <li>En parallèle, dès le début : la comptabilité (une leçon par semaine), indispensable pour lire des comptes, une liasse fiscale ou une garantie de passif.</li>
         </ol>
         <p className="small muted">
           Dans chaque domaine, le <strong>test de positionnement</strong> repère ce que vous savez déjà, pour ne pas

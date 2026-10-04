@@ -8,6 +8,13 @@ const HELP = `## Comment travailler avec LexCampus
 4. **Chaque semaine, un exercice rédigé** (Méthodologie) : fiche d'arrêt, cas pratique, commentaire, note de synthèse. Le corrigé est fourni ; l'assistant peut corriger votre copie.
 5. **Une fois par mois, la veille** de vos domaines prioritaires.
 
+## Apprendre la comptabilité
+
+Le domaine **Comptabilité, analyse financière et fiscalité appliquée** suit une entreprise fictive, la SAS Mobilia, de sa création à son impôt sur les sociétés : les chiffres se répondent d'une leçon à l'autre.
+- **Ateliers d'écritures** : saisissez les comptes et les montants au débit ou au crédit ; l'intitulé du compte s'affiche, les totaux se calculent, la correction est immédiate (un compte plus détaillé est accepté : 6071 pour 607).
+- **Exercices chiffrés** : SIG, CAF, BFR, amortissements, résultat fiscal et IS, corrigés automatiquement avec le détail du calcul.
+- **Plan comptable** (menu Plus) : tous les comptes utilisés, avec recherche par numéro ou par mot.
+
 ## Lire ou écouter
 
 - 🎧 **Écouter la leçon** lit le cours à voix haute, paragraphe par paragraphe, avec surlignage. Le lecteur reste en bas de l'écran pendant que vous naviguez.

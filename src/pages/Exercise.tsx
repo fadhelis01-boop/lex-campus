@@ -4,6 +4,8 @@ import { useStore, setNote, addXp, setState, getState, saveReport, uid, awardBad
 import { aiConfigured, gradeExercise } from "../lib/ai";
 import Markdown from "../components/Markdown";
 import AiOutput, { NeedKey } from "../components/AiOutput";
+import Journal from "../components/Journal";
+import CalcQuiz from "../components/CalcQuiz";
 
 const TYPE_LABEL: Record<string, string> = {
   "cas-pratique": "Cas pratique",
@@ -12,6 +14,8 @@ const TYPE_LABEL: Record<string, string> = {
   "fiche-arret": "Fiche d'arrêt",
   dissertation: "Dissertation",
   redaction: "Rédaction",
+  ecritures: "Atelier d'écritures comptables",
+  calcul: "Exercice chiffré",
 };
 
 function Timer({ minutes }: { minutes: number }) {
@@ -144,7 +148,17 @@ export default function ExercisePage({ packId, lessonId, exerciseId }: { packId:
         </section>
       ) : null}
 
-      {ex.steps?.length ? (
+      {ex.type === "ecritures" && ex.entries?.length ? (
+        <section className="card">
+          <h2>Passez les écritures</h2>
+          <Journal entries={ex.entries} accounts={pack.accounts} onAllSolved={markDone} />
+        </section>
+      ) : ex.type === "calcul" && ex.questions?.length ? (
+        <section className="card">
+          <h2>Vos calculs</h2>
+          <CalcQuiz questions={ex.questions} onAllSolved={markDone} />
+        </section>
+      ) : ex.steps?.length ? (
         <section className="card">
           <h2>Votre fiche</h2>
           {ex.steps.map((s, i) => (
@@ -188,10 +202,11 @@ export default function ExercisePage({ packId, lessonId, exerciseId }: { packId:
         </section>
       )}
 
+      {!["ecritures", "calcul"].includes(ex.type) || ex.model ? (
       <section className="card">
-        <h2>Correction</h2>
+        <h2>{["ecritures", "calcul"].includes(ex.type) ? "Commentaire du corrigé" : "Correction"}</h2>
         <div className="actions-row">
-          {aiConfigured() ? (
+          {aiConfigured() && !["ecritures", "calcul"].includes(ex.type) ? (
             <button className="btn" onClick={correct} disabled={grade?.busy}>
               🧑‍🏫 Faire corriger ma copie (≈ 0,10 à 0,30 $)
             </button>
@@ -200,7 +215,7 @@ export default function ExercisePage({ packId, lessonId, exerciseId }: { packId:
             {showModel ? "Masquer le corrigé" : "📗 Voir le corrigé"}
           </button>
         </div>
-        {!aiConfigured() && (
+        {!aiConfigured() && !["ecritures", "calcul"].includes(ex.type) && (
           <details>
             <summary className="small">Correction personnalisée par l'IA</summary>
             <NeedKey />
@@ -232,6 +247,7 @@ export default function ExercisePage({ packId, lessonId, exerciseId }: { packId:
           </div>
         ) : null}
       </section>
+      ) : null}
     </div>
   );
 }

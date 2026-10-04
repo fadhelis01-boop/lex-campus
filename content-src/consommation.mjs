@@ -2,13 +2,13 @@ const P = "packs/consommation/";
 
 export default {
   id: "consommation",
-  version: "2026.10.1",
+  version: "2026.10.2",
   title: "Droit de la consommation",
   branch: "Droit des affaires",
   icon: "🛒",
   color: "#2c7a7b",
   order: 14,
-  updatedAt: "2026-10-01",
+  updatedAt: "2026-10-05",
   description: "Notions de consommateur et de professionnel, information, clauses abusives, pratiques commerciales, vente à distance, rétractation, garanties légales, crédit, action de groupe.",
   modules: [
     {
@@ -57,6 +57,15 @@ export default {
       lessons: [
         {
           id: "credit-consommation",
+          src: P + "credit-consommation.md",
+          duration: 15,
+          quiz: [
+            { type: "qcm", q: "Délai de rétractation d'un crédit à la consommation :", choices: ["7 jours", "10 jours", "14 jours", "30 jours"], answer: 2, explain: "Art. L. 312-19." },
+            { type: "qcm", q: "Le crédit immobilier comporte :", choices: ["Un délai de rétractation de 14 jours", "Un délai de réflexion de 10 jours avant acceptation", "Aucun délai", "Un délai de 3 mois"], answer: 1, explain: "Art. L. 313-34." },
+            { type: "qcm", q: "Sanction principale des manquements du prêteur :", choices: ["Nullité du contrat", "Déchéance totale ou partielle du droit aux intérêts", "Amende pénale seule", "Rien"], answer: 1, explain: "Et relevé d'office par le juge." },
+            { type: "qcm", q: "Délai pour agir du prêteur contre l'emprunteur défaillant (crédit conso) :", choices: ["Forclusion de 2 ans à compter du premier incident non régularisé", "5 ans", "10 ans", "Aucun"], answer: 0, explain: "Art. R. 312-35." }
+          ],
+          flashcards: [{ q: "Directive 2023/2225 ?", a: "Nouvelle directive crédit aux consommateurs, applicable en novembre 2026 : champ élargi (paiement fractionné), solvabilité renforcée." }],
           title: "Crédit à la consommation et crédit immobilier",
           objectives: ["Connaître le formalisme protecteur du crédit", "Mesurer les sanctions (déchéance du droit aux intérêts)"],
           outline: [
@@ -71,6 +80,15 @@ export default {
         },
         {
           id: "action-groupe-surendettement",
+          src: P + "action-groupe-surendettement.md",
+          duration: 13,
+          quiz: [
+            { type: "vf", q: "Le régime de l'action de groupe a été refondu et unifié en 2025.", answer: true, explain: "Transposition de la directive (UE) 2020/1828 — conditions à vérifier." },
+            { type: "qcm", q: "La procédure de surendettement concerne :", choices: ["Les dettes professionnelles des sociétés", "Les dettes non professionnelles des personnes physiques de bonne foi", "Les collectivités", "Les banques"], answer: 1, explain: "Art. L. 711-1 C. consom." },
+            { type: "qcm", q: "Durée maximale de principe d'un plan de surendettement :", choices: ["2 ans", "5 ans", "7 ans", "10 ans"], answer: 2, explain: "Mesures de rééchelonnement." },
+            { type: "vf", q: "L'effacement des dettes du débiteur surendetté libère sa caution.", answer: false, explain: "La caution reste tenue, sous réserve des règles du cautionnement." }
+          ],
+          flashcards: [{ q: "Rétablissement personnel ?", a: "Pour une situation irrémédiablement compromise : effacement des dettes non professionnelles (avec ou sans liquidation)." }],
           title: "Action de groupe et surendettement",
           objectives: ["Situer l'action de groupe réformée en 2025", "Connaître la procédure de surendettement"],
           outline: [

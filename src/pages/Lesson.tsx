@@ -241,7 +241,7 @@ export default function LessonPage({ packId, lessonId }: { packId: string; lesso
   return (
     <article className="page lesson" style={{ ["--accent" as string]: pack.color }}>
       <nav className="crumbs">
-        <a href={pack.id === "methodologie" ? "#/methodo" : `#/domaine/${pack.id}`}>
+        <a href={pack.id === "methodologie" ? "#/methodo" : pack.id === "comptabilite" ? "#/compta" : `#/domaine/${pack.id}`}>
           {pack.icon} {pack.title}
         </a>
         <span>›</span>

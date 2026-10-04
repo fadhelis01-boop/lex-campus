@@ -20,6 +20,7 @@ export interface Pack {
   glossary?: GlossaryEntry[];
   reforms?: Reform[];
   changelog?: { date: string; text: string }[];
+  accounts?: Record<string, string>; // plan comptable (n° de compte -> intitulé)
   origin?: "officiel" | "importé" | "généré"; // renseigné par l'application
 }
 
@@ -68,7 +69,7 @@ export interface ExerciseDoc {
 
 export interface Exercise {
   id: string;
-  type: "cas-pratique" | "commentaire" | "note-synthese" | "fiche-arret" | "dissertation" | "redaction";
+  type: "cas-pratique" | "commentaire" | "note-synthese" | "fiche-arret" | "dissertation" | "redaction" | "ecritures" | "calcul";
   title: string;
   statement: string; // Markdown : énoncé
   documents?: ExerciseDoc[];
@@ -77,6 +78,28 @@ export interface Exercise {
   model: string; // Markdown : corrigé / éléments de réponse
   hints?: string[];
   steps?: FicheStep[]; // fiche d'arrêt guidée
+  entries?: JournalEntry[]; // atelier d'écritures comptables
+  questions?: CalcQuestion[]; // exercice chiffré corrigé automatiquement
+}
+
+export interface EntryLine {
+  account: string; // n° de compte attendu (préfixe accepté : 6071 vaut 607)
+  debit?: number;
+  credit?: number;
+}
+
+export interface JournalEntry {
+  label: string; // l'opération à enregistrer
+  lines: EntryLine[];
+  explain?: string;
+}
+
+export interface CalcQuestion {
+  q: string;
+  answer: number;
+  tolerance?: number; // écart admis (défaut : 1)
+  unit?: string;
+  explain: string;
 }
 
 export interface FicheStep {

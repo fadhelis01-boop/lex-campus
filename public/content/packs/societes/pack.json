@@ -1,12 +1,12 @@
 {
  "id": "societes",
- "version": "2026.10.1",
+ "version": "2026.10.2",
  "title": "Droit des sociétés",
  "branch": "Droit des affaires",
  "icon": "🏢",
  "color": "#1f6f78",
  "order": 11,
- "updatedAt": "2026-10-01",
+ "updatedAt": "2026-10-05",
  "description": "Droit commun, SARL, SAS, SA et gouvernance, droits des associés et abus, dirigeants et responsabilités, cessions, groupes et restructurations.",
  "modules": [
   {
@@ -193,6 +193,58 @@
     },
     {
      "id": "societes-civiles-snc",
+     "src": "packs/societes/societes-civiles-snc.md",
+     "duration": 14,
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "La responsabilité des associés de société civile est :",
+       "choices": [
+        "Limitée aux apports",
+        "Indéfinie et solidaire",
+        "Indéfinie, non solidaire, proportionnelle aux parts",
+        "Nulle"
+       ],
+       "answer": 2,
+       "explain": "Art. 1857."
+      },
+      {
+       "type": "qcm",
+       "q": "Avant de poursuivre un associé de SNC, le créancier doit :",
+       "choices": [
+        "Rien",
+        "Mettre vainement en demeure la société",
+        "Obtenir un jugement contre la société",
+        "Saisir le juge-commissaire"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 221-1."
+      },
+      {
+       "type": "vf",
+       "q": "La cession de parts de SNC requiert l'unanimité.",
+       "answer": true,
+       "explain": "Art. L. 221-13."
+      },
+      {
+       "type": "qcm",
+       "q": "Un loyer excessif versé par la société d'exploitation à la SCI du dirigeant peut constituer :",
+       "choices": [
+        "Une économie fiscale",
+        "Un abus de biens sociaux et un acte anormal de gestion",
+        "Une provision",
+        "Rien"
+       ],
+       "answer": 1,
+       "explain": "Et une convention réglementée."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Art. 1858 C. civ. ?",
+       "a": "Les créanciers ne poursuivent les associés qu'après vaines poursuites de la personne morale ; la déclaration à la procédure collective suffit (ch. mixte 2007)."
+      }
+     ],
      "title": "SNC, sociétés civiles et SCI",
      "objectives": [
       "Mesurer la responsabilité indéfinie des associés",
@@ -567,6 +619,62 @@
     },
     {
      "id": "pactes-capital-investissement",
+     "src": "packs/societes/pactes-capital-investissement.md",
+     "duration": 16,
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Pour obtenir l'exécution forcée d'une clause de sortie, on la structure en :",
+       "choices": [
+        "Simple obligation de faire",
+        "Promesse unilatérale (art. 1124)",
+        "Clause pénale",
+        "Lettre d'intention"
+       ],
+       "answer": 1,
+       "explain": "La rétractation du promettant n'empêche pas la formation du contrat."
+      },
+      {
+       "type": "qcm",
+       "q": "La clause de sortie conjointe (tag along) permet :",
+       "choices": [
+        "Au majoritaire de forcer la vente",
+        "Au minoritaire de céder aux mêmes conditions que le majoritaire",
+        "D'exclure un associé",
+        "De bloquer les titres"
+       ],
+       "answer": 1,
+       "explain": "Le drag along est la sortie forcée."
+      },
+      {
+       "type": "vf",
+       "q": "Un pacte d'associés à durée indéterminée peut être résilié unilatéralement avec un préavis raisonnable.",
+       "answer": true,
+       "explain": "Art. 1210-1211 ; préférez une durée déterminée."
+      },
+      {
+       "type": "qcm",
+       "q": "La liquidation préférentielle repose généralement sur :",
+       "choices": [
+        "Des actions de préférence",
+        "Une hypothèque",
+        "Un compte courant",
+        "Une clause pénale"
+       ],
+       "answer": 0,
+       "explain": "Art. L. 228-11."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Rendre un pacte opposable aux nouveaux associés ?",
+       "a": "Clause statutaire subordonnant l'agrément à l'adhésion au pacte."
+      },
+      {
+       "q": "Good / bad leaver ?",
+       "a": "Promesse de vente du fondateur sortant, prix variable selon les circonstances du départ."
+      }
+     ],
      "title": "Pactes d'associés et capital-investissement : clauses et rédaction",
      "objectives": [
       "Rédiger les clauses usuelles d'un pacte",
@@ -582,6 +690,62 @@
     },
     {
      "id": "societes-cotees",
+     "src": "packs/societes/societes-cotees.md",
+     "duration": 14,
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Délai de déclaration d'un franchissement de seuil :",
+       "choices": [
+        "2 jours",
+        "4 jours de bourse",
+        "15 jours",
+        "1 mois"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 233-7."
+      },
+      {
+       "type": "qcm",
+       "q": "Seuil de l'offre publique obligatoire :",
+       "choices": [
+        "25 %",
+        "30 %",
+        "33,3 %",
+        "50 %"
+       ],
+       "answer": 1,
+       "explain": "Règlement général de l'AMF."
+      },
+      {
+       "type": "qcm",
+       "q": "Seuil du retrait obligatoire depuis la loi PACTE :",
+       "choices": [
+        "95 %",
+        "90 %",
+        "85 %",
+        "66,6 %"
+       ],
+       "answer": 1,
+       "explain": "Abaissé de 95 % à 90 % en 2019."
+      },
+      {
+       "type": "vf",
+       "q": "Le droit de vote double est automatique dans les sociétés cotées pour les actions au nominatif depuis 2 ans, sauf clause contraire.",
+       "answer": true,
+       "explain": "Loi Florange, 2014."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Sanction du défaut de déclaration de seuil ?",
+       "a": "Privation des droits de vote excédant le seuil pendant 2 ans."
+      },
+      {
+       "q": "Say on pay ?",
+       "a": "Vote contraignant des actionnaires sur la politique de rémunération (ex ante) et les éléments versés (ex post)."
+      }
+     ],
      "title": "Sociétés cotées : information, offres publiques, abus de marché",
      "objectives": [
       "Connaître les obligations d'information permanente",

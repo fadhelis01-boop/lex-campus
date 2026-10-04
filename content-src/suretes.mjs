@@ -2,13 +2,13 @@ const P = "packs/suretes/";
 
 export default {
   id: "suretes",
-  version: "2026.10.1",
+  version: "2026.10.2",
   title: "Droit des sûretés",
   branch: "Droit privé",
   icon: "🔐",
   color: "#7a4e9c",
   order: 3,
-  updatedAt: "2026-10-01",
+  updatedAt: "2026-10-05",
   description: "La réforme de 2021 : cautionnement unifié, garanties autonomes, sûretés réelles mobilières et immobilières, classement des créanciers.",
   modules: [
     {
@@ -79,6 +79,14 @@ export default {
         },
         {
           id: "suretes-pratique-financement",
+          src: P + "suretes-pratique-financement.md",
+          duration: 14,
+          quiz: [
+            { type: "qcm", q: "Après le jugement d'ouverture, un créancier peut-il inscrire une hypothèque ?", choices: ["Oui", "Non (art. L. 622-30)", "Seulement avec accord du débiteur", "Seulement en liquidation"], answer: 1, explain: "Interdiction des inscriptions postérieures." },
+            { type: "qcm", q: "Le droit de rétention fictif du gage sans dépossession, pendant la période d'observation, est :", choices: ["Opposable", "Inopposable", "Renforcé", "Transformé en hypothèque"], answer: 1, explain: "Art. L. 622-7." },
+            { type: "qcm", q: "Quelles garanties sont les plus efficaces en procédure collective ?", choices: ["Les cautionnements", "La propriété-sûreté et la rétention effective", "Les lettres d'intention", "Les privilèges généraux"], answer: 1, explain: "Hors concours ou quasi." }
+          ],
+          flashcards: [{ q: "Agent des sûretés ?", a: "Art. 2488-6 s. C. civ. : prend et gère les sûretés pour les créanciers, dans un patrimoine affecté." }],
           title: "Les sûretés dans le financement d'entreprise : montages et choix",
           level: 3,
           objectives: ["Construire le package de sûretés d'un financement", "Anticiper le sort des sûretés en procédure collective"],

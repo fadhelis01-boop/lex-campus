@@ -1,0 +1,1822 @@
+{
+ "id": "comptabilite",
+ "version": "2026.10.2",
+ "title": "Comptabilité, analyse financière et fiscalité appliquée",
+ "branch": "Comptabilité et finance",
+ "icon": "🧮",
+ "color": "#1f6f50",
+ "order": 25,
+ "updatedAt": "2026-10-05",
+ "description": "De zéro à la lecture experte des comptes : partie double, opérations courantes, inventaire, comptes annuels, SIG, BFR, valorisation, résultat fiscal, TVA et liasse. Fil rouge chiffré (SAS Mobilia) et ateliers d'écritures corrigés automatiquement.",
+ "accounts": {
+  "37": "Stocks de marchandises",
+  "101": "Capital",
+  "106": "Réserves",
+  "110": "Report à nouveau (solde créditeur)",
+  "119": "Report à nouveau (solde débiteur)",
+  "120": "Résultat de l'exercice (bénéfice)",
+  "129": "Résultat de l'exercice (perte)",
+  "145": "Amortissements dérogatoires",
+  "151": "Provisions pour risques",
+  "164": "Emprunts auprès des établissements de crédit",
+  "205": "Concessions, brevets, logiciels",
+  "207": "Fonds commercial",
+  "211": "Terrains",
+  "213": "Constructions",
+  "215": "Installations techniques, matériel et outillage",
+  "218": "Autres immobilisations corporelles",
+  "261": "Titres de participation",
+  "275": "Dépôts et cautionnements versés",
+  "280": "Amortissements des immobilisations incorporelles",
+  "281": "Amortissements des immobilisations corporelles",
+  "291": "Dépréciations des immobilisations corporelles",
+  "397": "Dépréciations des stocks de marchandises",
+  "401": "Fournisseurs",
+  "404": "Fournisseurs d'immobilisations",
+  "408": "Fournisseurs — factures non parvenues",
+  "409": "Fournisseurs débiteurs (avances versées)",
+  "411": "Clients",
+  "416": "Clients douteux ou litigieux",
+  "418": "Clients — produits non encore facturés",
+  "419": "Clients créditeurs (avances reçues)",
+  "421": "Personnel — rémunérations dues",
+  "428": "Personnel — charges à payer",
+  "431": "Sécurité sociale",
+  "437": "Autres organismes sociaux",
+  "438": "Organismes sociaux — charges à payer",
+  "444": "État — impôt sur les bénéfices",
+  "445": "État — taxes sur le chiffre d'affaires",
+  "447": "Autres impôts, taxes et versements assimilés",
+  "448": "État — charges à payer",
+  "455": "Associés — comptes courants",
+  "457": "Associés — dividendes à payer",
+  "462": "Créances sur cessions d'immobilisations",
+  "467": "Autres comptes débiteurs ou créditeurs",
+  "486": "Charges constatées d'avance",
+  "487": "Produits constatés d'avance",
+  "491": "Dépréciations des comptes de clients",
+  "512": "Banques",
+  "530": "Caisse",
+  "580": "Virements internes",
+  "601": "Achats stockés — matières premières",
+  "606": "Achats non stockés de matières et fournitures",
+  "607": "Achats de marchandises",
+  "613": "Locations",
+  "615": "Entretien et réparations",
+  "616": "Primes d'assurances",
+  "622": "Rémunérations d'intermédiaires et honoraires",
+  "623": "Publicité, publications, relations publiques",
+  "625": "Déplacements, missions et réceptions",
+  "626": "Frais postaux et de télécommunications",
+  "627": "Services bancaires et assimilés",
+  "635": "Autres impôts, taxes et versements assimilés",
+  "641": "Rémunérations du personnel",
+  "645": "Charges de sécurité sociale et de prévoyance",
+  "654": "Pertes sur créances irrécouvrables",
+  "661": "Charges d'intérêts",
+  "665": "Escomptes accordés",
+  "675": "Valeurs comptables des éléments d'actif cédés",
+  "695": "Impôts sur les bénéfices",
+  "701": "Ventes de produits finis",
+  "706": "Prestations de services",
+  "707": "Ventes de marchandises",
+  "708": "Produits des activités annexes",
+  "765": "Escomptes obtenus",
+  "775": "Produits des cessions d'éléments d'actif",
+  "1013": "Capital souscrit, appelé, versé",
+  "1061": "Réserve légale",
+  "1688": "Intérêts courus sur emprunts",
+  "2182": "Matériel de transport",
+  "2183": "Matériel de bureau et informatique",
+  "2184": "Mobilier",
+  "4421": "Prélèvements à la source (impôt sur le revenu)",
+  "6037": "Variation des stocks de marchandises",
+  "6097": "Rabais, remises et ristournes obtenus sur achats de marchandises",
+  "6811": "Dotations aux amortissements des immobilisations",
+  "6815": "Dotations aux provisions pour risques et charges d'exploitation",
+  "6816": "Dotations aux dépréciations des immobilisations",
+  "6817": "Dotations aux dépréciations des actifs circulants",
+  "6872": "Dotations aux provisions réglementées",
+  "7097": "Rabais, remises et ristournes accordés sur ventes de marchandises",
+  "7815": "Reprises sur provisions pour risques et charges",
+  "7817": "Reprises sur dépréciations des actifs circulants",
+  "7872": "Reprises sur provisions réglementées",
+  "44551": "TVA à décaisser",
+  "44562": "TVA déductible sur immobilisations",
+  "44566": "TVA déductible sur autres biens et services",
+  "44567": "Crédit de TVA à reporter",
+  "44571": "TVA collectée",
+  "44586": "TVA sur factures non parvenues",
+  "44587": "TVA sur factures à établir"
+ },
+ "modules": [
+  {
+   "id": "fondamentaux",
+   "title": "Les fondamentaux",
+   "level": 1,
+   "summary": "À quoi sert la comptabilité, bilan et compte de résultat, partie double, opérations courantes.",
+   "lessons": [
+    {
+     "id": "pourquoi-comptabilite",
+     "title": "La comptabilité, langage juridique et financier de l'entreprise",
+     "duration": 14,
+     "src": "packs/comptabilite/pourquoi-comptabilite.md",
+     "objectives": [
+      "Situer le cadre juridique de la comptabilité",
+      "Connaître les principes comptables",
+      "Distinguer bénéfice et trésorerie"
+     ],
+     "keyRefs": [
+      "Art. L. 123-12 C. com.",
+      "Art. L. 123-14 C. com.",
+      "Art. L. 123-22 C. com.",
+      "Règl. ANC n° 2014-03 (PCG)",
+      "Règl. ANC n° 2022-06",
+      "Art. L. 47 A LPF"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Durée de conservation des documents comptables (code de commerce) :",
+       "choices": [
+        "3 ans",
+        "6 ans",
+        "10 ans",
+        "30 ans"
+       ],
+       "answer": 2,
+       "explain": "Art. L. 123-22 C. com."
+      },
+      {
+       "type": "qcm",
+       "q": "Le principe de prudence impose :",
+       "choices": [
+        "De comptabiliser les profits probables",
+        "De tenir compte des pertes probables, sans anticiper les profits",
+        "De sous-évaluer tout l'actif",
+        "D'éviter les provisions"
+       ],
+       "answer": 1,
+       "explain": "D'où dépréciations et provisions."
+      },
+      {
+       "type": "vf",
+       "q": "Une entreprise bénéficiaire dispose forcément d'une trésorerie positive.",
+       "answer": false,
+       "explain": "Comptabilité d'engagement : bénéfice ≠ trésorerie (délais clients, stocks…)."
+      },
+      {
+       "type": "qcm",
+       "q": "La réforme des états financiers (ANC 2022-06) s'applique aux exercices ouverts à compter du :",
+       "choices": [
+        "1er janvier 2023",
+        "1er janvier 2025",
+        "1er janvier 2027",
+        "Elle n'est pas adoptée"
+       ],
+       "answer": 1,
+       "explain": "Redéfinition du résultat exceptionnel notamment."
+      },
+      {
+       "type": "qcm",
+       "q": "Le commissaire aux comptes :",
+       "choices": [
+        "Établit les comptes",
+        "Certifie les comptes",
+        "Approuve les comptes",
+        "Dépose les comptes"
+       ],
+       "answer": 1,
+       "explain": "Le dirigeant établit, le CAC certifie, les associés approuvent."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Huit principes comptables ?",
+       "a": "Image fidèle, prudence, continuité d'exploitation, permanence des méthodes, indépendance des exercices, coût historique, non-compensation, intangibilité du bilan d'ouverture."
+      },
+      {
+       "q": "FEC ?",
+       "a": "Fichier des écritures comptables, à remettre sous forme normée en cas de contrôle fiscal (art. L. 47 A LPF)."
+      }
+     ]
+    },
+    {
+     "id": "bilan-resultat",
+     "title": "Le bilan et le compte de résultat",
+     "duration": 14,
+     "src": "packs/comptabilite/bilan-resultat.md",
+     "objectives": [
+      "Lire un bilan et un compte de résultat",
+      "Comprendre le lien entre les deux",
+      "Distinguer emploi durable et charge"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Les capitaux propres sont égaux à :",
+       "choices": [
+        "Actif + dettes",
+        "Actif − dettes",
+        "Produits − charges",
+        "Capital social"
+       ],
+       "answer": 1,
+       "explain": "Actif net."
+      },
+      {
+       "type": "vf",
+       "q": "L'achat d'une machine est une charge de l'exercice d'acquisition.",
+       "answer": false,
+       "explain": "C'est un emploi immobilisé ; il devient charge par l'amortissement."
+      },
+      {
+       "type": "qcm",
+       "q": "Pour une entreprise assujettie, la TVA payée sur ses achats est :",
+       "choices": [
+        "Une charge",
+        "Une créance sur l'État",
+        "Un produit",
+        "Une dette fournisseur"
+       ],
+       "answer": 1,
+       "explain": "Elle est récupérable (TVA déductible)."
+      },
+      {
+       "type": "qcm",
+       "q": "Le résultat de l'exercice figure :",
+       "choices": [
+        "Seulement au compte de résultat",
+        "Au compte de résultat et au passif du bilan",
+        "À l'actif",
+        "Dans l'annexe seulement"
+       ],
+       "answer": 1,
+       "explain": "Il relie les deux documents."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Équation du bilan ?",
+       "a": "Actif = capitaux propres + dettes (et provisions)."
+      }
+     ]
+    },
+    {
+     "id": "partie-double",
+     "title": "La partie double : comptes, débit, crédit, plan comptable",
+     "duration": 18,
+     "src": "packs/comptabilite/partie-double.md",
+     "objectives": [
+      "Appliquer les règles du débit et du crédit",
+      "Se repérer dans le plan comptable",
+      "Passer ses premières écritures"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Un compte de charge s'enregistre :",
+       "choices": [
+        "Au débit",
+        "Au crédit",
+        "Indifféremment",
+        "Hors bilan"
+       ],
+       "answer": 0,
+       "explain": "Classe 6 au débit, classe 7 au crédit."
+      },
+      {
+       "type": "qcm",
+       "q": "L'apport en capital versé en banque :",
+       "choices": [
+        "Débit 101 / crédit 512",
+        "Débit 512 / crédit 101",
+        "Débit 512 / crédit 707",
+        "Débit 607 / crédit 101"
+       ],
+       "answer": 1,
+       "explain": "La banque augmente (débit), le capital augmente (crédit)."
+      },
+      {
+       "type": "qcm",
+       "q": "Classe des comptes de tiers :",
+       "choices": [
+        "2",
+        "3",
+        "4",
+        "5"
+       ],
+       "answer": 2,
+       "explain": "Clients, fournisseurs, État, personnel, associés."
+      },
+      {
+       "type": "vf",
+       "q": "Une écriture comptable est toujours équilibrée.",
+       "answer": true,
+       "explain": "Total des débits = total des crédits."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Que signifie débiter la banque (512) ?",
+       "a": "La trésorerie de l'entreprise augmente."
+      },
+      {
+       "q": "Journal, grand livre, balance ?",
+       "a": "Chronologique ; par compte ; liste des soldes de tous les comptes."
+      }
+     ],
+     "exercises": [
+      {
+       "id": "atelier-creation-mobilia",
+       "type": "ecritures",
+       "title": "Atelier : les six premières écritures de Mobilia",
+       "statement": "Passez au journal les opérations de création et de démarrage de la SAS Mobilia (TVA au taux de 20 %).",
+       "entries": [
+        {
+         "label": "Les associés versent leur apport en capital de **50 000 €** sur le compte bancaire de la société.",
+         "lines": [
+          {
+           "account": "512",
+           "debit": 50000
+          },
+          {
+           "account": "101",
+           "credit": 50000
+          }
+         ],
+         "explain": "La banque augmente (actif → débit) ; le capital augmente (capitaux propres → crédit). En pratique, on passe par le compte 4561 (associés — apports) ; le résultat final est identique."
+        },
+        {
+         "label": "La banque accorde un **emprunt de 30 000 €**, versé sur le compte.",
+         "lines": [
+          {
+           "account": "512",
+           "debit": 30000
+          },
+          {
+           "account": "164",
+           "credit": 30000
+          }
+         ],
+         "explain": "L'emprunt est une dette (passif → crédit)."
+        },
+        {
+         "label": "Achat de matériel et d'agencements pour **24 000 € HT**, TVA 4 800 €, facture à payer au fournisseur.",
+         "lines": [
+          {
+           "account": "218",
+           "debit": 24000
+          },
+          {
+           "account": "44562",
+           "debit": 4800
+          },
+          {
+           "account": "404",
+           "credit": 28800
+          }
+         ],
+         "explain": "Immobilisation (classe 2), TVA déductible sur immobilisations (44562), dette envers un fournisseur d'immobilisations (404, et non 401)."
+        },
+        {
+         "label": "Paiement du fournisseur d'immobilisations par virement (**28 800 €**).",
+         "lines": [
+          {
+           "account": "404",
+           "debit": 28800
+          },
+          {
+           "account": "512",
+           "credit": 28800
+          }
+         ],
+         "explain": "La dette s'éteint (débit), la banque diminue (crédit)."
+        },
+        {
+         "label": "Achat de marchandises **10 000 € HT** à crédit, TVA 2 000 €.",
+         "lines": [
+          {
+           "account": "607",
+           "debit": 10000
+          },
+          {
+           "account": "44566",
+           "debit": 2000
+          },
+          {
+           "account": "401",
+           "credit": 12000
+          }
+         ],
+         "explain": "Charge d'achat (607), TVA déductible sur biens et services (44566), dette fournisseur (401)."
+        },
+        {
+         "label": "Vente de marchandises **15 000 € HT** à crédit, TVA 3 000 €.",
+         "lines": [
+          {
+           "account": "411",
+           "debit": 18000
+          },
+          {
+           "account": "707",
+           "credit": 15000
+          },
+          {
+           "account": "44571",
+           "credit": 3000
+          }
+         ],
+         "explain": "Créance client TTC (411), produit HT (707), TVA collectée, dette envers l'État (44571)."
+        }
+       ],
+       "model": ""
+      }
+     ]
+    },
+    {
+     "id": "operations-courantes",
+     "title": "Les opérations courantes : achats, ventes, réductions, paie, TVA",
+     "duration": 20,
+     "src": "packs/comptabilite/operations-courantes.md",
+     "objectives": [
+      "Enregistrer remises, avoirs et escomptes",
+      "Comptabiliser une paie",
+      "Établir l'écriture de TVA à décaisser"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Un escompte accordé à un client s'enregistre en :",
+       "choices": [
+        "7097",
+        "665",
+        "765",
+        "609"
+       ],
+       "answer": 1,
+       "explain": "Charge financière ; TVA calculée sur le net financier."
+      },
+      {
+       "type": "qcm",
+       "q": "Une remise figurant sur la facture d'achat :",
+       "choices": [
+        "Est enregistrée en 6097",
+        "N'est pas enregistrée : on comptabilise le net commercial",
+        "Est un produit financier",
+        "Est une charge"
+       ],
+       "answer": 1,
+       "explain": "Seuls les RRR accordés après coup (avoir) passent en 609/709."
+      },
+      {
+       "type": "qcm",
+       "q": "Le salaire brut s'enregistre au débit du compte :",
+       "choices": [
+        "421",
+        "431",
+        "641",
+        "645"
+       ],
+       "answer": 2,
+       "explain": "645 pour les charges patronales ; 421 pour le net dû."
+      },
+      {
+       "type": "qcm",
+       "q": "Pour une prestation de services (sans option pour les débits), la TVA est exigible :",
+       "choices": [
+        "À la facturation",
+        "À l'encaissement",
+        "À la commande",
+        "À la clôture"
+       ],
+       "answer": 1,
+       "explain": "Pour les biens : à la livraison."
+      },
+      {
+       "type": "vf",
+       "q": "La TVA non récupérable devient une charge (ou s'ajoute au coût de l'immobilisation).",
+       "answer": true,
+       "explain": "Ex. véhicules de tourisme."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "TVA à décaisser ?",
+       "a": "TVA collectée − TVA déductible (44571 − 44566 − 44562) → 44551."
+      },
+      {
+       "q": "Coût total d'un salarié ?",
+       "a": "Salaire brut + cotisations patronales."
+      }
+     ],
+     "exercises": [
+      {
+       "id": "atelier-operations-courantes",
+       "type": "ecritures",
+       "title": "Atelier : un mois d'opérations courantes",
+       "statement": "Enregistrez les opérations du mois de mars de Mobilia (TVA 20 %).",
+       "entries": [
+        {
+         "label": "Facture d'achat de marchandises : prix brut **5 000 € HT**, remise de 10 % sur facture. TVA sur le net.",
+         "lines": [
+          {
+           "account": "607",
+           "debit": 4500
+          },
+          {
+           "account": "44566",
+           "debit": 900
+          },
+          {
+           "account": "401",
+           "credit": 5400
+          }
+         ],
+         "explain": "On enregistre le net commercial (4 500 €) ; TVA 900 € ; TTC 5 400 €."
+        },
+        {
+         "label": "Le fournisseur adresse un **avoir** pour un rabais de **300 € HT** (marchandise légèrement abîmée), TVA 60 €.",
+         "lines": [
+          {
+           "account": "401",
+           "debit": 360
+          },
+          {
+           "account": "6097",
+           "credit": 300
+          },
+          {
+           "account": "44566",
+           "credit": 60
+          }
+         ],
+         "explain": "La dette diminue de 360 € ; le rabais obtenu après coup se crédite en 6097 ; la TVA déductible est réduite."
+        },
+        {
+         "label": "Règlement du fournisseur par virement pour le solde dû (**5 040 €**).",
+         "lines": [
+          {
+           "account": "401",
+           "debit": 5040
+          },
+          {
+           "account": "512",
+           "credit": 5040
+          }
+         ],
+         "explain": "5 400 − 360 = 5 040 €."
+        },
+        {
+         "label": "Facture de vente **8 000 € HT** avec escompte de 2 % pour paiement comptant ; TVA 20 % sur le net financier.",
+         "lines": [
+          {
+           "account": "411",
+           "debit": 9408
+          },
+          {
+           "account": "665",
+           "debit": 160
+          },
+          {
+           "account": "707",
+           "credit": 8000
+          },
+          {
+           "account": "44571",
+           "credit": 1568
+          }
+         ],
+         "explain": "Escompte 160 € (665) ; net financier 7 840 € ; TVA 1 568 € ; net à payer 9 408 €."
+        },
+        {
+         "label": "Paie du mois : salaires bruts **7 500 €**, cotisations salariales **1 650 €**, prélèvement à la source **300 €**, net à payer **5 550 €**.",
+         "lines": [
+          {
+           "account": "641",
+           "debit": 7500
+          },
+          {
+           "account": "431",
+           "credit": 1650
+          },
+          {
+           "account": "4421",
+           "credit": 300
+          },
+          {
+           "account": "421",
+           "credit": 5550
+          }
+         ],
+         "explain": "Le brut est la charge ; on doit les cotisations salariales aux organismes, l'impôt prélevé à l'État et le net aux salariés."
+        },
+        {
+         "label": "Cotisations patronales du mois : **3 000 €**.",
+         "lines": [
+          {
+           "account": "645",
+           "debit": 3000
+          },
+          {
+           "account": "431",
+           "credit": 3000
+          }
+         ],
+         "explain": "Charge sociale patronale, dette envers l'URSSAF."
+        },
+        {
+         "label": "Déclaration de TVA du mois : TVA collectée **12 000 €**, TVA déductible sur achats **7 000 €**, sur immobilisations **1 000 €**.",
+         "lines": [
+          {
+           "account": "44571",
+           "debit": 12000
+          },
+          {
+           "account": "44566",
+           "credit": 7000
+          },
+          {
+           "account": "44562",
+           "credit": 1000
+          },
+          {
+           "account": "44551",
+           "credit": 4000
+          }
+         ],
+         "explain": "On solde les comptes de TVA ; la différence (4 000 €) est due à l'État."
+        },
+        {
+         "label": "Paiement de la TVA due par virement.",
+         "lines": [
+          {
+           "account": "44551",
+           "debit": 4000
+          },
+          {
+           "account": "512",
+           "credit": 4000
+          }
+         ]
+        }
+       ],
+       "model": ""
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "inventaire",
+   "title": "Les travaux d'inventaire et les comptes annuels",
+   "level": 2,
+   "summary": "Immobilisations et amortissements, stocks, dépréciations et provisions, régularisations, IS et affectation, comptes annuels.",
+   "lessons": [
+    {
+     "id": "immobilisations-amortissements",
+     "title": "Immobilisations et amortissements (linéaire, dégressif, dérogatoire, cessions)",
+     "duration": 20,
+     "src": "packs/comptabilite/immobilisations-amortissements.md",
+     "objectives": [
+      "Déterminer le coût d'entrée",
+      "Calculer un plan d'amortissement",
+      "Comptabiliser une cession"
+     ],
+     "keyRefs": [
+      "Art. 39 B CGI",
+      "Art. 39 A CGI",
+      "PCG art. 214-13 et s."
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "L'amortissement linéaire commence à courir :",
+       "choices": [
+        "Au premier jour du mois d'acquisition",
+        "À la date de mise en service",
+        "Au 1er janvier",
+        "À la date de paiement"
+       ],
+       "answer": 1,
+       "explain": "Le dégressif, lui, part du premier jour du mois d'acquisition."
+      },
+      {
+       "type": "qcm",
+       "q": "Coefficient dégressif pour un bien amortissable sur 5 ans :",
+       "choices": [
+        "1,25",
+        "1,75",
+        "2,25",
+        "2,5"
+       ],
+       "answer": 1,
+       "explain": "1,25 (3-4 ans), 1,75 (5-6 ans), 2,25 (> 6 ans)."
+      },
+      {
+       "type": "qcm",
+       "q": "L'amortissement dérogatoire est inscrit :",
+       "choices": [
+        "À l'actif",
+        "Dans les capitaux propres (provisions réglementées)",
+        "En dettes",
+        "Hors bilan"
+       ],
+       "answer": 1,
+       "explain": "Compte 145."
+      },
+      {
+       "type": "qcm",
+       "q": "Plus-value de cession = ",
+       "choices": [
+        "Prix − coût d'acquisition",
+        "Prix − valeur nette comptable",
+        "Prix − amortissements",
+        "VNC − prix"
+       ],
+       "answer": 1,
+       "explain": "VNC = coût − amortissements cumulés."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Seuil de tolérance de comptabilisation en charges ?",
+       "a": "Biens de faible valeur, moins de 500 € HT l'unité (tolérance fiscale)."
+      },
+      {
+       "q": "Écriture de dotation aux amortissements ?",
+       "a": "Débit 6811 / crédit 28x."
+      }
+     ],
+     "exercises": [
+      {
+       "id": "calcul-amortissements",
+       "type": "calcul",
+       "title": "Exercice chiffré : plan d'amortissement",
+       "statement": "Une machine est acquise **36 000 € HT** et mise en service le **1er avril N**. Durée d'utilisation : **6 ans**. Exercice clos le 31 décembre.",
+       "questions": [
+        {
+         "q": "Annuité d'amortissement **linéaire** de l'exercice N ?",
+         "answer": 4500,
+         "unit": "€",
+         "explain": "36 000 / 6 = 6 000 € par an ; prorata de 9 mois : 6 000 × 9/12 = 4 500 €."
+        },
+        {
+         "q": "Valeur nette comptable au 31 décembre N (linéaire) ?",
+         "answer": 31500,
+         "unit": "€",
+         "explain": "36 000 − 4 500 = 31 500 €."
+        },
+        {
+         "q": "Annuité **dégressive** de N (coefficient 1,75 ; prorata depuis le 1er jour du mois d'acquisition, ici avril) ?",
+         "answer": 7875,
+         "tolerance": 5,
+         "unit": "€",
+         "explain": "Taux : 1/6 × 1,75 = 29,17 % ; 36 000 × 29,17 % = 10 500 € ; × 9/12 = 7 875 €."
+        },
+        {
+         "q": "Dotation aux **amortissements dérogatoires** de N si l'amortissement comptable est linéaire et l'amortissement fiscal dégressif ?",
+         "answer": 3375,
+         "tolerance": 5,
+         "unit": "€",
+         "explain": "7 875 − 4 500 = 3 375 € (débit 6872 / crédit 145)."
+        },
+        {
+         "q": "Un matériel acquis 20 000 € et amorti à hauteur de 12 000 € est cédé 9 000 €. Plus-value (ou moins-value si négatif) ?",
+         "answer": 1000,
+         "unit": "€",
+         "explain": "VNC 8 000 € ; 9 000 − 8 000 = 1 000 €."
+        }
+       ],
+       "model": ""
+      },
+      {
+       "id": "atelier-cession",
+       "type": "ecritures",
+       "title": "Atelier : dotation et cession",
+       "statement": "Passez les écritures d'amortissement et de cession.",
+       "entries": [
+        {
+         "label": "Dotation annuelle aux amortissements du matériel de Mobilia (**24 000 €** sur 5 ans, année pleine).",
+         "lines": [
+          {
+           "account": "6811",
+           "debit": 4800
+          },
+          {
+           "account": "281",
+           "credit": 4800
+          }
+         ],
+         "explain": "24 000 / 5 = 4 800 €."
+        },
+        {
+         "label": "Cession d'un matériel pour **9 000 € HT** (TVA 1 800 €) payés comptant : enregistrement du **prix**.",
+         "lines": [
+          {
+           "account": "512",
+           "debit": 10800
+          },
+          {
+           "account": "775",
+           "credit": 9000
+          },
+          {
+           "account": "44571",
+           "credit": 1800
+          }
+         ]
+        },
+        {
+         "label": "Sortie du matériel cédé : coût d'acquisition **20 000 €**, amortissements cumulés **12 000 €**.",
+         "lines": [
+          {
+           "account": "281",
+           "debit": 12000
+          },
+          {
+           "account": "675",
+           "debit": 8000
+          },
+          {
+           "account": "215",
+           "credit": 20000
+          }
+         ],
+         "explain": "On solde le compte d'immobilisation et ses amortissements ; la VNC passe en charge (675). Plus-value nette : 9 000 − 8 000 = 1 000 €."
+        }
+       ],
+       "model": ""
+      }
+     ]
+    },
+    {
+     "id": "stocks-provisions",
+     "title": "Stocks, dépréciations et provisions",
+     "duration": 16,
+     "src": "packs/comptabilite/stocks-provisions.md",
+     "objectives": [
+      "Comptabiliser la variation des stocks",
+      "Déprécier une créance douteuse",
+      "Constituer une provision"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Stock initial 10 000, achats 100 000, stock final 25 000 : coût d'achat des marchandises vendues ?",
+       "choices": [
+        "85 000",
+        "115 000",
+        "125 000",
+        "75 000"
+       ],
+       "answer": 0,
+       "explain": "100 000 + 10 000 − 25 000 = 85 000."
+      },
+      {
+       "type": "qcm",
+       "q": "La dépréciation d'une créance client se calcule sur :",
+       "choices": [
+        "Le TTC",
+        "Le HT",
+        "La TVA",
+        "Le prix de vente total annuel"
+       ],
+       "answer": 1,
+       "explain": "La TVA sera récupérée si la créance devient irrécouvrable."
+      },
+      {
+       "type": "vf",
+       "q": "Le LIFO (dernier entré, premier sorti) est admis pour évaluer les stocks.",
+       "answer": false,
+       "explain": "CUMP ou FIFO."
+      },
+      {
+       "type": "qcm",
+       "q": "Une provision pour risques suppose notamment :",
+       "choices": [
+        "Une perte certaine",
+        "Une obligation et une sortie de ressources probable estimable",
+        "L'accord du fisc",
+        "Un jugement définitif"
+       ],
+       "answer": 1,
+       "explain": "Obligation, sortie probable, estimation fiable."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Compte de variation des stocks de marchandises ?",
+       "a": "6037, mouvementé pour SI − SF."
+      }
+     ],
+     "exercises": [
+      {
+       "id": "atelier-inventaire",
+       "type": "ecritures",
+       "title": "Atelier : stocks, créance douteuse, provision",
+       "statement": "Passez les écritures d'inventaire de Mobilia au 31 décembre N.",
+       "entries": [
+        {
+         "label": "Constatation du stock final de marchandises : **40 000 €** (stock initial nul).",
+         "lines": [
+          {
+           "account": "37",
+           "debit": 40000
+          },
+          {
+           "account": "6037",
+           "credit": 40000
+          }
+         ]
+        },
+        {
+         "label": "Un client devant **12 000 € TTC** est en redressement judiciaire : reclassement en créance douteuse.",
+         "lines": [
+          {
+           "account": "416",
+           "debit": 12000
+          },
+          {
+           "account": "411",
+           "credit": 12000
+          }
+         ]
+        },
+        {
+         "label": "Dépréciation de cette créance : perte probable **40 %** (TVA 20 % comprise dans les 12 000 €).",
+         "lines": [
+          {
+           "account": "6817",
+           "debit": 4000
+          },
+          {
+           "account": "491",
+           "credit": 4000
+          }
+         ],
+         "explain": "HT : 10 000 € ; 40 % = 4 000 €."
+        },
+        {
+         "label": "Provision pour un litige client : condamnation probable estimée à **2 000 €**.",
+         "lines": [
+          {
+           "account": "6815",
+           "debit": 2000
+          },
+          {
+           "account": "151",
+           "credit": 2000
+          }
+         ]
+        }
+       ],
+       "model": ""
+      }
+     ]
+    },
+    {
+     "id": "regularisations-cloture",
+     "title": "Régularisations, impôt sur les sociétés et affectation du résultat",
+     "duration": 18,
+     "src": "packs/comptabilite/regularisations-cloture.md",
+     "objectives": [
+      "Rattacher charges et produits au bon exercice",
+      "Comptabiliser l'IS",
+      "Affecter le résultat conformément au droit des sociétés"
+     ],
+     "keyRefs": [
+      "Art. L. 232-10 C. com.",
+      "Art. L. 232-11 C. com.",
+      "Art. L. 232-12 C. com."
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Assurance annuelle de 1 200 € payée le 1er juillet N : charge constatée d'avance au 31/12/N ?",
+       "choices": [
+        "0",
+        "300",
+        "600",
+        "1 200"
+       ],
+       "answer": 2,
+       "explain": "6 mois concernent N+1."
+      },
+      {
+       "type": "qcm",
+       "q": "Une facture d'électricité de décembre reçue en janvier s'enregistre au 31/12 en :",
+       "choices": [
+        "486",
+        "408",
+        "418",
+        "487"
+       ],
+       "answer": 1,
+       "explain": "Facture non parvenue."
+      },
+      {
+       "type": "qcm",
+       "q": "La réserve légale est dotée de 5 % du bénéfice jusqu'à atteindre :",
+       "choices": [
+        "5 % du capital",
+        "10 % du capital",
+        "20 % du capital",
+        "La moitié du capital"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 232-10 C. com."
+      },
+      {
+       "type": "vf",
+       "q": "Un acompte sur dividende peut être versé avant l'approbation des comptes sur la base d'un bilan certifié.",
+       "answer": true,
+       "explain": "Art. L. 232-12 C. com."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Bénéfice distribuable (L. 232-11) ?",
+       "a": "Bénéfice de l'exercice − pertes antérieures − dotation aux réserves légales/statutaires + report bénéficiaire."
+      }
+     ],
+     "exercises": [
+      {
+       "id": "atelier-cloture",
+       "type": "ecritures",
+       "title": "Atelier : clôture de l'exercice N",
+       "statement": "Passez les écritures de régularisation et de clôture de Mobilia au 31 décembre N, puis l'affectation du résultat décidée en N+1.",
+       "entries": [
+        {
+         "label": "Assurance de **2 400 €** payée le 1er octobre N pour douze mois (compte 616).",
+         "lines": [
+          {
+           "account": "486",
+           "debit": 1800
+          },
+          {
+           "account": "616",
+           "credit": 1800
+          }
+         ],
+         "explain": "9 mois concernent N+1 : 2 400 × 9/12 = 1 800 €."
+        },
+        {
+         "label": "Facture d'électricité de décembre non encore reçue : **500 € HT**, TVA 100 € (compte 606).",
+         "lines": [
+          {
+           "account": "606",
+           "debit": 500
+          },
+          {
+           "account": "44586",
+           "debit": 100
+          },
+          {
+           "account": "408",
+           "credit": 600
+          }
+         ]
+        },
+        {
+         "label": "Livraison faite le 28 décembre, facture émise en janvier : **3 000 € HT**, TVA 600 €.",
+         "lines": [
+          {
+           "account": "418",
+           "debit": 3600
+          },
+          {
+           "account": "707",
+           "credit": 3000
+          },
+          {
+           "account": "44587",
+           "credit": 600
+          }
+         ]
+        },
+        {
+         "label": "Intérêts courus sur l'emprunt, non échus : **300 €**.",
+         "lines": [
+          {
+           "account": "661",
+           "debit": 300
+          },
+          {
+           "account": "1688",
+           "credit": 300
+          }
+         ]
+        },
+        {
+         "label": "Impôt sur les sociétés de l'exercice : **8 450 €** (aucun acompte versé la première année).",
+         "lines": [
+          {
+           "account": "695",
+           "debit": 8450
+          },
+          {
+           "account": "444",
+           "credit": 8450
+          }
+         ]
+        },
+        {
+         "label": "En N+1, l'AGO affecte le bénéfice de **41 550 €** : réserve légale 5 %, dividendes **20 000 €**, solde en report à nouveau.",
+         "lines": [
+          {
+           "account": "120",
+           "debit": 41550
+          },
+          {
+           "account": "1061",
+           "credit": 2077.5
+          },
+          {
+           "account": "457",
+           "credit": 20000
+          },
+          {
+           "account": "110",
+           "credit": 19472.5
+          }
+         ],
+         "explain": "5 % × 41 550 = 2 077,50 € ; report à nouveau : 41 550 − 2 077,50 − 20 000 = 19 472,50 €."
+        }
+       ],
+       "model": ""
+      }
+     ]
+    },
+    {
+     "id": "comptes-annuels",
+     "title": "Les comptes annuels : établissement, approbation, publicité",
+     "duration": 14,
+     "src": "packs/comptabilite/comptes-annuels.md",
+     "objectives": [
+      "Connaître le calendrier juridique des comptes",
+      "Utiliser la confidentialité",
+      "Réagir à des capitaux propres insuffisants"
+     ],
+     "keyRefs": [
+      "Art. L. 232-1 C. com.",
+      "Art. L. 232-21 à L. 232-25 C. com.",
+      "Art. L. 225-248 C. com.",
+      "Art. L. 223-42 C. com."
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Délai d'approbation des comptes après la clôture :",
+       "choices": [
+        "3 mois",
+        "6 mois",
+        "9 mois",
+        "1 an"
+       ],
+       "answer": 1,
+       "explain": "Prorogation possible par le président du tribunal."
+      },
+      {
+       "type": "qcm",
+       "q": "Une micro-entreprise peut :",
+       "choices": [
+        "Ne pas établir de comptes",
+        "Demander la confidentialité de ses comptes annuels",
+        "Ne pas tenir de comptabilité",
+        "Déposer ses comptes tous les 3 ans"
+       ],
+       "answer": 1,
+       "explain": "Les petites entreprises peuvent rendre confidentiel le compte de résultat."
+      },
+      {
+       "type": "vf",
+       "q": "Les engagements hors bilan (cautions données) figurent dans l'annexe.",
+       "answer": true,
+       "explain": "Point essentiel d'un audit."
+      },
+      {
+       "type": "qcm",
+       "q": "Capitaux propres inférieurs à la moitié du capital : les associés doivent statuer sur la dissolution anticipée dans :",
+       "choices": [
+        "1 mois",
+        "4 mois de l'approbation des comptes",
+        "1 an",
+        "Aucun délai"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 225-248 / L. 223-42."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Délai de dépôt des comptes au greffe ?",
+       "a": "Un mois après l'approbation (deux mois par voie électronique)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "analyse",
+   "title": "L'analyse financière",
+   "level": 2,
+   "summary": "SIG et CAF, bilan fonctionnel et BFR, rentabilité, endettement, valorisation.",
+   "lessons": [
+    {
+     "id": "sig-caf",
+     "title": "Les soldes intermédiaires de gestion et la capacité d'autofinancement",
+     "duration": 18,
+     "src": "packs/comptabilite/sig-caf.md",
+     "objectives": [
+      "Calculer la cascade des SIG",
+      "Interpréter l'EBE",
+      "Calculer la CAF par deux méthodes"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "L'EBE est proche de :",
+       "choices": [
+        "Le résultat net",
+        "L'EBITDA",
+        "Le chiffre d'affaires",
+        "La CAF"
+       ],
+       "answer": 1,
+       "explain": "Avant amortissements, frais financiers et impôt."
+      },
+      {
+       "type": "qcm",
+       "q": "Valeur ajoutée = ",
+       "choices": [
+        "Marge + production − consommations externes",
+        "Ventes − salaires",
+        "EBE + impôts",
+        "Résultat + amortissements"
+       ],
+       "answer": 0,
+       "explain": "Richesse créée par l'entreprise."
+      },
+      {
+       "type": "qcm",
+       "q": "CAF (méthode additive) = résultat net +",
+       "choices": [
+        "Ventes",
+        "Dotations (− reprises) ± résultat de cession",
+        "Dividendes",
+        "Emprunts"
+       ],
+       "answer": 1,
+       "explain": "On neutralise les charges et produits calculés."
+      },
+      {
+       "type": "vf",
+       "q": "La CAF est égale à la variation de trésorerie de l'exercice.",
+       "answer": false,
+       "explain": "Il faut tenir compte de la variation du BFR, des investissements et du financement."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Cascade des SIG ?",
+       "a": "Marge commerciale, production, valeur ajoutée, EBE, résultat d'exploitation, RCAI, résultat exceptionnel, résultat net."
+      }
+     ],
+     "exercises": [
+      {
+       "id": "calcul-sig",
+       "type": "calcul",
+       "title": "Exercice chiffré : les SIG d'une société de négoce",
+       "statement": "Compte de résultat simplifié de la SAS Delta (en euros) : ventes de marchandises **800 000** ; achats de marchandises **480 000** ; stock initial **50 000** ; stock final **70 000** ; autres achats et charges externes **110 000** ; impôts et taxes **12 000** ; salaires **120 000** ; charges sociales **48 000** ; dotations aux amortissements **25 000** ; dotations aux provisions **5 000** ; charges d'intérêts **8 000** ; impôt sur les bénéfices **5 000**.",
+       "questions": [
+        {
+         "q": "Coût d'achat des marchandises vendues ?",
+         "answer": 460000,
+         "unit": "€",
+         "explain": "480 000 + 50 000 − 70 000 = 460 000 €."
+        },
+        {
+         "q": "Marge commerciale ?",
+         "answer": 340000,
+         "unit": "€",
+         "explain": "800 000 − 460 000 = 340 000 €."
+        },
+        {
+         "q": "Valeur ajoutée ?",
+         "answer": 230000,
+         "unit": "€",
+         "explain": "340 000 − 110 000 = 230 000 €."
+        },
+        {
+         "q": "EBE ?",
+         "answer": 50000,
+         "unit": "€",
+         "explain": "230 000 − 12 000 − 120 000 − 48 000 = 50 000 €."
+        },
+        {
+         "q": "Résultat d'exploitation ?",
+         "answer": 20000,
+         "unit": "€",
+         "explain": "50 000 − 25 000 − 5 000 = 20 000 €."
+        },
+        {
+         "q": "Résultat net ?",
+         "answer": 7000,
+         "unit": "€",
+         "explain": "20 000 − 8 000 = 12 000 € (RCAI) ; − 5 000 d'IS = 7 000 €."
+        },
+        {
+         "q": "CAF ?",
+         "answer": 37000,
+         "unit": "€",
+         "explain": "Additive : 7 000 + 25 000 + 5 000 = 37 000 € ; soustractive : 50 000 − 8 000 − 5 000 = 37 000 €."
+        }
+       ],
+       "model": ""
+      }
+     ]
+    },
+    {
+     "id": "bilan-fonctionnel-bfr",
+     "title": "Bilan fonctionnel, BFR et trésorerie",
+     "duration": 18,
+     "src": "packs/comptabilite/bilan-fonctionnel-bfr.md",
+     "objectives": [
+      "Calculer FRNG, BFR et trésorerie nette",
+      "Interpréter l'équilibre financier",
+      "Lire un tableau des flux"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Trésorerie nette = ",
+       "choices": [
+        "FRNG + BFR",
+        "FRNG − BFR",
+        "BFR − FRNG",
+        "CAF − BFR"
+       ],
+       "answer": 1,
+       "explain": "Équation fondamentale de l'équilibre financier."
+      },
+      {
+       "type": "vf",
+       "q": "Une forte croissance du chiffre d'affaires réduit le BFR.",
+       "answer": false,
+       "explain": "Elle l'augmente (plus de stocks et de créances) : effet ciseaux."
+      },
+      {
+       "type": "qcm",
+       "q": "Délai clients = ",
+       "choices": [
+        "Clients HT / CA HT × 360",
+        "Clients TTC / CA TTC × 360",
+        "Fournisseurs / achats × 360",
+        "Stocks / CA × 360"
+       ],
+       "answer": 1,
+       "explain": "Comparer créances TTC et ventes TTC."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Flux de trésorerie d'exploitation ?",
+       "a": "CAF − variation du BFR."
+      }
+     ],
+     "exercises": [
+      {
+       "id": "calcul-bfr",
+       "type": "calcul",
+       "title": "Exercice chiffré : l'équilibre financier",
+       "statement": "Bilan fonctionnel simplifié de la SAS Delta (en euros) : capitaux propres **300 000** ; amortissements cumulés **150 000** ; provisions **10 000** ; emprunts à long terme **140 000** ; immobilisations brutes **480 000** ; stocks **70 000** ; créances clients TTC **120 000** ; dettes fournisseurs TTC **90 000** ; dettes fiscales et sociales d'exploitation **40 000** ; disponibilités **80 000** ; découvert bancaire **20 000**. Ventes TTC de l'année : **960 000**.",
+       "questions": [
+        {
+         "q": "FRNG ?",
+         "answer": 120000,
+         "unit": "€",
+         "explain": "Ressources stables 300 000 + 150 000 + 10 000 + 140 000 = 600 000 ; − emplois stables 480 000 = 120 000 €."
+        },
+        {
+         "q": "BFR d'exploitation ?",
+         "answer": 60000,
+         "unit": "€",
+         "explain": "70 000 + 120 000 − 90 000 − 40 000 = 60 000 €."
+        },
+        {
+         "q": "Trésorerie nette ?",
+         "answer": 60000,
+         "unit": "€",
+         "explain": "Trésorerie active 80 000 − trésorerie passive 20 000 = 60 000 € ; vérification : FRNG − BFR = 120 000 − 60 000 = 60 000 €. L'équilibre est sain : le FRNG finance tout le BFR."
+        },
+        {
+         "q": "Délai de paiement des clients (en jours, base 360) ?",
+         "answer": 45,
+         "unit": "jours",
+         "explain": "120 000 / 960 000 × 360 = 45 jours."
+        }
+       ],
+       "model": ""
+      }
+     ]
+    },
+    {
+     "id": "rentabilite-valorisation",
+     "title": "Rentabilité, endettement, covenants et valorisation",
+     "duration": 16,
+     "src": "packs/comptabilite/rentabilite-valorisation.md",
+     "objectives": [
+      "Calculer les ratios de rentabilité et d'endettement",
+      "Comprendre l'effet de levier",
+      "Passer de la valeur d'entreprise à la valeur des titres"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Valeur des titres = ",
+       "choices": [
+        "Valeur d'entreprise + dette nette",
+        "Valeur d'entreprise − dette financière nette",
+        "Capitaux propres × 2",
+        "EBE × 10"
+       ],
+       "answer": 1,
+       "explain": "On retranche ce qui revient aux prêteurs."
+      },
+      {
+       "type": "qcm",
+       "q": "Un covenant « dette nette / EBITDA < 3 » mesure :",
+       "choices": [
+        "La rentabilité",
+        "Le levier d'endettement",
+        "Le BFR",
+        "La marge"
+       ],
+       "answer": 1,
+       "explain": "En années d'EBITDA."
+      },
+      {
+       "type": "vf",
+       "q": "L'effet de levier est positif lorsque la rentabilité économique dépasse le coût de la dette.",
+       "answer": true,
+       "explain": "Sinon, effet massue."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Locked box ?",
+       "a": "Prix fixé sur des comptes passés, avec interdiction des fuites de valeur jusqu'au closing (pas d'ajustement de prix)."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fiscalite-appliquee",
+   "title": "Comptabilité et fiscalité, comptabilité et droit",
+   "level": 3,
+   "summary": "Résultat fiscal et IS, TVA et liasse, calendrier ; lecture des comptes par le juriste.",
+   "lessons": [
+    {
+     "id": "resultat-fiscal",
+     "title": "Du résultat comptable au résultat fiscal ; le calcul de l'IS",
+     "duration": 18,
+     "src": "packs/comptabilite/resultat-fiscal.md",
+     "objectives": [
+      "Établir le tableau de passage (2058-A)",
+      "Calculer l'IS d'une PME",
+      "Appliquer le régime mère-fille"
+     ],
+     "keyRefs": [
+      "Art. 38 CGI",
+      "Art. 39 CGI",
+      "Art. 39-4 CGI",
+      "Art. 213 CGI",
+      "Art. 216 CGI",
+      "Art. 219 CGI"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Une amende fiscale comptabilisée en charge est :",
+       "choices": [
+        "Déductible",
+        "Réintégrée",
+        "Déduite deux fois",
+        "Exonérée"
+       ],
+       "answer": 1,
+       "explain": "Art. 39, 2 CGI."
+      },
+      {
+       "type": "qcm",
+       "q": "Quote-part de frais et charges sur dividendes mère-fille :",
+       "choices": [
+        "1 %",
+        "5 %",
+        "12 %",
+        "25 %"
+       ],
+       "answer": 1,
+       "explain": "Art. 216 CGI (1 % dans certains cas d'intégration)."
+      },
+      {
+       "type": "qcm",
+       "q": "Résultat fiscal 60 000 €, PME éligible : IS ?",
+       "choices": [
+        "9 000",
+        "10 750",
+        "15 000",
+        "6 375"
+       ],
+       "answer": 1,
+       "explain": "42 500 × 15 % = 6 375 ; 17 500 × 25 % = 4 375 ; total 10 750 €."
+      },
+      {
+       "type": "vf",
+       "q": "Les impôts différés sont systématiquement comptabilisés dans les comptes individuels français.",
+       "answer": false,
+       "explain": "En principe dans les comptes consolidés (et IFRS)."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Formule du résultat fiscal ?",
+       "a": "Résultat comptable avant IS + réintégrations − déductions − déficits imputés."
+      }
+     ],
+     "exercises": [
+      {
+       "id": "calcul-is",
+       "type": "calcul",
+       "title": "Exercice chiffré : du résultat comptable à l'IS",
+       "statement": "La SAS Delta (PME éligible au taux réduit) présente un **résultat comptable avant IS de 120 000 €**. Parmi ses charges figurent : une **amende** pour infraction routière d'un salarié prise en charge **1 500 €** ; une **taxe sur l'affectation des véhicules de tourisme 2 200 €** ; une **dotation à une provision pour indemnités de départ en retraite 6 000 €** (non déductible). Parmi ses produits figurent des **dividendes de 50 000 €** reçus d'une filiale détenue à 30 % depuis 4 ans (régime mère-fille).",
+       "questions": [
+        {
+         "q": "Total des réintégrations (hors quote-part de frais et charges) ?",
+         "answer": 9700,
+         "unit": "€",
+         "explain": "1 500 + 2 200 + 6 000 = 9 700 €."
+        },
+        {
+         "q": "Quote-part de frais et charges à réintégrer sur les dividendes ?",
+         "answer": 2500,
+         "unit": "€",
+         "explain": "5 % × 50 000 = 2 500 €."
+        },
+        {
+         "q": "Résultat fiscal ?",
+         "answer": 82200,
+         "unit": "€",
+         "explain": "120 000 + 9 700 + 2 500 − 50 000 = 82 200 €."
+        },
+        {
+         "q": "Impôt sur les sociétés ?",
+         "answer": 16300,
+         "unit": "€",
+         "explain": "42 500 × 15 % = 6 375 € ; (82 200 − 42 500) × 25 % = 39 700 × 25 % = 9 925 € ; total 16 300 €."
+        }
+       ],
+       "model": ""
+      }
+     ]
+    },
+    {
+     "id": "tva-liasse-calendrier",
+     "title": "TVA, facturation électronique, liasse fiscale et calendrier",
+     "duration": 16,
+     "src": "packs/comptabilite/tva-liasse-calendrier.md",
+     "objectives": [
+      "Maîtriser les comptes et régimes de TVA",
+      "Se repérer dans la liasse fiscale",
+      "Tenir le calendrier fiscal"
+     ],
+     "keyRefs": [
+      "Art. 256 CGI",
+      "Art. 269 CGI",
+      "Art. 271 CGI",
+      "Art. 1729 D CGI"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Régime simplifié de TVA : déclaration annuelle et :",
+       "choices": [
+        "Acomptes mensuels",
+        "Deux acomptes semestriels",
+        "Aucun acompte",
+        "Quatre acomptes"
+       ],
+       "answer": 1,
+       "explain": "Juillet et décembre ; déclaration CA12."
+      },
+      {
+       "type": "qcm",
+       "q": "Le tableau de passage du résultat comptable au résultat fiscal est le :",
+       "choices": [
+        "2050",
+        "2052",
+        "2058-A",
+        "2065"
+       ],
+       "answer": 2,
+       "explain": "Réel normal (2033-B en simplifié)."
+      },
+      {
+       "type": "vf",
+       "q": "La TVA sur l'achat d'un véhicule de tourisme est en principe récupérable.",
+       "answer": false,
+       "explain": "Exclusion du droit à déduction (sauf exceptions)."
+      },
+      {
+       "type": "qcm",
+       "q": "Solde de l'IS pour un exercice clos le 31 décembre :",
+       "choices": [
+        "15 mars",
+        "15 avril",
+        "15 mai",
+        "30 juin"
+       ],
+       "answer": 2,
+       "explain": "Le 15 du 4e mois suivant la clôture."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Calendrier de la facturation électronique ?",
+       "a": "Réception obligatoire pour tous et émission GE/ETI à partir de septembre 2026 ; émission PME/micro en 2027 (à vérifier)."
+      }
+     ]
+    },
+    {
+     "id": "lire-comptes-juriste",
+     "title": "Lire les comptes en juriste : due diligence, cessions, dividendes, difficultés",
+     "duration": 16,
+     "src": "packs/comptabilite/lire-comptes-juriste.md",
+     "objectives": [
+      "Conduire la revue comptable d'une cible",
+      "Rédiger des clauses fondées sur des agrégats comptables",
+      "Repérer les signaux d'alerte"
+     ],
+     "quiz": [
+      {
+       "type": "vf",
+       "q": "Des capitaux propres négatifs signifient nécessairement la cessation des paiements.",
+       "answer": false,
+       "explain": "Insolvabilité comptable ≠ cessation des paiements."
+      },
+      {
+       "type": "qcm",
+       "q": "Un compte courant débiteur d'un gérant personne physique de SARL révèle :",
+       "choices": [
+        "Un placement normal",
+        "Un prêt prohibé, possible ABS",
+        "Une prime",
+        "Une provision"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 223-21 ; requalification fiscale possible."
+      },
+      {
+       "type": "qcm",
+       "q": "Où trouver les cautions données par la société ?",
+       "choices": [
+        "Au bilan actif",
+        "Dans l'annexe (engagements hors bilan)",
+        "Au compte de résultat",
+        "Nulle part"
+       ],
+       "answer": 1,
+       "explain": "Engagements hors bilan."
+      },
+      {
+       "type": "qcm",
+       "q": "Le préjudice de rupture brutale se calcule en principe sur :",
+       "choices": [
+        "Le chiffre d'affaires perdu",
+        "La marge sur coûts variables perdue",
+        "Le résultat net",
+        "Les capitaux propres"
+       ],
+       "answer": 1,
+       "explain": "Marge brute pendant le préavis manquant."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Garantie de valeur vs garantie de passif ?",
+       "a": "Valeur : indemnise l'acquéreur de la perte de valeur des titres ; passif : indemnise la société ; effets fiscaux différents."
+      }
+     ],
+     "exercises": [
+      {
+       "id": "cas-revue-comptable",
+       "type": "cas-pratique",
+       "title": "Cas pratique : la revue comptable avant rachat",
+       "timerMin": 45,
+       "statement": "Votre client envisage de racheter 100 % des actions de la SAS Gamma (capital 100 000 €). Les comptes du dernier exercice montrent : capitaux propres **40 000 €** ; résultat de l'exercice **− 30 000 €** ; un compte courant **débiteur** du président de **25 000 €** ; une annexe mentionnant une **caution** donnée par Gamma à une société sœur pour **200 000 €** ; un litige prud'homal non provisionné (demande de 80 000 €). Le cédant propose un prix fixe fondé sur un multiple de 6 fois l'EBE.\n\nQuels points relevez-vous et quelles clauses proposez-vous ?",
+       "rubric": [
+        "Capitaux propres < moitié du capital : procédure L. 227-1 / L. 225-248, régularisation",
+        "Compte courant débiteur du président : prêt prohibé (L. 227-12), ABS, requalification fiscale ; exiger le remboursement",
+        "Caution à une société sœur : intérêt social, autorisation, risque hors bilan ; mainlevée",
+        "Litige non provisionné : prudence, garantie spécifique ou ajustement",
+        "Prix : de la VE à la valeur des titres (dette nette), définition de l'EBE, ajustement / locked box, GAP"
+       ],
+       "model": "**1. Capitaux propres** (40 000 €) **inférieurs à la moitié du capital** (50 000 €) : vérifier que l'assemblée a été consultée sur la dissolution anticipée dans les quatre mois de l'approbation (règles de la SA applicables à la SAS) et que la publicité a été faite ; la société doit reconstituer ses capitaux propres avant la fin du deuxième exercice suivant. Prévoir une **recapitalisation** ou un engagement du cédant.\n\n**2. Compte courant débiteur du président** : prêt **interdit** aux dirigeants de SAS (art. L. 227-12), risque d'**abus de biens sociaux** et de requalification en **revenus distribués**. Condition suspensive : **remboursement** avant le closing.\n\n**3. Caution de 200 000 €** donnée à une société sœur : engagement hors bilan majeur ; vérifier l'**intérêt social** (risque d'ABS, Rozenblum), l'autorisation statutaire ; exiger la **mainlevée** au closing ou une **garantie spécifique** du cédant.\n\n**4. Litige prud'homal non provisionné** : les comptes ne respectent pas la prudence si le risque est probable ; **ajuster le prix** ou prévoir une **garantie spécifique** (non soumise aux franchises et plafonds de la GAP).\n\n**5. Prix** : un multiple d'EBE donne une **valeur d'entreprise** ; il faut retrancher la **dette financière nette** (en tenant compte de la caution, du litige, du compte courant) et prévoir un **ajustement** sur comptes de cession ou un mécanisme de **locked box** ; définir l'EBE de référence (retraitements) ; GAP avec comptes de référence, plafond, franchise, durée alignée sur les prescriptions fiscales et sociales, et **garantie bancaire** de la GAP."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "decisions": [],
+ "reforms": [
+  {
+   "date": "2014-10-01",
+   "title": "Recodification du plan comptable général",
+   "summary": "Règlement ANC n° 2014-03 : nouveau PCG."
+  },
+  {
+   "date": "2014-01-01",
+   "title": "Fichier des écritures comptables (FEC)",
+   "summary": "Remise obligatoire de la comptabilité sous forme de fichier normé en cas de contrôle (art. L. 47 A LPF)."
+  },
+  {
+   "date": "2025-01-01",
+   "title": "Modernisation des états financiers",
+   "summary": "Règlement ANC n° 2022-06 : résultat exceptionnel redéfini, fin des transferts de charges, annexe refondue."
+  },
+  {
+   "date": "2026-09-01",
+   "title": "Facturation électronique (première étape)",
+   "summary": "Réception obligatoire pour toutes les entreprises et émission pour les grandes et moyennes, selon le calendrier connu à la date de rédaction."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Partie double",
+   "def": "Principe selon lequel chaque opération est enregistrée au débit et au crédit de comptes pour un même total."
+  },
+  {
+   "term": "Balance",
+   "def": "Tableau récapitulant les totaux et soldes de tous les comptes."
+  },
+  {
+   "term": "Valeur nette comptable (VNC)",
+   "def": "Coût d'acquisition diminué des amortissements et dépréciations."
+  },
+  {
+   "term": "Amortissement dérogatoire",
+   "def": "Excédent de l'amortissement fiscal sur l'amortissement comptable, inscrit en provision réglementée (145)."
+  },
+  {
+   "term": "Charge constatée d'avance",
+   "def": "Charge enregistrée dans l'exercice mais concernant l'exercice suivant (486)."
+  },
+  {
+   "term": "Facture non parvenue",
+   "def": "Charge de l'exercice dont la facture n'est pas encore reçue (408)."
+  },
+  {
+   "term": "EBE / EBITDA",
+   "def": "Excédent brut d'exploitation : performance de l'exploitation avant amortissements, frais financiers et impôt."
+  },
+  {
+   "term": "CAF",
+   "def": "Capacité d'autofinancement : trésorerie potentielle dégagée par l'activité."
+  },
+  {
+   "term": "FRNG",
+   "def": "Fonds de roulement net global : ressources stables − emplois stables."
+  },
+  {
+   "term": "BFR",
+   "def": "Besoin en fonds de roulement : besoin de financement du cycle d'exploitation."
+  },
+  {
+   "term": "Dette financière nette",
+   "def": "Dettes financières − trésorerie."
+  },
+  {
+   "term": "Covenant",
+   "def": "Engagement de respecter des ratios financiers dans un contrat de prêt."
+  },
+  {
+   "term": "Liasse fiscale",
+   "def": "Ensemble des tableaux (2050-2059 ou 2033) accompagnant la déclaration de résultat."
+  },
+  {
+   "term": "2058-A",
+   "def": "Tableau de détermination du résultat fiscal à partir du résultat comptable."
+  },
+  {
+   "term": "FEC",
+   "def": "Fichier des écritures comptables remis à l'administration en cas de contrôle."
+  },
+  {
+   "term": "Capitaux propres",
+   "def": "Actif − dettes : capital, réserves, report à nouveau, résultat, provisions réglementées."
+  }
+ ]
+}

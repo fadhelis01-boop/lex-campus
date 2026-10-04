@@ -4,9 +4,9 @@ Application web installable (PWA) qui fonctionne sur PC, Mac, tablette, iPhone e
 
 ## Ce qu'elle contient
 
-- **19 domaines**, du droit des contrats au droit public : 84 leçons au programme (63 rédigées, les autres rédigées à la demande par l'assistant IA avec vérification sur les sources officielles), 3 niveaux (fondamentaux, approfondissement, expert).
+- **20 domaines**, du droit des contrats au droit public, plus un module complet de **comptabilité, analyse financière et fiscalité appliquée** : 98 leçons rédigées, 3 niveaux (fondamentaux, approfondissement, expert). Un domaine ajouté plus tard peut voir ses leçons rédigées à la demande par l'assistant IA.
 - **Cours écrits et audio** : lecture à voix haute paragraphe par paragraphe, surlignage, vitesse réglable, reprise exacte là où l'on s'est arrêté ou depuis le début ; reprise de la lecture écrite également.
-- **Pédagogie active** : 262 questions de quiz, cartes de révision à répétition espacée, test de positionnement et examen blanc par domaine, exercices rédigés avec corrigés (cas pratiques, fiche d'arrêt guidée, commentaire, dissertation, note de synthèse en conditions réelles).
+- **Pédagogie active** : 397 questions de quiz, ateliers d'écritures comptables et exercices chiffrés corrigés automatiquement, plan comptable consultable, cartes de révision à répétition espacée, test de positionnement et examen blanc par domaine, exercices rédigés avec corrigés (cas pratiques, fiche d'arrêt guidée, commentaire, dissertation, note de synthèse en conditions réelles).
 - **Méthodologie** complète : lire un arrêt en style direct, fiche d'arrêt, commentaire, cas pratique, dissertation, note de synthèse (méthode + trucs et astuces), recherche documentaire.
 - **Jurisprudence** : 55 grands arrêts avec leur sort actuel (en vigueur, codifié, abandonné), jeu de « l'arrêt mystère », liens Judilibre automatiques.
 - **« Ce qui a changé depuis 2006 »** : frise des réformes, et encadrés dans chaque leçon.

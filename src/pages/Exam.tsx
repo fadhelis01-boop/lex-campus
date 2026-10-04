@@ -22,7 +22,7 @@ export default function Exam({ packId, mode }: { packId: string; mode: "position
   }, [pack, mode, started]);
 
   if (!pack) return <div className="page"><h1>Domaine introuvable</h1></div>;
-  const back = pack.id === "methodologie" ? "#/methodo" : `#/domaine/${pack.id}`;
+  const back = pack.id === "methodologie" ? "#/methodo" : pack.id === "comptabilite" ? "#/compta" : `#/domaine/${pack.id}`;
   const timer = mode === "blanc" ? Math.max(5, Math.round(items.length * 1.25)) : undefined;
 
   const byModule = result

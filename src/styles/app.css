@@ -515,3 +515,35 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
   .tabbar, .sidebar, .audiobar, .lesson-toolbar, .prev-next, .banner { display: none !important; }
   .page { max-width: none; }
 }
+
+/* ============ Comptabilité : atelier d'écritures, calculs ============ */
+.mono { font-family: ui-monospace, "SF Mono", Consolas, monospace; }
+.num { text-align: right; font-variant-numeric: tabular-nums; }
+.journal-entry { border: 1px solid var(--line); border-radius: 12px; padding: 12px; margin: 12px 0; background: var(--bg-elev); }
+.journal-entry.solved { border-color: var(--ok); }
+.journal-label { display: flex; gap: 8px; align-items: flex-start; }
+.journal-label .prose { font-size: 1rem; }
+.journal-label .prose p { margin: 0; }
+.journal-table { display: flex; flex-direction: column; gap: 4px; margin-top: 8px; }
+.jt-head, .jt-row, .jt-total { display: grid; grid-template-columns: 78px 1fr 92px 92px; gap: 6px; align-items: center; }
+.jt-head { font-size: 0.75rem; font-weight: 700; color: var(--muted); text-transform: uppercase; }
+.jt-row input { min-height: 38px; padding: 6px 8px; font-variant-numeric: tabular-nums; }
+.jt-row input:nth-child(3), .jt-row input:nth-child(4) { text-align: right; }
+.jt-row.bad input { border-color: var(--ko); background: var(--ko-bg); }
+.jt-lib { font-size: 0.8rem; color: var(--ink-soft); line-height: 1.2; overflow: hidden; text-overflow: ellipsis; }
+.jt-total { border-top: 2px solid var(--line); padding-top: 6px; font-weight: 700; font-size: 0.85rem; }
+.jt-total span:nth-child(3), .jt-total span:nth-child(4) { text-align: right; font-variant-numeric: tabular-nums; }
+.jt-total.ok { color: var(--ok); }
+.jt-total.ko { color: var(--warn); }
+@media (max-width: 480px) {
+  .jt-head, .jt-row, .jt-total { grid-template-columns: 64px 1fr 78px 78px; gap: 4px; }
+  .jt-lib { font-size: 0.7rem; }
+}
+.solution { margin-top: 10px; padding: 10px; border-radius: 10px; background: var(--ok-bg); }
+.sol-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.sol-table td { padding: 4px 6px; border-bottom: 1px solid var(--line); }
+.calc-q { padding: 10px 0; border-bottom: 1px dashed var(--line); }
+.calc-q.ok input { border-color: var(--ok); }
+.calc-q.ko input { border-color: var(--ko); }
+.calc-q .row input { max-width: 220px; text-align: right; }
+.pcg td { padding: 6px 10px; }

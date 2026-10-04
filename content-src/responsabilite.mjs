@@ -2,13 +2,13 @@ const P = "packs/responsabilite/";
 
 export default {
   id: "responsabilite",
-  version: "2026.10.1",
+  version: "2026.10.2",
   title: "Responsabilité civile et quasi-contrats",
   branch: "Droit privé",
   icon: "⚠️",
   color: "#b23b3b",
   order: 2,
-  updatedAt: "2026-10-01",
+  updatedAt: "2026-10-05",
   description: "Conditions de la responsabilité, fait personnel, fait des choses et d'autrui, régimes spéciaux, réparation ; enrichissement injustifié et autres quasi-contrats.",
   modules: [
     {
@@ -82,6 +82,15 @@ export default {
         },
         {
           id: "quasi-contrats",
+          src: P + "quasi-contrats.md",
+          duration: 15,
+          quiz: [
+            { type: "qcm", q: "L'indemnité d'enrichissement injustifié est égale à :", choices: ["L'enrichissement", "L'appauvrissement", "La moindre des deux valeurs", "La plus forte des deux valeurs"], answer: 2, explain: "Art. 1303 (la plus forte en cas de mauvaise foi de l'enrichi, art. 1303-4)." },
+            { type: "vf", q: "L'action en enrichissement injustifié permet de contourner une action contractuelle prescrite.", answer: false, explain: "Subsidiarité : obstacle de droit tel que la prescription (art. 1303-3)." },
+            { type: "qcm", q: "Le gérant d'affaires doit avoir géré :", choices: ["Sur mandat", "Sciemment et utilement, sans y être tenu", "Par erreur", "Contre l'opposition du maître"], answer: 1, explain: "Art. 1301." },
+            { type: "qcm", q: "Dans l'indu subjectif, le solvens a payé :", choices: ["Une dette inexistante", "La dette d'autrui, par erreur ou sous contrainte", "Une obligation naturelle", "Une amende"], answer: 1, explain: "Art. 1302-2." }
+          ],
+          flashcards: [{ q: "Quasi-contrats codifiés en 2016 ?", a: "Gestion d'affaires (1301), paiement de l'indu (1302), enrichissement injustifié (1303)." }, { q: "Dates d'évaluation (1303-4) ?", a: "Appauvrissement au jour de la dépense ; enrichissement au jour de la demande." }],
           title: "Les quasi-contrats : gestion d'affaires, paiement de l'indu, enrichissement injustifié",
           objectives: ["Distinguer les trois quasi-contrats codifiés en 2016", "Maîtriser la subsidiarité de l'enrichissement injustifié"],
           outline: [
@@ -95,6 +104,14 @@ export default {
         },
         {
           id: "responsabilite-reforme",
+          src: P + "responsabilite-reforme.md",
+          duration: 12,
+          quiz: [
+            { type: "vf", q: "La réforme générale de la responsabilité civile a été adoptée en 2017.", answer: false, explain: "Projet de 2017, proposition sénatoriale de 2020 : aucun texte adopté à la date de rédaction." },
+            { type: "qcm", q: "Que prévoit le projet pour le tiers victime d'un manquement contractuel ?", choices: ["Il agirait sans limite", "Il agirait dans les conditions et limites du contrat (ou en prouvant une faute délictuelle)", "Il ne pourrait plus agir", "Il agirait devant le juge pénal"], answer: 1, explain: "Revenir sur Boot shop / Bois Rouge." },
+            { type: "qcm", q: "Quelle innovation concerne la victime d'un dommage non corporel ?", choices: ["Une obligation de minimiser son dommage", "Une amende", "Un barème obligatoire", "Une prescription d'un an"], answer: 0, explain: "Aujourd'hui refusée par la Cour de cassation (2003)." }
+          ],
+          flashcards: [{ q: "Dommage corporel dans le projet ?", a: "Toujours réparé selon les règles extracontractuelles ; clauses limitatives interdites ; exonération par la seule faute lourde de la victime." }],
           title: "Le projet de réforme de la responsabilité civile : état des lieux",
           level: 3,
           objectives: ["Connaître les principales innovations envisagées", "Mesurer l'état d'avancement du projet"],

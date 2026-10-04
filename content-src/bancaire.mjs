@@ -2,13 +2,13 @@ const P = "packs/bancaire/";
 
 export default {
   id: "bancaire",
-  version: "2026.10.1",
+  version: "2026.10.2",
   title: "Droit bancaire et financier",
   branch: "Droit des affaires",
   icon: "🏦",
   color: "#3b5b8a",
   order: 15,
-  updatedAt: "2026-10-01",
+  updatedAt: "2026-10-05",
   description: "Monopole bancaire, crédit et responsabilité du banquier, paiements, LCB-FT ; marchés financiers, abus de marché, crypto-actifs.",
   modules: [
     {
@@ -34,6 +34,15 @@ export default {
         },
         {
           id: "paiement-financements",
+          src: P + "paiement-financements.md",
+          duration: 14,
+          quiz: [
+            { type: "qcm", q: "La cession Dailly est opposable aux tiers :", choices: ["Après signification", "À la date portée sur le bordereau", "Après acceptation", "Après publication"], answer: 1, explain: "Art. L. 313-27 CMF." },
+            { type: "qcm", q: "L'affacturage repose juridiquement sur :", choices: ["La cession Dailly", "La subrogation conventionnelle", "La délégation", "La novation"], answer: 1, explain: "Quittance subrogative." },
+            { type: "vf", q: "Sans publicité, le crédit-bailleur ne peut opposer sa propriété aux créanciers du crédit-preneur.", answer: true, explain: "D'où l'importance de l'inscription." },
+            { type: "qcm", q: "Le tiré qui a accepté une lettre de change ne peut opposer au porteur de bonne foi :", choices: ["Les exceptions tirées de ses rapports personnels avec le tireur", "Le faux", "L'incapacité", "La prescription"], answer: 0, explain: "Inopposabilité des exceptions." }
+          ],
+          flashcards: [{ q: "Acceptation de la cession Dailly ?", a: "Le débiteur s'engage directement envers la banque et ne peut plus lui opposer ses exceptions personnelles contre le cédant (sauf collusion)." }],
           title: "Moyens de paiement et financements courts (affacturage, Dailly, crédit-bail)",
           objectives: ["Choisir l'outil de financement court terme", "Connaître les risques de chaque technique"],
           outline: [

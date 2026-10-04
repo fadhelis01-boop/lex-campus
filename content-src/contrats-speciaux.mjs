@@ -2,13 +2,13 @@ const P = "packs/contrats-speciaux/";
 
 export default {
   id: "contrats-speciaux",
-  version: "2026.10.1",
+  version: "2026.10.2",
   title: "Contrats spéciaux de l'entreprise",
   branch: "Droit privé",
   icon: "📑",
   color: "#5b6b8c",
   order: 4,
-  updatedAt: "2026-10-01",
+  updatedAt: "2026-10-05",
   description: "Vente (délivrance, vices cachés, éviction), contrat d'entreprise et sous-traitance, mandat, prêt, dépôt ; réforme des contrats spéciaux en préparation.",
   modules: [
     {
@@ -48,6 +48,14 @@ export default {
         },
         {
           id: "reforme-contrats-speciaux",
+          src: P + "reforme-contrats-speciaux.md",
+          duration: 10,
+          quiz: [
+            { type: "vf", q: "La réforme des contrats spéciaux est entrée en vigueur en 2024.", answer: false, explain: "Avant-projet de 2022, non adopté à la date de rédaction." },
+            { type: "qcm", q: "Une orientation majeure de l'avant-projet pour la vente :", choices: ["Supprimer la vente", "Unifier non-conformité et vices cachés", "Rendre la vente solennelle", "Interdire les clauses limitatives"], answer: 1, explain: "Fin du choix de fondement." },
+            { type: "qcm", q: "Quel texte organise la priorité des règles spéciales ?", choices: ["Art. 1103", "Art. 1105", "Art. 1195", "Art. 1240"], answer: 1, explain: "Les règles générales s'appliquent sous réserve des règles particulières." }
+          ],
+          flashcards: [{ q: "Pourquoi réformer les contrats spéciaux ?", a: "Incohérences avec le droit commun de 2016, jurisprudence à codifier, absence de régime général des services." }],
           title: "Le projet de réforme des contrats spéciaux",
           level: 3,
           objectives: ["Connaître les grandes orientations de l'avant-projet", "Suivre l'état d'avancement"],

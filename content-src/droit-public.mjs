@@ -5,14 +5,14 @@ const P = "packs/droit-public/";
 
 export default {
   id: "droit-public",
-  version: "2026.10.1",
+  version: "2026.10.2",
   title: "Droit public pour le juriste d'affaires",
   branch: "Droit public",
   icon: "🏛️",
   color: "#3b6ea8",
   order: 30,
-  updatedAt: "2026-10-01",
-  description: "Contrats publics, droit administratif général, droit constitutionnel et QPC, droit public économique. Programme complet ; leçons rédigées à la demande par l'assistant.",
+  updatedAt: "2026-10-05",
+  description: "Contrats publics et passation des marchés, organisation administrative, acte administratif, contentieux et référés, responsabilité administrative, QPC et libertés économiques, aides d'État et régulation.",
   modules: [
     {
       id: "contrats-publics",
@@ -40,6 +40,15 @@ export default {
         },
         {
           id: "passation-marches",
+          src: P + "passation-marches.md",
+          duration: 15,
+          quiz: [
+            { type: "qcm", q: "En dessous des seuils européens, l'acheteur recourt en principe à :", choices: ["L'appel d'offres obligatoire", "La procédure adaptée (MAPA)", "Un gré à gré sans limite", "La concession"], answer: 1, explain: "Modalités librement fixées et proportionnées." },
+            { type: "qcm", q: "Face à une offre anormalement basse, l'acheteur doit :", choices: ["L'accepter", "Demander des justifications et la rejeter si elles sont insuffisantes", "L'ignorer", "La transmettre au juge"], answer: 1, explain: "Art. L. 2152-5 et L. 2152-6 CCP." },
+            { type: "qcm", q: "Délai de paiement de l'État et des collectivités :", choices: ["30 jours", "45 jours", "60 jours", "90 jours"], answer: 0, explain: "50 jours pour les établissements publics de santé." },
+            { type: "vf", q: "Le sous-traitant de premier rang accepté bénéficie du paiement direct au-delà d'un faible seuil.", answer: true, explain: "Art. L. 2193-10 s. CCP." }
+          ],
+          flashcards: [{ q: "Standstill ?", a: "Délai de suspension entre l'information des évincés et la signature (11 jours par voie électronique), pendant lequel le référé précontractuel est possible." }],
           title: "Passation des marchés publics : procédures et seuils",
           objectives: ["Choisir la procédure adaptée", "Préparer une candidature et une offre"],
           outline: ["Seuils européens et procédure adaptée", "Appel d'offres, procédure avec négociation, dialogue compétitif", "Critères d'attribution et offre économiquement la plus avantageuse", "Offres anormalement basses", "Exclusions et sous-traitance"],
@@ -53,10 +62,45 @@ export default {
       level: 1,
       summary: "Organisation administrative, actes, recours, responsabilité.",
       lessons: [
-        { id: "organisation-administrative", title: "L'organisation administrative et les sources du droit administratif", objectives: ["Situer l'État, les collectivités et les établissements publics", "Hiérarchiser les sources"], outline: ["Centralisation, déconcentration, décentralisation", "Établissements publics et autorités administratives indépendantes", "Sources : Constitution, conventions, lois, principes généraux du droit, règlements", "Le Conseil d'État, juge et conseiller"] },
-        { id: "acte-administratif", title: "L'acte administratif unilatéral", objectives: ["Distinguer actes réglementaires et individuels", "Connaître les règles d'entrée en vigueur et de retrait"], outline: ["Notion et catégories", "Code des relations entre le public et l'administration (CRPA)", "Retrait et abrogation", "Silence vaut acceptation (principe de 2013) et exceptions"] },
-        { id: "recours-contentieux", title: "Le contentieux administratif : REP, plein contentieux, référés", objectives: ["Choisir le recours", "Utiliser les référés administratifs"], outline: ["Recours pour excès de pouvoir : cas d'ouverture", "Plein contentieux", "Référé-suspension, référé-liberté", "Délais de recours et jurisprudence Czabaj (délai raisonnable d'un an)", "Modulation dans le temps des annulations (AC !, 2004)"] },
-        { id: "responsabilite-administrative", title: "La responsabilité administrative", objectives: ["Engager la responsabilité d'une personne publique"], outline: ["Blanco (TC, 1873) et autonomie", "Responsabilité pour faute", "Responsabilité sans faute : risque, rupture d'égalité devant les charges publiques", "Responsabilité du fait des lois et des conventions"] },
+        { id: "organisation-administrative",
+          src: P + "organisation-administrative.md",
+          duration: 13,
+          quiz: [
+            { type: "qcm", q: "L'arrêt Nicolo (1989) permet au juge administratif :", choices: ["De contrôler la constitutionnalité des lois", "D'écarter une loi contraire à un traité, même postérieure", "D'annuler une loi", "De juger les litiges privés"], answer: 1, explain: "Contrôle de conventionnalité." },
+            { type: "qcm", q: "Le préfet est une autorité :", choices: ["Décentralisée", "Déconcentrée de l'État", "Indépendante", "Judiciaire"], answer: 1, explain: "Représentant de l'État dans le département et la région." },
+            { type: "vf", q: "Le Conseil d'État est à la fois juge et conseiller du Gouvernement.", answer: true, explain: "Avis sur projets de lois et de décrets." }
+          ],
+          flashcards: [{ q: "Blanco (1873) ?", a: "La responsabilité de l'administration relève de règles spéciales et du juge administratif." }], title: "L'organisation administrative et les sources du droit administratif", objectives: ["Situer l'État, les collectivités et les établissements publics", "Hiérarchiser les sources"], outline: ["Centralisation, déconcentration, décentralisation", "Établissements publics et autorités administratives indépendantes", "Sources : Constitution, conventions, lois, principes généraux du droit, règlements", "Le Conseil d'État, juge et conseiller"] },
+        { id: "acte-administratif",
+          src: P + "acte-administratif.md",
+          duration: 15,
+          quiz: [
+            { type: "qcm", q: "Le silence de l'administration pendant deux mois vaut en principe :", choices: ["Rejet", "Acceptation, sauf nombreuses exceptions", "Rien", "Sursis"], answer: 1, explain: "Loi du 12 nov. 2013, art. L. 231-1 CRPA." },
+            { type: "qcm", q: "Délai de retrait d'une décision créatrice de droits illégale :", choices: ["2 mois", "4 mois", "1 an", "Jamais"], answer: 1, explain: "Ternon (2001), art. L. 242-1 CRPA." },
+            { type: "qcm", q: "Selon Danthony (2011), un vice de procédure entraîne l'annulation :", choices: ["Toujours", "S'il a pu influencer la décision ou a privé d'une garantie", "Jamais", "Seulement s'il est volontaire"], answer: 1, explain: "Neutralisation des vices sans incidence." },
+            { type: "vf", q: "Les actes de droit souple d'un régulateur ne peuvent jamais être attaqués.", answer: false, explain: "Fairvesta, Numericable (2016) : attaquables s'ils ont des effets notables." }
+          ],
+          flashcards: [{ q: "Mesures transitoires (KPMG, 2006) ?", a: "Obligation d'édicter des mesures transitoires lorsque la sécurité juridique l'exige." }], title: "L'acte administratif unilatéral", objectives: ["Distinguer actes réglementaires et individuels", "Connaître les règles d'entrée en vigueur et de retrait"], outline: ["Notion et catégories", "Code des relations entre le public et l'administration (CRPA)", "Retrait et abrogation", "Silence vaut acceptation (principe de 2013) et exceptions"] },
+        { id: "recours-contentieux",
+          src: P + "recours-contentieux.md",
+          duration: 15,
+          quiz: [
+            { type: "qcm", q: "Délai de recours en l'absence de mention des voies et délais :", choices: ["Illimité", "Délai raisonnable, en principe un an (Czabaj)", "Deux mois", "Cinq ans"], answer: 1, explain: "CE, ass., 13 juill. 2016." },
+            { type: "qcm", q: "Le référé-suspension suppose :", choices: ["Urgence et doute sérieux sur la légalité", "Atteinte à une liberté fondamentale", "Une créance non contestable", "Un contrat"], answer: 0, explain: "Art. L. 521-1 CJA." },
+            { type: "qcm", q: "Le référé-liberté est jugé en :", choices: ["48 heures", "8 jours", "1 mois", "2 mois"], answer: 0, explain: "Art. L. 521-2 CJA." },
+            { type: "vf", q: "Le juge administratif peut moduler dans le temps les effets d'une annulation.", answer: true, explain: "AC !, 2004." }
+          ],
+          flashcards: [{ q: "Cas d'ouverture du REP ?", a: "Incompétence, vice de forme ou de procédure, violation de la loi (erreurs de droit, de fait, de qualification), détournement de pouvoir." }], title: "Le contentieux administratif : REP, plein contentieux, référés", objectives: ["Choisir le recours", "Utiliser les référés administratifs"], outline: ["Recours pour excès de pouvoir : cas d'ouverture", "Plein contentieux", "Référé-suspension, référé-liberté", "Délais de recours et jurisprudence Czabaj (délai raisonnable d'un an)", "Modulation dans le temps des annulations (AC !, 2004)"] },
+        { id: "responsabilite-administrative",
+          src: P + "responsabilite-administrative.md",
+          duration: 14,
+          quiz: [
+            { type: "vf", q: "Toute illégalité d'une décision administrative constitue une faute.", answer: true, explain: "Mais elle n'est indemnisée que si elle a causé un préjudice direct et certain." },
+            { type: "qcm", q: "La responsabilité pour rupture d'égalité suppose un préjudice :", choices: ["Quelconque", "Anormal et spécial", "Corporel", "Moral"], answer: 1, explain: "Couitéas (1923), La Fleurette (1938)." },
+            { type: "qcm", q: "Prescription des créances sur les personnes publiques :", choices: ["2 ans", "4 ans (quadriennale)", "5 ans", "30 ans"], answer: 1, explain: "Loi du 31 déc. 1968." },
+            { type: "qcm", q: "Gardedieu (2007) consacre la responsabilité de l'État du fait :", choices: ["Des travaux publics", "Des lois contraires aux conventions internationales", "Des préfets", "Des collectivités"], answer: 1, explain: "Sans faute de l'administration." }
+          ],
+          flashcards: [{ q: "Faute personnelle et cumul ?", a: "Pelletier (1873) : faute détachable relevant du juge judiciaire ; Lemonnier (1918) : cumul avec la responsabilité de l'administration." }], title: "La responsabilité administrative", objectives: ["Engager la responsabilité d'une personne publique"], outline: ["Blanco (TC, 1873) et autonomie", "Responsabilité pour faute", "Responsabilité sans faute : risque, rupture d'égalité devant les charges publiques", "Responsabilité du fait des lois et des conventions"] },
       ],
     },
     {
@@ -65,8 +109,26 @@ export default {
       level: 3,
       summary: "QPC, libertés économiques, aides d'État, régulation.",
       lessons: [
-        { id: "qpc-libertes-economiques", title: "La QPC et les libertés économiques", objectives: ["Mettre en œuvre une QPC dans un litige d'affaires"], outline: ["Procédure de la QPC depuis 2010 : filtres, conditions", "Liberté d'entreprendre, droit de propriété, liberté contractuelle", "Exemples de censures en droit des affaires", "Effets dans le temps des décisions"] },
-        { id: "aides-etat-sieg", title: "Aides d'État, services d'intérêt économique général et régulation", objectives: ["Identifier une aide d'État", "Comprendre la régulation sectorielle"], outline: ["Notion d'aide d'État (art. 107 TFUE) et exemptions", "Récupération des aides illégales", "SIEG et jurisprudence Altmark", "Autorités de régulation (ARCEP, CRE, ART…)"] },
+        { id: "qpc-libertes-economiques",
+          src: P + "qpc-libertes-economiques.md",
+          duration: 14,
+          quiz: [
+            { type: "qcm", q: "La QPC existe depuis :", choices: ["1958", "1er mars 2010", "2008", "2016"], answer: 1, explain: "Art. 61-1, révision de 2008, loi organique de 2009." },
+            { type: "qcm", q: "Délai dont disposent le Conseil d'État et la Cour de cassation pour transmettre :", choices: ["1 mois", "3 mois", "6 mois", "1 an"], answer: 1, explain: "Puis 3 mois pour le Conseil constitutionnel." },
+            { type: "qcm", q: "La saisine d'office du tribunal pour ouvrir un redressement a été jugée :", choices: ["Conforme", "Contraire au principe d'impartialité (2012)", "Sans objet", "Conforme sous réserve"], answer: 1, explain: "Cons. const., 7 déc. 2012, n° 2012-286 QPC." },
+            { type: "vf", q: "Une disposition déjà déclarée conforme peut être de nouveau contestée en cas de changement des circonstances.", answer: true, explain: "Condition de recevabilité." }
+          ],
+          flashcards: [{ q: "Fondement de la liberté d'entreprendre ?", a: "Art. 4 de la Déclaration de 1789 ; limites justifiées par l'intérêt général et proportionnées." }], title: "La QPC et les libertés économiques", objectives: ["Mettre en œuvre une QPC dans un litige d'affaires"], outline: ["Procédure de la QPC depuis 2010 : filtres, conditions", "Liberté d'entreprendre, droit de propriété, liberté contractuelle", "Exemples de censures en droit des affaires", "Effets dans le temps des décisions"] },
+        { id: "aides-etat-sieg",
+          src: P + "aides-etat-sieg.md",
+          duration: 14,
+          quiz: [
+            { type: "qcm", q: "Plafond de minimis général :", choices: ["100 000 € sur 3 ans", "200 000 € sur 3 ans", "300 000 € sur 3 ans glissants", "500 000 € par an"], answer: 2, explain: "Règlement (UE) 2023/2831." },
+            { type: "qcm", q: "Une aide illégale et incompatible doit être :", choices: ["Conservée", "Récupérée avec intérêts", "Doublée", "Déclarée au fisc"], answer: 1, explain: "Sur une période pouvant remonter à 10 ans." },
+            { type: "qcm", q: "Les critères Altmark concernent :", choices: ["Les concentrations", "La compensation des obligations de service public", "Les ententes", "Les marchés publics"], answer: 1, explain: "Si les quatre conditions sont réunies, pas d'aide d'État." },
+            { type: "vf", q: "Une intervention publique dans des conditions normales de marché n'est pas une aide d'État.", answer: true, explain: "Critère de l'opérateur privé en économie de marché." }
+          ],
+          flashcards: [{ q: "Critères de l'aide d'État ?", a: "Ressources d'État, avantage, sélectivité, affectation des échanges et distorsion de concurrence." }], title: "Aides d'État, services d'intérêt économique général et régulation", objectives: ["Identifier une aide d'État", "Comprendre la régulation sectorielle"], outline: ["Notion d'aide d'État (art. 107 TFUE) et exemptions", "Récupération des aides illégales", "SIEG et jurisprudence Altmark", "Autorités de régulation (ARCEP, CRE, ART…)"] },
       ],
     },
   ],

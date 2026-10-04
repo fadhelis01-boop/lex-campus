@@ -128,6 +128,9 @@ export default function Home() {
           <a href="#/methodo" className="quick-item">
             <span>✒️</span>Méthodologie
           </a>
+          <a href="#/compta" className="quick-item">
+            <span>🧮</span>Comptabilité
+          </a>
           <a href="#/arrets" className="quick-item">
             <span>🏛️</span>Grands arrêts
           </a>

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useRoute, href } from "./lib/router";
 import { useStore, setState, getProgress, updateProgress, addMinutes } from "./lib/store";
-import { useContent } from "./lib/content";
+import { useContent, setUpdatesSeen } from "./lib/content";
 import { usePwa, applyUpdate } from "./lib/pwa";
 import { onBlock } from "./lib/tts";
 import AudioBar from "./components/AudioBar";
@@ -24,6 +24,7 @@ import Plus from "./pages/Plus";
 import Profil from "./pages/Profil";
 import Reformes from "./pages/Reformes";
 import Aide from "./pages/Aide";
+import PlanComptable from "./pages/PlanComptable";
 
 const NAV = [
   { path: "/", icon: "🏠", label: "Accueil" },
@@ -35,6 +36,8 @@ const NAV = [
 
 const SIDE_EXTRA = [
   { path: "/methodo", icon: "✒️", label: "Méthodologie" },
+  { path: "/compta", icon: "🧮", label: "Comptabilité" },
+  { path: "/plan-comptable", icon: "📒", label: "Plan comptable" },
   { path: "/arrets", icon: "🏛️", label: "Grands arrêts" },
   { path: "/veille", icon: "📡", label: "Veille" },
   { path: "/reformes", icon: "🔄", label: "Réformes depuis 2006" },
@@ -97,6 +100,10 @@ function Page() {
       return <Profil />;
     case "aide":
       return <Aide />;
+    case "plan-comptable":
+      return <PlanComptable />;
+    case "compta":
+      return <Domain packId="comptabilite" />;
     default:
       return (
         <div className="page">
@@ -196,6 +203,9 @@ export default function App() {
           <div className="banner banner-soft">
             Contenus mis à jour : {updates.join(", ")}.
             <a href="#/contenus">Voir</a>
+            <button className="mini-link" onClick={() => setUpdatesSeen()} aria-label="Fermer">
+              ✕
+            </button>
           </div>
         )}
         {!ready || loading ? (

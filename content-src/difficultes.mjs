@@ -2,13 +2,13 @@ const P = "packs/difficultes/";
 
 export default {
   id: "difficultes",
-  version: "2026.10.1",
+  version: "2026.10.2",
   title: "Entreprises en difficulté",
   branch: "Droit des affaires",
   icon: "🆘",
   color: "#c0541a",
   order: 12,
-  updatedAt: "2026-10-01",
+  updatedAt: "2026-10-05",
   description: "Prévention et procédures amiables, sauvegarde, redressement et liquidation, classes de parties affectées, plans, sanctions — à jour de la réforme de 2021.",
   modules: [
     {
@@ -101,6 +101,15 @@ Le dirigeant de Métalex vous demande : 1) Peut-il se faire payer les 60 000 €
         },
         {
           id: "difficultes-salaries-ags",
+          src: P + "difficultes-salaries-ags.md",
+          duration: 14,
+          quiz: [
+            { type: "vf", q: "Les salariés doivent déclarer leurs créances au mandataire judiciaire.", answer: false, explain: "Relevés des créances salariales établis par le mandataire." },
+            { type: "qcm", q: "Le superprivilège couvre les rémunérations des :", choices: ["30 derniers jours", "60 derniers jours", "6 derniers mois", "12 derniers mois"], answer: 1, explain: "Art. L. 3253-2 C. trav., dans la limite d'un plafond." },
+            { type: "qcm", q: "En redressement, un licenciement pendant la période d'observation doit être :", choices: ["Libre", "Urgent, inévitable, indispensable et autorisé par le juge-commissaire", "Décidé par le CSE", "Interdit"], answer: 1, explain: "Art. L. 631-17 C. com." },
+            { type: "qcm", q: "Délai de licenciement en liquidation pour la garantie AGS (sans PSE) :", choices: ["8 jours", "15 jours", "1 mois", "3 mois"], answer: 1, explain: "21 jours si un PSE est élaboré." }
+          ],
+          flashcards: [{ q: "AGS ?", a: "Régime de garantie qui avance les créances salariales et se subroge ensuite dans les droits des salariés." }],
           title: "Les salariés dans la procédure collective : AGS, licenciements, reprise",
           level: 3,
           objectives: ["Connaître la garantie AGS", "Maîtriser les licenciements en période d'observation et en cession"],
@@ -114,6 +123,14 @@ Le dirigeant de Métalex vous demande : 1) Peut-il se faire payer les 60 000 €
         },
         {
           id: "difficultes-international",
+          src: P + "difficultes-international.md",
+          duration: 12,
+          quiz: [
+            { type: "qcm", q: "La procédure principale est ouverte dans l'État du :", choices: ["Siège statutaire toujours", "Centre des intérêts principaux (COMI)", "Lieu des actifs", "Domicile du créancier"], answer: 1, explain: "COMI présumé au siège statutaire (présomption réfragable)." },
+            { type: "qcm", q: "La loi applicable à la procédure est en principe :", choices: ["La loi du créancier", "La lex concursi (État d'ouverture)", "La loi du contrat", "La loi du for choisie"], answer: 1, explain: "Art. 7 du règlement 2015/848." },
+            { type: "vf", q: "La décision d'ouverture d'une procédure principale est reconnue automatiquement dans les autres États membres.", answer: true, explain: "Sans exequatur." }
+          ],
+          flashcards: [{ q: "Procédure secondaire ?", a: "Ouverte là où le débiteur a un établissement ; effets limités aux biens situés dans cet État." }],
           title: "Insolvabilité transfrontalière : le règlement (UE) 2015/848",
           level: 3,
           objectives: ["Déterminer la juridiction compétente (COMI)", "Articuler procédure principale et secondaire"],

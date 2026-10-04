@@ -1,5 +1,7 @@
 const ITEMS = [
   { path: "/methodo", icon: "✒️", label: "Méthodologie", sub: "Fiche d'arrêt, commentaire, note de synthèse, cas pratique" },
+  { path: "/compta", icon: "🧮", label: "Comptabilité", sub: "Comptabilité, analyse financière, fiscalité appliquée" },
+  { path: "/plan-comptable", icon: "📒", label: "Plan comptable", sub: "Tous les comptes utilisés, avec recherche" },
   { path: "/arrets", icon: "🏛️", label: "Grands arrêts", sub: "Bibliothèque et jeu de l'arrêt mystère" },
   { path: "/veille", icon: "📡", label: "Veille", sub: "Nouveautés législatives et jurisprudentielles" },
   { path: "/reformes", icon: "🔄", label: "Réformes depuis 2006", sub: "Ce qui a changé depuis votre master" },
