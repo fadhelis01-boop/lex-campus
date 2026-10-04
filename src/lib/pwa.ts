@@ -53,7 +53,8 @@ export function registerServiceWorker() {
       });
     })
     .catch(() => undefined);
-  let reloaded = false;
+  // Rechargement seulement lors d'une mise à jour (pas à la toute première installation)
+  let reloaded = !navigator.serviceWorker.controller;
   navigator.serviceWorker.addEventListener("controllerchange", () => {
     if (reloaded) return;
     reloaded = true;
