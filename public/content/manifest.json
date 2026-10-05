@@ -1,6 +1,6 @@
 {
- "version": "2026.10.2",
- "updatedAt": "2026-10-04",
+ "version": "2026.10.3",
+ "updatedAt": "2026-10-05",
  "packs": [
   {
    "id": "bancaire",
@@ -71,8 +71,8 @@
   {
    "id": "fiscal",
    "file": "packs/fiscal/pack.json",
-   "version": "2026.10.2",
-   "title": "Fiscalité des affaires"
+   "version": "2026.10.3",
+   "title": "Fiscalité des affaires et optimisation fiscale légale"
   },
   {
    "id": "methodologie",
@@ -124,6 +124,10 @@
   }
  ],
  "changelog": [
+  {
+   "date": "2026-10-06",
+   "text": "Fiscalité refondue (16 leçons) : choix du régime, TVA approfondie, impôts locaux, incitations (CIR, IP box, mécénat), groupes et holdings, restructurations, dirigeant, transmission, contrôle et contentieux, et un bloc complet d'optimisation fiscale légale (frontière, leviers, exercices chiffrés, 3 cas stratégiques corrigés, pistes créatives). Les tableaux des leçons sont désormais lus à voix haute."
+  },
   {
    "date": "2026-10-05",
    "text": "Nouveau domaine « Comptabilité, analyse financière et fiscalité appliquée » (14 leçons, fil rouge chiffré, ateliers d'écritures et exercices chiffrés corrigés automatiquement, plan comptable consultable). Les 21 leçons qui restaient à rédiger le sont désormais : 98 leçons rédigées au total."

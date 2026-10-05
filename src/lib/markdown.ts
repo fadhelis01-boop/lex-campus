@@ -113,6 +113,15 @@ const SPOKEN: [RegExp, string][] = [
   [/\bs\.$/g, "et suivants"],
   [/§/g, "paragraphe "],
   [/→/g, ", donc "],
+  // 1 805 677 → 1805677 (lu correctement) ; deux passes pour les grands nombres
+  [/(\d)[   ](\d{3})/g, "$1$2"],
+  [/(\d)[   ](\d{3})/g, "$1$2"],
+  [/ − /g, " moins "],
+  [/ × /g, " fois "],
+  [/ = /g, " égale "],
+  [/€/g, " euros"],
+  [/ %/g, " pour cent"],
+  [/✔/g, ""],
   [/[*_`#>|]/g, " "],
 ];
 
@@ -124,7 +133,9 @@ export function spokenText(s: string) {
 
 // Découpe le rendu HTML en blocs lisibles (paragraphes, titres, items).
 export function collectBlocks(root: HTMLElement): HTMLElement[] {
-  const sel = "h1,h2,h3,h4,p,li,.callout-title,blockquote";
+  // Les tableaux (écritures comptables, bilans, comparatifs) sont lus ligne
+  // par ligne, chaque cellule précédée de l'intitulé de sa colonne.
+  const sel = "h1,h2,h3,h4,p,li,.callout-title,blockquote,tbody tr";
   const els = Array.from(root.querySelectorAll<HTMLElement>(sel));
   return els.filter((el) => {
     if (el.tagName === "LI" && el.querySelector(":scope > p")) return false; // ses <p> seront lus
@@ -135,6 +146,21 @@ export function collectBlocks(root: HTMLElement): HTMLElement[] {
 }
 
 export function blockText(el: HTMLElement) {
+  if (el.tagName === "TR") {
+    const table = el.closest("table");
+    const heads = Array.from(table?.querySelectorAll("thead th") ?? []).map((h) => (h.textContent ?? "").trim());
+    const cells = Array.from(el.children).map((c) => (c.textContent ?? "").trim());
+    const parts = cells
+      .map((c, i) => {
+        if (!c) return "";
+        const h = heads[i];
+        // Première colonne : on la lit telle quelle (c'est l'intitulé de la ligne)
+        if (i === 0 || !h) return c;
+        return `${h} : ${c}`;
+      })
+      .filter(Boolean);
+    return parts.join(" ; ") + ".";
+  }
   if (el.tagName === "LI") {
     const clone = el.cloneNode(true) as HTMLElement;
     clone.querySelectorAll("ul,ol").forEach((n) => n.remove());
