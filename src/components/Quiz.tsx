@@ -4,6 +4,7 @@ import Markdown from "./Markdown";
 
 export interface QuizItem extends Question {
   tag?: string; // module / leçon d'origine
+  key?: string; // identifiant d'origine (ex. "contrats|formation") pour le bilan
 }
 
 export interface QuizResult {
@@ -27,6 +28,7 @@ export default function Quiz(props: {
   items: QuizItem[];
   mode: "entrainement" | "examen";
   timerMin?: number;
+  allowSkip?: boolean; // bouton « Je ne sais pas » (diagnostic honnête)
   onDone: (r: QuizResult) => void;
 }) {
   const { mode } = props;
@@ -123,6 +125,21 @@ export default function Quiz(props: {
           </button>
         )}
         <span className="grow" />
+        {props.allowSkip && (
+          <button
+            className="btn btn-ghost"
+            onClick={() => {
+              const g = [...given];
+              g[i] = -1; // « je ne sais pas » : compté comme non acquis
+              setGiven(g);
+              setRevealed(false);
+              if (i + 1 < items.length) setI(i + 1);
+              else finish(g);
+            }}
+          >
+            Je ne sais pas
+          </button>
+        )}
         {mode === "examen" && (
           <button className="btn btn-ghost" onClick={() => finish()}>
             Terminer

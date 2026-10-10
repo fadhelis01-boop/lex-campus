@@ -25,6 +25,8 @@ import Profil from "./pages/Profil";
 import Reformes from "./pages/Reformes";
 import Aide from "./pages/Aide";
 import PlanComptable from "./pages/PlanComptable";
+import Bilan from "./pages/Bilan";
+import PlanPage from "./pages/Plan";
 
 const NAV = [
   { path: "/", icon: "🏠", label: "Accueil" },
@@ -35,6 +37,8 @@ const NAV = [
 ];
 
 const SIDE_EXTRA = [
+  { path: "/plan", icon: "🗓️", label: "Mon plan de formation" },
+  { path: "/bilan", icon: "🎯", label: "Bilan de connaissances" },
   { path: "/methodo", icon: "✒️", label: "Méthodologie" },
   { path: "/compta", icon: "🧮", label: "Comptabilité" },
   { path: "/plan-comptable", icon: "📒", label: "Plan comptable" },
@@ -102,6 +106,10 @@ function Page() {
       return <Aide />;
     case "plan-comptable":
       return <PlanComptable />;
+    case "bilan":
+      return <Bilan />;
+    case "plan":
+      return <PlanPage />;
     case "compta":
       return <Domain packId="comptabilite" />;
     default:

@@ -547,3 +547,34 @@ input[type="range"] { width: 100%; accent-color: var(--brand); }
 .calc-q.ko input { border-color: var(--ko); }
 .calc-q .row input { max-width: 220px; text-align: right; }
 .pcg td { padding: 6px 10px; }
+
+/* ============ Bilan et plan de formation ============ */
+.choice-cards { display: grid; gap: 8px; }
+@media (min-width: 700px) { .choice-cards { grid-template-columns: 1fr 1fr; } }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+.chip { border: 1px solid var(--line); background: var(--bg-elev); border-radius: 999px; padding: 8px 14px; min-height: 40px; cursor: pointer; font-weight: 600; font-size: 0.88rem; }
+.chip.on { background: var(--brand); color: var(--brand-ink); border-color: var(--brand); }
+.domain-pick { list-style: none; padding: 0; margin: 0; columns: 2 260px; }
+.domain-pick li { display: flex; align-items: center; justify-content: space-between; gap: 6px; break-inside: avoid; border-bottom: 1px dashed var(--line); }
+.star { background: none; border: 0; font-size: 1.3rem; color: var(--line); cursor: pointer; min-width: 40px; min-height: 40px; }
+.star.on { color: var(--gold); }
+.star:disabled { opacity: 0.3; cursor: default; }
+.bilan-bars li { grid-template-columns: 1fr 110px 120px; }
+.mini-bar.st-maitrise > span { background: var(--ok); }
+.mini-bar.st-a-consolider > span { background: var(--gold); }
+.mini-bar.st-a-apprendre > span { background: var(--ko); }
+.plan-items { list-style: none; padding: 0; margin: 6px 0 0; }
+.plan-row { display: flex; align-items: center; gap: 10px; border-top: 1px solid var(--line); }
+.plan-row:first-child { border-top: 0; }
+.plan-row input { width: 20px; height: 20px; accent-color: var(--ok); flex: none; }
+.plan-row a { flex: 1; display: flex; gap: 8px; align-items: center; padding: 10px 0; text-decoration: none; color: var(--ink); min-height: 44px; }
+.plan-row.done .plan-title { text-decoration: line-through; color: var(--muted); }
+.plan-title { flex: 1; }
+.week-card summary { cursor: pointer; }
+.week-card.current { border-left: 5px solid var(--gold); }
+.plan-home h3 { margin-bottom: 4px; }
+@media print {
+  .plan-page .actions-row, .plan-page .mini-link, .plan-page .plan-row input { display: none !important; }
+  .plan-page details { display: block; }
+  .plan-page details > summary { list-style: none; }
+}

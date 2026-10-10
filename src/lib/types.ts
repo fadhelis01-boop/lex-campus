@@ -218,3 +218,63 @@ export interface SavedReport {
   sources?: { url: string; title: string }[];
   at: number;
 }
+
+// ---------- Bilan de connaissances et plan de formation ----------
+
+export type Objective = "remise-a-niveau" | "pratique-affaires" | "examen" | "fiscal-comptable";
+
+export interface LearnerProfile {
+  objective: Objective;
+  minutesPerWeek: number;
+  priorities: string[]; // identifiants des domaines prioritaires
+  domains: string[]; // domaines inclus dans le bilan
+  deadline?: string; // AAAA-MM-JJ (examen, prise de poste…)
+}
+
+export interface DomainScore {
+  packId: string;
+  title: string;
+  asked: number;
+  correct: number;
+  skipped: number;
+  pct: number;
+  modules: { moduleId: string; title: string; level: number; asked: number; correct: number; pct: number }[];
+}
+
+export interface Assessment {
+  id: string;
+  at: number;
+  length: "express" | "complet";
+  globalPct: number;
+  scores: DomainScore[];
+}
+
+export interface PlanItem {
+  packId: string;
+  lessonId: string;
+  title: string;
+  packTitle: string;
+  minutes: number;
+  kind: "lecon" | "exercice" | "revision";
+  exerciseId?: string;
+}
+
+export interface PlanWeek {
+  index: number;
+  start: string; // AAAA-MM-JJ (lundi)
+  items: PlanItem[];
+  minutes: number;
+}
+
+export interface TrainingPlan {
+  createdAt: number;
+  assessmentId: string;
+  profile: LearnerProfile;
+  domainOrder: { packId: string; title: string; pct: number; status: "maitrise" | "a-consolider" | "a-apprendre"; reason: string }[];
+  skippedModules: { packId: string; moduleId: string; title: string; pct: number }[];
+  weeks: PlanWeek[];
+  endDate: string;
+  warning?: string; // ex. échéance impossible à tenir au rythme choisi
+  doneItems: string[]; // exercices et révisions cochés manuellement
+  advice?: string; // commentaire de l'assistant IA (facultatif)
+}

@@ -4,6 +4,7 @@ import { isDue } from "../lib/srs";
 import { isIos, isStandalone, usePwa, promptInstall } from "../lib/pwa";
 import { useState } from "react";
 import { go } from "../lib/router";
+import { currentWeek, isItemDone, planProgress } from "../lib/plan";
 
 function greeting(name: string) {
   const h = new Date().getHours();
@@ -79,6 +80,41 @@ export default function Home() {
         <input value={q} onChange={(e) => setQ(e.target.value)} placeholder="Rechercher une notion, un article, un arrêt…" aria-label="Rechercher" />
         <button className="btn">🔎</button>
       </form>
+
+      {s.plan ? (
+        (() => {
+          const w = currentWeek(s.plan);
+          const prog = planProgress(s.plan);
+          const next = w?.items.find((it) => !isItemDone(s.plan!, it) && it.kind !== "revision");
+          const doneW = w ? w.items.filter((it) => isItemDone(s.plan!, it)).length : 0;
+          return (
+            <a className="card card-cta plan-home" href="#/plan" style={{ ["--accent" as string]: "#b8862f" }}>
+              <p className="eyebrow">🗓️ Mon plan de formation · {prog.pct} % réalisé</p>
+              {w && (
+                <h3>
+                  Semaine {w.index} : {doneW}/{w.items.length} étapes
+                </h3>
+              )}
+              {next ? (
+                <p className="small">
+                  Prochaine étape : <strong>{next.title}</strong> <span className="muted">({next.packTitle}, {next.minutes} min)</span>
+                </p>
+              ) : (
+                <p className="small">Semaine terminée, bravo !</p>
+              )}
+              <div className="mini-bar">
+                <span style={{ width: prog.pct + "%" }} />
+              </div>
+            </a>
+          );
+        })()
+      ) : (
+        <a className="card card-cta" href="#/bilan" style={{ ["--accent" as string]: "#b8862f" }}>
+          <p className="eyebrow">🎯 Par où commencer ?</p>
+          <h3>Faites votre bilan de connaissances (≈ 20 min)</h3>
+          <p className="small muted">Il mesure votre niveau dans chaque domaine et construit votre plan de formation personnalisé, semaine par semaine.</p>
+        </a>
+      )}
 
       {!isStandalone() && (canInstall || isIos()) && (
         <div className="card notice">

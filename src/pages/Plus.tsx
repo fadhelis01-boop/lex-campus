@@ -1,4 +1,6 @@
 const ITEMS = [
+  { path: "/bilan", icon: "🎯", label: "Bilan de connaissances", sub: "Mesurer son niveau et obtenir un plan personnalisé" },
+  { path: "/plan", icon: "🗓️", label: "Mon plan de formation", sub: "Programme semaine par semaine, avancement" },
   { path: "/methodo", icon: "✒️", label: "Méthodologie", sub: "Fiche d'arrêt, commentaire, note de synthèse, cas pratique" },
   { path: "/compta", icon: "🧮", label: "Comptabilité", sub: "Comptabilité, analyse financière, fiscalité appliquée" },
   { path: "/plan-comptable", icon: "📒", label: "Plan comptable", sub: "Tous les comptes utilisés, avec recherche" },

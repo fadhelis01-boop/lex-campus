@@ -4,6 +4,8 @@ Application web installable (PWA) qui fonctionne sur PC, Mac, tablette, iPhone e
 
 ## Ce qu'elle contient
 
+- **Bilan de connaissances et plan de formation** : un test (express ou complet) mesure le niveau par domaine et par module, puis génère un plan personnalisé semaine par semaine selon l'objectif, le temps disponible, l'échéance et les priorités ; avancement automatique, export et impression.
+
 - **20 domaines**, du droit des contrats au droit public, plus un module complet de **comptabilité, analyse financière et fiscalité appliquée** : 111 leçons rédigées, 3 niveaux (fondamentaux, approfondissement, expert). Un domaine ajouté plus tard peut voir ses leçons rédigées à la demande par l'assistant IA.
 - **Cours écrits et audio** : lecture à voix haute paragraphe par paragraphe, surlignage, vitesse réglable, reprise exacte là où l'on s'est arrêté ou depuis le début ; reprise de la lecture écrite également.
 - **Pédagogie active** : 449 questions de quiz, ateliers d'écritures comptables et exercices chiffrés corrigés automatiquement, plan comptable consultable, cartes de révision à répétition espacée, test de positionnement et examen blanc par domaine, exercices rédigés avec corrigés (cas pratiques, fiche d'arrêt guidée, commentaire, dissertation, note de synthèse en conditions réelles).

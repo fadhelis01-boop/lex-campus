@@ -44,6 +44,10 @@ export default function Parcours() {
       <h1>Parcours</h1>
       <div className="card notice">
         <strong>Parcours conseillé pour une remise à niveau</strong>
+        <p className="small">
+          🎯 <a href="#/bilan">Faites d'abord le bilan de connaissances</a> : il construit un plan de formation adapté à votre
+          niveau, à votre objectif et à votre temps disponible. À défaut, voici l'ordre général :
+        </p>
         <ol className="small path">
           <li>Méthodologie : la fiche d'arrêt (pour relire la jurisprudence efficacement).</li>
           <li>Droit des contrats (réforme de 2016) puis responsabilité civile : le socle de tout le droit des affaires.</li>

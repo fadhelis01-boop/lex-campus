@@ -1,6 +1,12 @@
 import Markdown from "../components/Markdown";
 
-const HELP = `## Comment travailler avec LexCampus
+const HELP = `## Commencer par le bilan de connaissances
+
+Le **bilan** (menu Plus, ou carte « Par où commencer ? » de l'accueil) vous demande votre objectif (remise à niveau, pratique des affaires, examen, fiscalité et comptabilité), votre temps disponible, une échéance éventuelle et vos domaines prioritaires, puis vous pose des questions dans chaque domaine (version express ou complète). Répondez « Je ne sais pas » plutôt qu'au hasard : le diagnostic sera plus juste.
+
+Il en résulte un **plan de formation** semaine par semaine : les modules déjà maîtrisés sont mis de côté, les domaines faibles et prioritaires passent en tête, les prérequis sont respectés (les contrats avant les sûretés, la comptabilité avant la fiscalité…). L'avancement se met à jour tout seul quand vous terminez une leçon. Vous pouvez changer de rythme, exporter ou imprimer le plan, demander l'avis de l'assistant, et refaire le bilan dans quelques mois pour mesurer vos progrès.
+
+## Comment travailler avec LexCampus
 
 1. **Commencez par le parcours conseillé** (onglet Parcours). Dans chaque domaine, le **test de positionnement** marque comme acquis les modules que vous maîtrisez déjà : vous ne refaites pas inutilement les fondamentaux.
 2. **Une leçon = 15 à 25 minutes** : lecture ou écoute, puis quiz (70 % valident la leçon), puis ajout des cartes de révision.

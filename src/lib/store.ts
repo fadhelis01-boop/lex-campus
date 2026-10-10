@@ -1,7 +1,7 @@
 import { useSyncExternalStore } from "react";
 import { dbGet, dbSet } from "./db";
 import { newCard, review } from "./srs";
-import type { Chat, LessonProgress, Profile, SavedReport, Settings, SrsCard } from "./types";
+import type { Assessment, Chat, LessonProgress, Profile, SavedReport, Settings, SrsCard, TrainingPlan } from "./types";
 
 export const DEFAULT_SETTINGS: Settings = {
   apiKey: "",
@@ -36,10 +36,12 @@ export interface State {
   chats: Chat[];
   reports: SavedReport[];
   lastLesson: string; // "pack/lesson"
+  plan: TrainingPlan | null; // plan de formation issu du bilan
+  assessments: Assessment[]; // historique des bilans de connaissances
   toast: { text: string; kind?: "xp" | "info" | "badge" } | null;
 }
 
-const PERSISTED = ["settings", "profile", "progress", "srs", "notes", "chats", "reports", "lastLesson"] as const;
+const PERSISTED = ["settings", "profile", "progress", "srs", "notes", "chats", "reports", "lastLesson", "plan", "assessments"] as const;
 type PersistedKey = (typeof PERSISTED)[number];
 
 let state: State = {
@@ -52,6 +54,8 @@ let state: State = {
   chats: [],
   reports: [],
   lastLesson: "",
+  plan: null,
+  assessments: [],
   toast: null,
 };
 
@@ -326,7 +330,13 @@ export function importBackup(json: string, mode: "remplacer" | "fusionner") {
       cardsReviewed: Math.max(state.profile.cardsReviewed, dp.cardsReviewed),
       days,
     };
-    setState({ progress, srs, notes, chats, reports, profile });
+    const theirPlan = (data.plan ?? null) as State["plan"];
+    const plan = !state.plan ? theirPlan : theirPlan && theirPlan.createdAt > state.plan.createdAt ? theirPlan : state.plan;
+    const assessments = [
+      ...state.assessments,
+      ...((data.assessments ?? []) as State["assessments"]).filter((a) => !state.assessments.some((x) => x.id === a.id)),
+    ].sort((a, b) => b.at - a.at);
+    setState({ progress, srs, notes, chats, reports, profile, plan, assessments });
   }
 }
 
@@ -341,6 +351,8 @@ export function resetAll() {
     chats: [],
     reports: [],
     lastLesson: "",
+    plan: null,
+    assessments: [],
   });
 }
 
