@@ -1,0 +1,272 @@
+{
+ "id": "bancaire",
+ "version": "2026.10.2",
+ "title": "Droit bancaire et financier",
+ "branch": "Droit des affaires",
+ "icon": "🏦",
+ "color": "#3b5b8a",
+ "order": 15,
+ "updatedAt": "2026-10-05",
+ "description": "Monopole bancaire, crédit et responsabilité du banquier, paiements, LCB-FT ; marchés financiers, abus de marché, crypto-actifs.",
+ "modules": [
+  {
+   "id": "banque",
+   "title": "Banque et crédit",
+   "level": 2,
+   "summary": "Relations banque-entreprise, responsabilités, services de paiement, anti-blanchiment.",
+   "lessons": [
+    {
+     "id": "banque-credit",
+     "title": "Le banquier, le crédit et ses responsabilités",
+     "duration": 16,
+     "src": "packs/bancaire/banque-credit.md",
+     "objectives": [
+      "Mettre en jeu la responsabilité du banquier",
+      "Sécuriser une rupture de crédit",
+      "Connaître les obligations LCB-FT"
+     ],
+     "keyRefs": [
+      "Art. L. 511-5 CMF",
+      "Art. L. 313-12 CMF",
+      "Art. L. 511-33 CMF",
+      "Art. L. 650-1 C. com.",
+      "Art. L. 561-2 CMF"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Préavis minimal de rupture d'un concours à durée indéterminée :",
+       "choices": [
+        "15 jours",
+        "30 jours",
+        "60 jours",
+        "6 mois"
+       ],
+       "answer": 2,
+       "explain": "Art. L. 313-12 CMF."
+      },
+      {
+       "type": "qcm",
+       "q": "Le devoir de mise en garde bénéficie à :",
+       "choices": [
+        "Tout emprunteur",
+        "L'emprunteur non averti exposé à un risque d'endettement excessif",
+        "Les seuls consommateurs",
+        "Les sociétés cotées"
+       ],
+       "answer": 1,
+       "explain": "Ch. mixte, 29 juin 2007."
+      },
+      {
+       "type": "vf",
+       "q": "Depuis 2019, l'erreur de TEG entraîne la substitution automatique du taux légal.",
+       "answer": false,
+       "explain": "Déchéance du droit aux intérêts dans une proportion fixée par le juge."
+      },
+      {
+       "type": "qcm",
+       "q": "Les déclarations de soupçon sont adressées à :",
+       "choices": [
+        "L'AMF",
+        "L'ACPR",
+        "Tracfin",
+        "La CNIL"
+       ],
+       "answer": 2,
+       "explain": "Cellule de renseignement financier."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Exceptions à la responsabilité pour soutien abusif en procédure collective ?",
+       "a": "Fraude, immixtion caractérisée dans la gestion, garanties disproportionnées (L. 650-1)."
+      }
+     ]
+    },
+    {
+     "id": "paiement-financements",
+     "src": "packs/bancaire/paiement-financements.md",
+     "duration": 14,
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "La cession Dailly est opposable aux tiers :",
+       "choices": [
+        "Après signification",
+        "À la date portée sur le bordereau",
+        "Après acceptation",
+        "Après publication"
+       ],
+       "answer": 1,
+       "explain": "Art. L. 313-27 CMF."
+      },
+      {
+       "type": "qcm",
+       "q": "L'affacturage repose juridiquement sur :",
+       "choices": [
+        "La cession Dailly",
+        "La subrogation conventionnelle",
+        "La délégation",
+        "La novation"
+       ],
+       "answer": 1,
+       "explain": "Quittance subrogative."
+      },
+      {
+       "type": "vf",
+       "q": "Sans publicité, le crédit-bailleur ne peut opposer sa propriété aux créanciers du crédit-preneur.",
+       "answer": true,
+       "explain": "D'où l'importance de l'inscription."
+      },
+      {
+       "type": "qcm",
+       "q": "Le tiré qui a accepté une lettre de change ne peut opposer au porteur de bonne foi :",
+       "choices": [
+        "Les exceptions tirées de ses rapports personnels avec le tireur",
+        "Le faux",
+        "L'incapacité",
+        "La prescription"
+       ],
+       "answer": 0,
+       "explain": "Inopposabilité des exceptions."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Acceptation de la cession Dailly ?",
+       "a": "Le débiteur s'engage directement envers la banque et ne peut plus lui opposer ses exceptions personnelles contre le cédant (sauf collusion)."
+      }
+     ],
+     "title": "Moyens de paiement et financements courts (affacturage, Dailly, crédit-bail)",
+     "objectives": [
+      "Choisir l'outil de financement court terme",
+      "Connaître les risques de chaque technique"
+     ],
+     "outline": [
+      "Effets de commerce : lettre de change, billet à ordre, chèque",
+      "Cession Dailly : bordereau, notification, acceptation",
+      "Affacturage : subrogation conventionnelle, recours",
+      "Crédit-bail mobilier et immobilier : publicité, option d'achat, sort en procédure collective",
+      "Location financière et interdépendance"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "marches",
+   "title": "Marchés financiers",
+   "level": 3,
+   "summary": "AMF, offre au public, abus de marché, crypto-actifs.",
+   "lessons": [
+    {
+     "id": "marches-financiers",
+     "title": "Marchés financiers, abus de marché et crypto-actifs",
+     "duration": 14,
+     "src": "packs/bancaire/marches-financiers.md",
+     "objectives": [
+      "Identifier une information privilégiée",
+      "Connaître le régime des sanctions"
+     ],
+     "keyRefs": [
+      "Art. L. 211-1 CMF",
+      "Règl. (UE) n° 596/2014 (MAR)",
+      "Règl. (UE) 2017/1129",
+      "Règl. (UE) 2023/1114 (MiCA)",
+      "Art. L. 465-1 CMF"
+     ],
+     "quiz": [
+      {
+       "type": "qcm",
+       "q": "Quelle décision a mis fin au cumul des poursuites AMF et pénales pour délit d'initié ?",
+       "choices": [
+        "CJUE 2014",
+        "Cons. const., 18 mars 2015",
+        "Cass. ass. plén. 2016",
+        "CE 2017"
+       ],
+       "answer": 1,
+       "explain": "Décision EADS ; loi du 21 juin 2016 (aiguillage)."
+      },
+      {
+       "type": "vf",
+       "q": "Le règlement MiCA s'applique pleinement depuis le 30 décembre 2024.",
+       "answer": true,
+       "explain": "Prestataires de services sur crypto-actifs."
+      },
+      {
+       "type": "qcm",
+       "q": "Une information privilégiée doit notamment être :",
+       "choices": [
+        "Publique",
+        "Précise et non publique",
+        "Écrite",
+        "Fausse"
+       ],
+       "answer": 1,
+       "explain": "Et susceptible d'influencer sensiblement le cours."
+      }
+     ],
+     "flashcards": [
+      {
+       "q": "Trois abus de marché (MAR) ?",
+       "a": "Opération d'initié, divulgation illicite d'information privilégiée, manipulation de marché."
+      }
+     ]
+    }
+   ]
+  }
+ ],
+ "decisions": [
+  {
+   "id": "eads",
+   "name": "EADS (non-cumul)",
+   "court": "Cons. const.",
+   "date": "18 mars 2015",
+   "number": "n° 2014-453/454 QPC et 2015-462 QPC",
+   "topic": "Abus de marché",
+   "solution": "Le cumul des poursuites pénales et administratives pour les mêmes faits de manquement et délit d'initié est contraire au principe de nécessité des délits et des peines.",
+   "scope": "Aiguillage des poursuites instauré en 2016.",
+   "status": "en vigueur"
+  }
+ ],
+ "reforms": [
+  {
+   "date": "2003-08-01",
+   "title": "Création de l'AMF",
+   "summary": "Loi de sécurité financière : fusion de la COB, du CMF et du CDGF."
+  },
+  {
+   "date": "2016-06-21",
+   "title": "Réforme de la répression des abus de marché",
+   "summary": "Aiguillage des poursuites entre AMF et parquet national financier."
+  },
+  {
+   "date": "2019-07-17",
+   "title": "Réforme de la sanction du TEG",
+   "summary": "Ordonnance : déchéance proportionnée du droit aux intérêts."
+  },
+  {
+   "date": "2024-12-30",
+   "title": "Application complète du règlement MiCA",
+   "summary": "Agrément des prestataires de services sur crypto-actifs dans l'UE."
+  }
+ ],
+ "glossary": [
+  {
+   "term": "Monopole bancaire",
+   "def": "Réservation des opérations de banque aux établissements de crédit agréés (L. 511-5 CMF)."
+  },
+  {
+   "term": "Emprunteur averti",
+   "def": "Emprunteur capable d'apprécier les risques de l'opération ; le banquier ne lui doit pas de mise en garde."
+  },
+  {
+   "term": "Information privilégiée",
+   "def": "Information précise, non publique, susceptible d'influencer sensiblement le cours d'un instrument financier."
+  },
+  {
+   "term": "Tracfin",
+   "def": "Service de renseignement financier recevant les déclarations de soupçon."
+  }
+ ]
+}
